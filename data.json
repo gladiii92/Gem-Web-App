@@ -135,7 +135,7 @@
   },
   {
     "id": 13,
-    "name": "Rubin (Purplish Red / Reddish Purple",
+    "name": "Rubin (Purplish Red / Reddish Purple)",
     "notes": "20% less worth than Red Ruby",
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99, "I1": 140, "SI2": 320, "SI1": 500, "VS": 610, "VVS": 720},
@@ -230,7 +230,7 @@
     "id": 21,
     "name": "Saphir (Blau, Sri Lanka)",
     "notes": "Burma 30-50% mehr!",
-      "quality_notes": {
+      "quality_notes":{
       "VVS": "Einkaufspreis ca. 30-50$/ct\nNur natürliche Steine",
       "VS": "Einkaufspreis ca. 25$/ct",
       "SI1": "Maximal 25$/ct",
