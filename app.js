@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const gemSelect = document.getElementById('gem-select');
     const qualitySelect = document.getElementById('quality-select');
-
+    
     // Qualitätsbezeichnungen
     const qualityLabels = {
         'I1': 'Low (I1)',
@@ -29,11 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 qualitySelect.innerHTML = '';
 
                 if (gem.special) {
-                    // Nur VVS für spezielle Steine
                     const option = new Option(qualityLabels['VVS'], 'VVS');
                     qualitySelect.add(option);
                 } else {
-                    // Alle Qualitäten für normale Steine
                     Object.entries(qualityLabels).forEach(([key, label]) => {
                         const option = new Option(label, key);
                         qualitySelect.add(option);
@@ -41,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // Initialen Status setzen
+            // Initialen Status laden
             gemSelect.dispatchEvent(new Event('change'));
         });
 });
@@ -65,10 +63,13 @@ function calculatePrice() {
             document.getElementById('result').innerHTML = `
                 <div class="result-box">
                     <h3>${gem.name}</h3>
-                    <p>Qualität: ${document.getElementById('quality-select').selectedOptions[0].text}</p>
-                    <p>Karat: ${carat} ct</p>
-                    <p>Preis/Kt: $${pricePerCarat.toLocaleString()}</p>
-                    <p class="total">Gesamtpreis: $${totalPrice.toLocaleString()}</p>
+                    ${gem.notes ? `<div class="gem-note">ℹ️ ${gem.notes}</div>` : ''}
+                    <table>
+                        <tr><td>Qualität:</td><td>${document.getElementById('quality-select').selectedOptions[0].text}</td></tr>
+                        <tr><td>Karat:</td><td>${carat} ct</td></tr>
+                        <tr><td>Preis/Kt:</td><td>$${pricePerCarat.toLocaleString()}</td></tr>
+                        <tr class="total-price"><td>Gesamtpreis:</td><td>$${totalPrice.toLocaleString()}</td></tr>
+                    </table>
                 </div>
             `;
         });
