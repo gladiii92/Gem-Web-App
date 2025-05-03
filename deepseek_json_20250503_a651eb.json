@@ -1,0 +1,263 @@
+[
+  {
+    "id": 1,
+    "name": "Katlang Topaz (Imperial Orange/Pink)",
+    "price_ranges": [
+      {"carat_min": 1, "carat_max": 1.99, "I1": 230, "SI2": 280, "SI1": 330, "VS": 375, "VVS": 420},
+      {"carat_min": 2, "carat_max": 4.99, "I1": 270, "SI2": 330, "SI1": 390, "VS": 440, "VVS": 490},
+      {"carat_min": 5, "carat_max": 7.99, "I1": 340, "SI2": 415, "SI1": 490, "VS": 550, "VVS": 610},
+      {"carat_min": 8, "carat_max": 9999, "I1": 380, "SI2": 465, "SI1": 550, "VS": 620, "VVS": 690}
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Tanzanit (Bluish Violet)",
+    "price_ranges": [
+      {"carat_min": 1, "carat_max": 1.99, "I1": 270, "SI2": 305, "SI1": 340, "VS": 395, "VVS": 450},
+      {"carat_min": 2, "carat_max": 4.99, "I1": 370, "SI2": 415, "SI1": 460, "VS": 540, "VVS": 620},
+      {"carat_min": 5, "carat_max": 7.99, "I1": 470, "SI2": 530, "SI1": 590, "VS": 690, "VVS": 790},
+      {"carat_min": 8, "carat_max": 9999, "I1": 540, "SI2": 605, "SI1": 670, "VS": 785, "VVS": 900}
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Tanzanit (Violetish Blue)",
+    "price_ranges": [
+      {"carat_min": 1, "carat_max": 1.99, "I1": 300, "SI2": 335, "SI1": 370, "VS": 435, "VVS": 500},
+      {"carat_min": 2, "carat_max": 4.99, "I1": 410, "SI2": 460, "SI1": 510, "VS": 600, "VVS": 690},
+      {"carat_min": 5, "carat_max": 7.99, "I1": 520, "SI2": 585, "SI1": 650, "VS": 760, "VVS": 870},
+      {"carat_min": 8, "carat_max": 9999, "I1": 600, "SI2": 675, "SI1": 750, "VS": 875, "VVS": 1000}
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Saphir (Weiß, Sri Lanka)",
+    "price_ranges": [
+      {"carat_min": 0.1, "carat_max": 0.99, "I1": 200, "SI2": 245, "SI1": 290, "VS": 330, "VVS": 370},
+      {"carat_min": 1, "carat_max": 1.99, "I1": 290, "SI2": 360, "SI1": 430, "VS": 480, "VVS": 530},
+      {"carat_min": 2, "carat_max": 4.99, "I1": 450, "SI2": 555, "SI1": 660, "VS": 740, "VVS": 820},
+      {"carat_min": 5, "carat_max": 7.99, "I1": 770, "SI2": 945, "SI1": 1120, "VS": 1255, "VVS": 1390},
+      {"carat_min": 8, "carat_max": 9999, "I1": 1010, "SI2": 1240, "SI1": 1470, "VS": 1650, "VVS": 1830}
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Grossular Garnet/Granat (Yellowish Green)",
+    "special": true,
+    "price_ranges": [
+      {"carat_min": 0.1, "carat_max": 0.99, "VVS": 360},
+      {"carat_min": 1, "carat_max": 1.99, "VVS": 430},
+      {"carat_min": 2, "carat_max": 4.99, "VVS": 1320},
+      {"carat_min": 5, "carat_max": 7.99, "VVS": 1990},
+      {"carat_min": 8, "carat_max": 9999, "VVS": 2800}
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Tsavorit Garnet/Granat (Yellowish Green)",
+    "price_ranges": [
+      {"carat_min": 0.1, "carat_max": 0.99, "I1": 270, "SI2": 315, "SI1": 360, "VS": 400, "VVS": 440},
+      {"carat_min": 1, "carat_max": 1.99, "I1": 320, "SI2": 375, "SI1": 430, "VS": 480, "VVS": 530},
+      {"carat_min": 2, "carat_max": 4.99, "I1": 990, "SI2": 1155, "SI1": 1320, "VS": 1490, "VVS": 1660},
+      {"carat_min": 5, "carat_max": 7.99, "I1": 1490, "SI2": 1740, "SI1": 1990, "VS": 2240, "VVS": 2490},
+      {"carat_min": 8, "carat_max": 9999, "I1": 2200, "SI2": 2600, "SI1": 3000, "VS": 3250, "VVS": 3500}
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Grossular Garnet/Granat (Green)",
+    "special": true,
+    "price_ranges": [
+      {"carat_min": 0.1, "carat_max": 0.99, "VVS": 400},
+      {"carat_min": 1, "carat_max": 1.99, "VVS": 490},
+      {"carat_min": 2, "carat_max": 4.99, "VVS": 1520},
+      {"carat_min": 5, "carat_max": 7.99, "VVS": 2280},
+      {"carat_min": 8, "carat_max": 9999, "VVS": 3400}
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Saphir (Gelb, Sri Lanka)",
+    "price_ranges": [
+      {"carat_min": 0.1, "carat_max": 0.99, "I1": 290, "SI2": 355, "SI1": 420, "VS": 475, "VVS": 530},
+      {"carat_min": 1, "carat_max": 1.99, "I1": 490, "SI2": 600, "SI1": 710, "VS": 795, "VVS": 880},
+      {"carat_min": 2, "carat_max": 4.99, "I1": 900, "SI2": 1105, "SI1": 1310, "VS": 1470, "VVS": 1630},
+      {"carat_min": 5, "carat_max": 7.99, "I1": 1510, "SI2": 1850, "SI1": 2190, "VS": 2465, "VVS": 2740},
+      {"carat_min": 8, "carat_max": 9999, "I1": 2020, "SI2": 2480, "SI1": 2940, "VS": 3305, "VVS": 3670}
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Demantoid Garnet/Granat (Yellowish Green)",
+    "price_ranges": [
+      {"carat_min": 0.1, "carat_max": 0.99, "I1": 290, "SI2": 302, "SI1": 330, "VS": 355, "VVS": 380},
+      {"carat_min": 1, "carat_max": 1.99, "I1": 650, "SI2": 694, "SI1": 730, "VS": 795, "VVS": 860},
+      {"carat_min": 2, "carat_max": 4.99, "I1": 1270, "SI2": 1355, "SI1": 1440, "VS": 1565, "VVS": 1690},
+      {"carat_min": 5, "carat_max": 7.99, "I1": 2140, "SI2": 2280, "SI1": 2420, "VS": 2635, "VVS": 2850},
+      {"carat_min": 8, "carat_max": 9999, "I1": 3000, "SI2": 3250, "SI1": 3500, "VS": 3750, "VVS": 4000}
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Tsavorit Garnet/Granat (Green)",
+    "price_ranges": [
+      {"carat_min": 0.1, "carat_max": 0.99, "I1": 310, "SI2": 360, "SI1": 410, "VS": 460, "VVS": 510},
+      {"carat_min": 1, "carat_max": 1.99, "I1": 370, "SI2": 430, "SI1": 490, "VS": 550, "VVS": 610},
+      {"carat_min": 2, "carat_max": 4.99, "I1": 1140, "SI2": 1330, "SI1": 1520, "VS": 1715, "VVS": 1910},
+      {"carat_min": 5, "carat_max": 7.99, "I1": 1710, "SI2": 2000, "SI1": 2290, "VS": 2575, "VVS": 2860},
+      {"carat_min": 8, "carat_max": 9999, "I1": 2500, "SI2": 2850, "SI1": 3200, "VS": 3650, "VVS": 4100}
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Demantoid Garnet/Granat (Green)",
+    "price_ranges": [
+      {"carat_min": 0.1, "carat_max": 0.99, "I1": 520, "SI2": 555, "SI1": 590, "VS": 645, "VVS": 700},
+      {"carat_min": 1, "carat_max": 1.99, "I1": 1170, "SI2": 1250, "SI1": 1330, "VS": 1445, "VVS": 1560},
+      {"carat_min": 2, "carat_max": 4.99, "I1": 2310, "SI2": 2465, "SI1": 2620, "VS": 2855, "VVS": 3080},
+      {"carat_min": 5, "carat_max": 7.99, "I1": 3890, "SI2": 4145, "SI1": 4400, "VS": 4790, "VVS": 5180},
+      {"carat_min": 8, "carat_max": 9999, "I1": 5200, "SI2": 5600, "SI1": 6000, "VS": 6750, "VVS": 7500}
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Saphir (Grün, Sri Lanka)",
+    "price_ranges": [
+      {"carat_min": 0.1, "carat_max": 0.99, "I1": 1170, "SI2": 1435, "SI1": 1700, "VS": 1910, "VVS": 2120},
+      {"carat_min": 1, "carat_max": 1.99, "I1": 1650, "SI2": 2020, "SI1": 2390, "VS": 2690, "VVS": 2990},
+      {"carat_min": 2, "carat_max": 4.99, "I1": 2490, "SI2": 3060, "SI1": 3630, "VS": 4080, "VVS": 4530},
+      {"carat_min": 5, "carat_max": 7.99, "I1": 3440, "SI2": 4220, "SI1": 5000, "VS": 5630, "VVS": 6260},
+      {"carat_min": 8, "carat_max": 9999, "I1": 4040, "SI2": 4955, "SI1": 5870, "VS": 6605, "VVS": 7340}
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Rubin (Purplish Red / Reddish Purple, Sri Lanka)",
+    "price_ranges": [
+      {"carat_min": 0.1, "carat_max": 0.99, "I1": 140, "SI2": 320, "SI1": 500, "VS": 610, "VVS": 720},
+      {"carat_min": 1, "carat_max": 1.99, "I1": 340, "SI2": 765, "SI1": 1190, "VS": 1440, "VVS": 1690},
+      {"carat_min": 2, "carat_max": 4.99, "I1": 790, "SI2": 1780, "SI1": 2770, "VS": 3360, "VVS": 3950},
+      {"carat_min": 5, "carat_max": 7.99, "I1": 1260, "SI2": 2830, "SI1": 4400, "VS": 5345, "VVS": 6290},
+      {"carat_min": 8, "carat_max": 9999, "I1": 2200, "SI2": 4350, "SI1": 6500, "VS": 7750, "VVS": 9000}
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Saphir (Lila, Sri Lanka)",
+    "price_ranges": [
+      {"carat_min": 0.1, "carat_max": 0.99, "I1": 640, "SI2": 790, "SI1": 940, "VS": 1055, "VVS": 1170},
+      {"carat_min": 1, "carat_max": 1.99, "I1": 1350, "SI2": 1655, "SI1": 1960, "VS": 2205, "VVS": 2450},
+      {"carat_min": 2, "carat_max": 4.99, "I1": 2390, "SI2": 2930, "SI1": 3470, "VS": 3905, "VVS": 4340},
+      {"carat_min": 5, "carat_max": 7.99, "I1": 4960, "SI2": 6090, "SI1": 7220, "VS": 8120, "VVS": 9020},
+      {"carat_min": 8, "carat_max": 9999, "I1": 7480, "SI2": 9180, "SI1": 10880, "VS": 12240, "VVS": 13600}
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Saphir (Pink, Sri Lanka)",
+    "price_ranges": [
+      {"carat_min": 0.1, "carat_max": 0.99, "I1": 780, "SI2": 955, "SI1": 1130, "VS": 1270, "VVS": 1410},
+      {"carat_min": 1, "carat_max": 1.99, "I1": 2020, "SI2": 2480, "SI1": 2940, "VS": 3305, "VVS": 3670},
+      {"carat_min": 2, "carat_max": 4.99, "I1": 3520, "SI2": 4315, "SI1": 5110, "VS": 5750, "VVS": 6390},
+      {"carat_min": 5, "carat_max": 7.99, "I1": 6660, "SI2": 8170, "SI1": 9680, "VS": 10890, "VVS": 12100},
+      {"carat_min": 8, "carat_max": 9999, "I1": 8150, "SI2": 10005, "SI1": 11860, "VS": 13340, "VVS": 14820}
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Alexandrit (Yellow/Green - Red/Orange)",
+    "price_ranges": [
+      {"carat_min": 0.1, "carat_max": 0.99, "I1": 240, "SI2": 540, "SI1": 840, "VS": 1025, "VVS": 1210},
+      {"carat_min": 1, "carat_max": 1.99, "I1": 890, "SI2": 1995, "SI1": 3100, "VS": 3760, "VVS": 4420},
+      {"carat_min": 2, "carat_max": 4.99, "I1": 1390, "SI2": 3135, "SI1": 4880, "VS": 5925, "VVS": 6970},
+      {"carat_min": 5, "carat_max": 7.99, "I1": 2090, "SI2": 4705, "SI1": 7320, "VS": 8890, "VVS": 10460},
+      {"carat_min": 8, "carat_max": 9999, "I1": 3500, "SI2": 7250, "SI1": 11000, "VS": 13250, "VVS": 15500}
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Padparadscha Saphir (Pink-Orange, Sri Lanka)",
+    "price_ranges": [
+      {"carat_min": 0.1, "carat_max": 0.99, "I1": 1420, "SI2": 1740, "SI1": 2060, "VS": 2320, "VVS": 2580},
+      {"carat_min": 1, "carat_max": 1.99, "I1": 3220, "SI2": 3953, "SI1": 4686, "VS": 5273, "VVS": 5858},
+      {"carat_min": 2, "carat_max": 4.99, "I1": 4860, "SI2": 5963, "SI1": 7063, "VS": 7946, "VVS": 8829},
+      {"carat_min": 5, "carat_max": 7.99, "I1": 7116, "SI2": 8733, "SI1": 10350, "VS": 11644, "VVS": 12938},
+      {"carat_min": 8, "carat_max": 9999, "I1": 8727, "SI2": 10711, "SI1": 12694, "VS": 14281, "VVS": 15867}
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Spinell (Orange)",
+    "price_ranges": [
+      {"carat_min": 0.1, "carat_max": 0.99, "I1": 360, "SI2": 690, "SI1": 1020, "VS": 1235, "VVS": 1450},
+      {"carat_min": 1, "carat_max": 1.99, "I1": 540, "SI2": 1035, "SI1": 1530, "VS": 1875, "VVS": 2220},
+      {"carat_min": 2, "carat_max": 4.99, "I1": 1230, "SI2": 2335, "SI1": 3440, "VS": 4175, "VVS": 4910},
+      {"carat_min": 5, "carat_max": 7.99, "I1": 3070, "SI2": 5840, "SI1": 8610, "VS": 10455, "VVS": 12300},
+      {"carat_min": 8, "carat_max": 9999, "I1": 4320, "SI2": 8205, "SI1": 12090, "VS": 14675, "VVS": 17260}
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Spinell (Rot)",
+    "price_ranges": [
+      {"carat_min": 0.1, "carat_max": 0.99, "I1": 480, "SI2": 920, "SI1": 1360, "VS": 1650, "VVS": 1940},
+      {"carat_min": 1, "carat_max": 1.99, "I1": 730, "SI2": 1385, "SI1": 2040, "VS": 2475, "VVS": 2910},
+      {"carat_min": 2, "carat_max": 4.99, "I1": 1640, "SI2": 3110, "SI1": 4580, "VS": 5560, "VVS": 6540},
+      {"carat_min": 5, "carat_max": 7.99, "I1": 4100, "SI2": 7790, "SI1": 11480, "VS": 13940, "VVS": 16400},
+      {"carat_min": 8, "carat_max": 9999, "I1": 5760, "SI2": 10935, "SI1": 16110, "VS": 19560, "VVS": 23020}
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Saphir (Blau, Sri Lanka)",
+    "price_ranges": [
+      {"carat_min": 0.1, "carat_max": 0.99, "I1": 970, "SI2": 1190, "SI1": 1410, "VS": 1590, "VVS": 1770},
+      {"carat_min": 1, "carat_max": 1.99, "I1": 2540, "SI2": 3120, "SI1": 3700, "VS": 4160, "VVS": 4620},
+      {"carat_min": 2, "carat_max": 4.99, "I1": 4400, "SI2": 5400, "SI1": 6400, "VS": 7195, "VVS": 7990},
+      {"carat_min": 5, "carat_max": 7.99, "I1": 9660, "SI2": 11855, "SI1": 14050, "VS": 15805, "VVS": 17560},
+      {"carat_min": 8, "carat_max": 9999, "I1": 14730, "SI2": 18075, "SI1": 21420, "VS": 24095, "VVS": 26780}
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Rubin (Red, Sri Lanka)",
+    "price_ranges": [
+      {"carat_min": 0.1, "carat_max": 0.99, "I1": 920, "SI2": 1075, "SI1": 1230, "VS": 1450, "VVS": 1970},
+      {"carat_min": 1, "carat_max": 1.99, "I1": 4190, "SI2": 4850, "SI1": 5510, "VS": 6060, "VVS": 6610},
+      {"carat_min": 2, "carat_max": 4.99, "I1": 10800, "SI2": 13265, "SI1": 15730, "VS": 17820, "VVS": 19840},
+      {"carat_min": 5, "carat_max": 7.99, "I1": 15430, "SI2": 19340, "SI1": 24250, "VS": 26670, "VVS": 30870},
+      {"carat_min": 8, "carat_max": 9999, "I1": 22000, "SI2": 28500, "SI1": 35000, "VS": 40650, "VVS": 46300}
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Paraiba Tourmaline (Bluish Green)",
+    "price_ranges": [
+      {"carat_min": 1, "carat_max": 1.99, "I1": 18230, "SI2": 21270, "SI1": 24310, "VS": 26740, "VVS": 30380},
+      {"carat_min": 2, "carat_max": 4.99, "I1": 20260, "SI2": 23635, "SI1": 27010, "VS": 29710, "VVS": 33760},
+      {"carat_min": 5, "carat_max": 7.99, "I1": 23290, "SI2": 27170, "SI1": 31060, "VS": 34170, "VVS": 38820},
+      {"carat_min": 8, "carat_max": 9999, "I1": 25320, "SI2": 29540, "SI1": 33760, "VS": 37135, "VVS": 42200}
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Alexandrit (Blue/Green - Purple/Red)",
+    "price_ranges": [
+      {"carat_min": 0.1, "carat_max": 0.99, "I1": 970, "SI2": 2175, "SI1": 3380, "VS": 4100, "VVS": 4820},
+      {"carat_min": 1, "carat_max": 1.99, "I1": 3540, "SI2": 7965, "SI1": 12390, "VS": 15040, "VVS": 17690},
+      {"carat_min": 2, "carat_max": 4.99, "I1": 5580, "SI2": 12555, "SI1": 19520, "VS": 23740, "VVS": 27880},
+      {"carat_min": 5, "carat_max": 7.99, "I1": 8360, "SI2": 18815, "SI1": 29270, "VS": 35540, "VVS": 41820},
+      {"carat_min": 8, "carat_max": 9999, "I1": 10000, "SI2": 24000, "SI1": 38000, "VS": 50350, "VVS": 62700}
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Paraiba Tourmaline (Greenish Blue)",
+    "price_ranges": [
+      {"carat_min": 1, "carat_max": 1.99, "I1": 10030, "SI2": 11685, "SI1": 13370, "VS": 15040, "VVS": 16710},
+      {"carat_min": 2, "carat_max": 4.99, "I1": 11140, "SI2": 12995, "SI1": 14850, "VS": 16710, "VVS": 18570},
+      {"carat_min": 5, "carat_max": 7.99, "I1": 12810, "SI2": 14945, "SI1": 17080, "VS": 19210, "VVS": 21350},
+      {"carat_min": 8, "carat_max": 9999, "I1": 13930, "SI2": 16255, "SI1": 18570, "VS": 20890, "VVS": 23210}
+    ]
+  }
+]
