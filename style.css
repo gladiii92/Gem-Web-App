@@ -76,20 +76,32 @@ h1 {
   border-left: 5px solid var(--secondary-color);
 }
 
-.gem-note {
-  color: var(--highlight-color);
-  background: #fdebd0;
+/* Alte .gem-note Klasse kann entfernt werden */
+.general-note {
+  color: #d35400;
+  background: #fcefdc;
   padding: 12px;
-  border-radius: 6px;
   margin: 15px 0;
-  font-size: 0.9em;
-  border-left: 4px solid var(--highlight-color);
+  border-left: 4px solid #e67e22;
+  border-radius: 4px;
+  line-height: 1.5;
 }
 
-.general-note, .quality-note {
-  white-space: pre-line;
+.quality-note {
+  color: #27ae60;
+  background: #e8faf3;
+  padding: 12px;
+  margin: 15px 0;
+  border-left: 4px solid #2ecc71;
+  border-radius: 4px;
   line-height: 1.5;
-  margin: 10px 0;
+}
+
+.general-note br,
+.quality-note br {
+  content: "";
+  display: block;
+  margin-bottom: 8px;
 }
 
 .result-box table {
