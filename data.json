@@ -12,6 +12,7 @@
   {
     "id": 2,
     "name": "Tanzanit (Bluish Violet)",
+    "notes": "i.d.R. Immer Heat Treatment (50% Minus wie bei Saphir)",
     "price_ranges": [
       {"carat_min": 1, "carat_max": 1.99, "I1": 270, "SI2": 305, "SI1": 340, "VS": 395, "VVS": 450},
       {"carat_min": 2, "carat_max": 4.99, "I1": 370, "SI2": 415, "SI1": 460, "VS": 540, "VVS": 620},
@@ -43,6 +44,7 @@
   {
     "id": 5,
     "name": "Grossular Garnet/Granat (Yellowish Green)",
+    "notes": "No Treatments, almost all VVS",
     "special": true,
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99, "VVS": 360},
@@ -66,6 +68,7 @@
   {
     "id": 7,
     "name": "Grossular Garnet/Granat (Green)",
+    "notes": "No Treatments, almost all VVS",
     "special": true,
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99, "VVS": 400},
@@ -132,7 +135,8 @@
   },
   {
     "id": 13,
-    "name": "Rubin (Purplish Red / Reddish Purple, Sri Lanka)",
+    "name": "Rubin (Purplish Red / Reddish Purple",
+    "notes": "20% less worth than Red Ruby",
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99, "I1": 140, "SI2": 320, "SI1": 500, "VS": 610, "VVS": 720},
       {"carat_min": 1, "carat_max": 1.99, "I1": 340, "SI2": 765, "SI1": 1190, "VS": 1440, "VVS": 1690},
@@ -177,6 +181,7 @@
   {
     "id": 17,
     "name": "Padparadscha Saphir (Pink-Orange, Sri Lanka)",
+    "notes": "Burma-Version: +30-50%, West-Afrika/Vietnam: -20%",
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99, "I1": 1420, "SI2": 1740, "SI1": 2060, "VS": 2320, "VVS": 2580},
       {"carat_min": 1, "carat_max": 1.99, "I1": 3220, "SI2": 3953, "SI1": 4686, "VS": 5273, "VVS": 5858},
@@ -188,6 +193,7 @@
   {
     "id": 18,
     "name": "Spinell (Orange)",
+    "notes": "Blau & Purple ca. 60% weniger!!! // Burma 30% mehr",
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99, "I1": 360, "SI2": 690, "SI1": 1020, "VS": 1235, "VVS": 1450},
       {"carat_min": 1, "carat_max": 1.99, "I1": 540, "SI2": 1035, "SI1": 1530, "VS": 1875, "VVS": 2220},
@@ -199,6 +205,7 @@
   {
     "id": 19,
     "name": "Spinell (Rot)",
+    "notes": "Burma 30% mehr",
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99, "I1": 480, "SI2": 920, "SI1": 1360, "VS": 1650, "VVS": 1940},
       {"carat_min": 1, "carat_max": 1.99, "I1": 730, "SI2": 1385, "SI1": 2040, "VS": 2475, "VVS": 2910},
@@ -210,6 +217,7 @@
   {
     "id": 20,
     "name": "Saphir (Blau, Sri Lanka)",
+    "notes": "Burma 30-50% mehr!",
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99, "I1": 970, "SI2": 1190, "SI1": 1410, "VS": 1590, "VVS": 1770},
       {"carat_min": 1, "carat_max": 1.99, "I1": 2540, "SI2": 3120, "SI1": 3700, "VS": 4160, "VVS": 4620},
@@ -221,6 +229,7 @@
   {
     "id": 21,
     "name": "Rubin (Red, Sri Lanka)",
+    "notes": "Burma 10x höherer Preis!",
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99, "I1": 920, "SI2": 1075, "SI1": 1230, "VS": 1450, "VVS": 1970},
       {"carat_min": 1, "carat_max": 1.99, "I1": 4190, "SI2": 4850, "SI1": 5510, "VS": 6060, "VVS": 6610},
