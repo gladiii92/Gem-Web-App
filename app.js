@@ -63,7 +63,7 @@ function calculatePrice() {
             document.getElementById('result').innerHTML = `
                 <div class="result-box">
                     <h3>${gem.name}</h3>
-                    ${gem.notes ? `<div class="gem-note">ℹ️ ${gem.notes}</div>` : ''}
+                    ${gem.notes ? `<div class="gem-notes">ℹ️ ${gem.notes}</div>` : ''}
                     <table>
                         <tr><td>Qualität:</td><td>${document.getElementById('quality-select').selectedOptions[0].text}</td></tr>
                         <tr><td>Karat:</td><td>${carat} ct</td></tr>
