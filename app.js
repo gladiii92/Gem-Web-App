@@ -3,11 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const qualitySelect = document.getElementById('quality-select');
 
     const qualityLabels = {
-        'I1': 'Low (I1)',
-        'SI2': 'Mid-Low (SI2)',
-        'SI1': 'Mid (SI1)',
-        'VS': 'Mid-High (VS)',
-        'VVS': 'High (VVS)'
+        'I1':     'Low (I1)',
+        'SI2':    'Mid-Low (SI2)',
+        'SI1':    'Mid (SI1)',
+        'VS':     'Mid-High (VS)',
+        'VVS':    'High (VVS)'
     };
 
     fetch('data.json')
