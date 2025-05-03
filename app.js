@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const gemSelect = document.getElementById('gem-select');
     const qualitySelect = document.getElementById('quality-select');
     
-    // Qualitätsbezeichnungen
     const qualityLabels = {
         'I1': 'Low (I1)',
         'SI2': 'Mid-Low (SI2)',
@@ -14,21 +13,24 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch('data.json')
         .then(response => response.json())
         .then(gems => {
-            // Steinauswahl füllen
-            gems.forEach(gem => {
-                const option = new Option(
-                    `${gem.id}. ${gem.name}${gem.special ? ' (Nur VVS)' : ''}`,
-                    gem.id
-                );
-                gemSelect.add(option);
-            });
+            const maxId = Math.max(...gems.map(g => g.id));
+            
+            for(let id = 1; id <= maxId; id++) {
+                const gem = gems.find(g => g.id === id);
+                if(gem) {
+                    const option = new Option(
+                        `${gem.id}. ${gem.name}${gem.special ? ' (Nur VVS)' : ''}`,
+                        gem.id
+                    );
+                    gemSelect.add(option);
+                }
+            }
 
-            // Qualitätsauswahl aktualisieren
             gemSelect.addEventListener('change', () => {
                 const gem = gems.find(g => g.id === parseInt(gemSelect.value));
                 qualitySelect.innerHTML = '';
-
-                if (gem.special) {
+                
+                if(gem.special) {
                     const option = new Option(qualityLabels['VVS'], 'VVS');
                     qualitySelect.add(option);
                 } else {
@@ -39,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // Initialen Status laden
             gemSelect.dispatchEvent(new Event('change'));
         });
 });
