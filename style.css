@@ -76,7 +76,6 @@ h1 {
   border-left: 5px solid var(--secondary-color);
 }
 
-/* Alte .gem-note Klasse kann entfernt werden */
 .general-note {
   color: #d35400;
   background: #fcefdc;
@@ -143,7 +142,8 @@ h1 {
     padding: 15px;
   }
 
-  .gem-note {
+  .general-note,
+  .quality-note {
     font-size: 0.85em;
     padding: 10px;
   }
