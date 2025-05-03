@@ -86,6 +86,12 @@ h1 {
   border-left: 4px solid var(--highlight-color);
 }
 
+.general-note, .quality-note {
+  white-space: pre-line;
+  line-height: 1.5;
+  margin: 10px 0;
+}
+
 .result-box table {
   width: 100%;
   margin-top: 15px;
