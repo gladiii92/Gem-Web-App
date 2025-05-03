@@ -47,33 +47,35 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function calculatePrice() {
-    const gemId = parseInt(document.getElementById('gem-select').value);
-    const quality = document.getElementById('quality-select').value;
-    const carat = parseFloat(document.getElementById('carat').value);
+  const selectedGem = document.getElementById('gem-select').value;
+  const selectedQuality = document.getElementById('quality-select').value;
+  const carat = parseFloat(document.getElementById('carat').value);
+  const resultBox = document.getElementById('result');
 
-    fetch('data.json')
-        .then(response => response.json())
-        .then(gems => {
-            const gem = gems.find(g => g.id === gemId);
-            const range = gem.price_ranges.find(r =>
-                carat >= r.carat_min && carat <= r.carat_max
-            );
+  // Beispielhafter Zugriff auf deine JSON-Daten
+  const gemData = gemstoneData.find(gem => gem.gem === selectedGem);
+  if (!gemData) return resultBox.innerHTML = 'Kein Edelstein gefunden.';
 
-            const pricePerCarat = gem.special ? range.VVS : range[quality];
-            const totalPrice = pricePerCarat * carat;
+  const qualityData = gemData.clarity.find(q => q.clarity === selectedQuality);
+  if (!qualityData) return resultBox.innerHTML = 'Keine Preisdaten gefunden.';
 
-            document.getElementById('result').innerHTML = `
-                <div class="result-box">
-                    <h3>${gem.name}</h3>
-                    ${gem.notes ? `<div class="gem-notes">ℹ️ ${gem.notes}</div>` : ''}
-                    ${gem.quality_notes ? `<div class="gem-notes">💎 ${gem.quality_notes}</div>` : ''}
-                    <table>
-                        <tr><td>Qualität:</td><td>${document.getElementById('quality-select').selectedOptions[0].text}</td></tr>
-                        <tr><td>Karat:</td><td>${carat} ct</td></tr>
-                        <tr><td>Preis/Kt:</td><td>$${pricePerCarat.toLocaleString()}</td></tr>
-                        <tr class="total-price"><td>Gesamtpreis:</td><td>$${totalPrice.toLocaleString()}</td></tr>
-                    </table>
-                </div>
-            `;
-        });
+  // Preisberechnung (vereinfacht)
+  let price = 0;
+  if (carat >= 5) price = qualityData.price_5_plus;
+  else if (carat >= 3) price = qualityData.price_3_5;
+  else if (carat >= 2) price = qualityData.price_2_3;
+  else price = qualityData.price_1_2;
+
+  const totalPrice = price * carat;
+
+  // Ausgabe inkl. quality_note
+  resultBox.innerHTML = `
+    <div class="quality-note"><strong>Hinweis zur Qualität:</strong><br>${qualityData.quality_note || '–'}</div>
+    <table>
+      <tr><td>Stein:</td><td>${selectedGem}</td></tr>
+      <tr><td>Qualität:</td><td>${selectedQuality}</td></tr>
+      <tr><td>Karat:</td><td>${carat}</td></tr>
+      <tr class="total-price"><td>Preis:</td><td>${totalPrice.toFixed(2)} USD</td></tr>
+    </table>
+  `;
 }
