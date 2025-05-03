@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const gemSelect = document.getElementById('gem-select');
     const qualitySelect = document.getElementById('quality-select');
-    
+
     const qualityLabels = {
         'I1': 'Low (I1)',
         'SI2': 'Mid-Low (SI2)',
@@ -14,10 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(gems => {
             const maxId = Math.max(...gems.map(g => g.id));
-            
-            for(let id = 1; id <= maxId; id++) {
+
+            for (let id = 1; id <= maxId; id++) {
                 const gem = gems.find(g => g.id === id);
-                if(gem) {
+                if (gem) {
                     const option = new Option(
                         `${gem.id}. ${gem.name}${gem.special ? ' (Nur VVS)' : ''}`,
                         gem.id
@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
             gemSelect.addEventListener('change', () => {
                 const gem = gems.find(g => g.id === parseInt(gemSelect.value));
                 qualitySelect.innerHTML = '';
-                
-                if(gem.special) {
+
+                if (gem.special) {
                     const option = new Option(qualityLabels['VVS'], 'VVS');
                     qualitySelect.add(option);
                 } else {
@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
+            // Initiale Auswahl auslösen
             gemSelect.dispatchEvent(new Event('change'));
         });
 });
@@ -54,7 +55,7 @@ function calculatePrice() {
         .then(response => response.json())
         .then(gems => {
             const gem = gems.find(g => g.id === gemId);
-            const range = gem.price_ranges.find(r => 
+            const range = gem.price_ranges.find(r =>
                 carat >= r.carat_min && carat <= r.carat_max
             );
 
@@ -65,6 +66,7 @@ function calculatePrice() {
                 <div class="result-box">
                     <h3>${gem.name}</h3>
                     ${gem.notes ? `<div class="gem-notes">ℹ️ ${gem.notes}</div>` : ''}
+                    ${gem.quality_notes ? `<div class="gem-notes">💎 ${gem.quality_notes}</div>` : ''}
                     <table>
                         <tr><td>Qualität:</td><td>${document.getElementById('quality-select').selectedOptions[0].text}</td></tr>
                         <tr><td>Karat:</td><td>${carat} ct</td></tr>
