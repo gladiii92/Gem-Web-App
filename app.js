@@ -1,65 +1,94 @@
-const gemData = {
-    "Spinell": {
-        "Farben": {
-            "Rot": {
-                "SI2": { "1-2": 150, "2-3": 180, "3-5": 220, "note": "SI2 = noch gute Farbe, leicht sichtbare Einschlüsse" },
-                "SI1": { "1-2": 200, "2-3": 240, "3-5": 280, "note": "SI1 = kräftiger Ton, minimale Einschlüsse" },
-                "VS":  { "1-2": 280, "2-3": 320, "3-5": 380, "note": "VS = sehr gute Klarheit mit schöner Sättigung" },
-                "VVS": { "1-2": 350, "2-3": 420, "3-5": 500, "note": "VVS = perfekte Reinheit und Topfarbe" }
-            }
-        },
-        "note": "Alle Preise pro Karat in € für unbehandelte Spinelle mit Designschliff."
-    }
-};
+let gems = [];
 
-function populateGemSelect() {
+// Initial setup: load gems and populate selectors
+document.addEventListener('DOMContentLoaded', () => {
     const gemSelect = document.getElementById('gem-select');
-    for (let gem in gemData) {
-        const option = document.createElement('option');
-        option.value = gem;
-        option.textContent = gem;
-        gemSelect.appendChild(option);
-    }
-}
+    const qualitySelect = document.getElementById('quality-select');
 
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            gems = data;
+            // Populate gem select
+            data.forEach(gem => {
+                const option = new Option(
+                    `${gem.id}. ${gem.name}${gem.special ? ' (Nur VVS)' : ''}`,
+                    gem.id
+                );
+                gemSelect.add(option);
+            });
+
+            // Trigger update of quality options
+            gemSelect.dispatchEvent(new Event('change'));
+
+            // Update quality options on gem change
+            gemSelect.addEventListener('change', () => {
+                const gemId = parseInt(gemSelect.value, 10);
+                const gem = gems.find(g => g.id === gemId);
+                qualitySelect.innerHTML = '';
+
+                if (gem.special) {
+                    qualitySelect.add(new Option('High (VVS)', 'VVS'));
+                } else {
+                    ['I1','SI2','SI1','VS','VVS'].forEach(key => {
+                        const label = {
+                            'I1': 'Low (I1)',
+                            'SI2': 'Mid-Low (SI2)',
+                            'SI1': 'Mid (SI1)',
+                            'VS': 'Mid-High (VS)',
+                            'VVS': 'High (VVS)'
+                        }[key];
+                        qualitySelect.add(new Option(label, key));
+                    });
+                }
+            });
+        })
+        .catch(err => console.error('Fehler beim Laden der Daten:', err));
+});
+
+// Preis berechnen und Ergebnis anzeigen
 function calculatePrice() {
-    const gem = document.getElementById('gem-select').value;
+    const gemId = parseInt(document.getElementById('gem-select').value, 10);
     const quality = document.getElementById('quality-select').value;
     const carat = parseFloat(document.getElementById('carat').value);
+    const resultBox = document.getElementById('result');
 
-    if (!gem || !quality || isNaN(carat)) {
-        alert("Bitte wähle alle Felder aus und gib ein gültiges Karatgewicht an.");
+    if (isNaN(gemId) || !quality || isNaN(carat)) {
+        resultBox.innerHTML = '<p class="general-note">Bitte Stein, Qualität und Karat korrekt auswählen.</p>';
         return;
     }
 
-    const color = "Rot"; // aktuell fest programmiert
-    const data = gemData[gem]?.Farben?.[color]?.[quality];
-
-    if (!data) {
-        document.getElementById("result").innerHTML = "<p>Keine Preisinformation gefunden.</p>";
+    const gem = gems.find(g => g.id === gemId);
+    if (!gem) {
+        resultBox.innerHTML = '<p class="general-note">Edelstein nicht gefunden.</p>';
         return;
     }
 
-    let pricePerCarat;
-    if (carat <= 2) pricePerCarat = data["1-2"];
-    else if (carat <= 3) pricePerCarat = data["2-3"];
-    else pricePerCarat = data["3-5"];
+    // Finde passende Preisspanne
+    const range = gem.price_ranges.find(r => carat >= r.carat_min && carat <= r.carat_max);
+    if (!range) {
+        resultBox.innerHTML = '<p class="general-note">Keine Preisspanne für dieses Karat.</p>';
+        return;
+    }
 
+    const pricePerCarat = range[quality] || range.VVS;
     const totalPrice = pricePerCarat * carat;
 
-    const resultBox = document.getElementById("result");
+    // Quality Note falls vorhanden
+    const qNote = gem.quality_notes && gem.quality_notes[quality] ?
+                  gem.quality_notes[quality] : null;
+
     resultBox.innerHTML = `
-        <div class="quality-note"><strong>Hinweis zur Qualität:</strong><br>${data.note}</div>
-        <div class="general-note"><strong>Allgemeiner Hinweis:</strong><br>${gemData[gem].note}</div>
-        <table>
-            <tr><td>Stein:</td><td>${gem}</td></tr>
-            <tr><td>Farbe:</td><td>${color}</td></tr>
-            <tr><td>Qualität:</td><td>${quality}</td></tr>
-            <tr><td>Karat:</td><td>${carat}</td></tr>
-            <tr><td>Preis pro Karat:</td><td>${pricePerCarat} €</td></tr>
-            <tr class="total-price"><td>Gesamtpreis:</td><td>${totalPrice.toFixed(2)} €</td></tr>
-        </table>
+        <div class="result-box">
+            <h3>${gem.name}</h3>
+            ${gem.notes ? `<div class="general-note">ℹ️ ${gem.notes}</div>` : ''}
+            ${qNote ? `<div class="quality-note">💎 ${qNote.replace(/\n/g, '<br>')}</div>` : ''}
+            <table>
+                <tr><td>Qualität:</td><td>${quality}</td></tr>
+                <tr><td>Karat:</td><td>${carat.toFixed(2)} ct</td></tr>
+                <tr><td>Preis/ct:</td><td>€${pricePerCarat.toLocaleString()}</td></tr>
+                <tr class="total-price"><td>Gesamtpreis:</td><td>€${totalPrice.toLocaleString()}</td></tr>
+            </table>
+        </div>
     `;
 }
-
-document.addEventListener('DOMContentLoaded', populateGemSelect);
