@@ -1,6 +1,5 @@
 let gems = [];
 
-// Initial setup: load gems and populate selectors
 document.addEventListener('DOMContentLoaded', () => {
     const gemSelect = document.getElementById('gem-select');
     const qualitySelect = document.getElementById('quality-select');
@@ -10,19 +9,18 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             gems = data;
 
-            // 1) Gem-Select mit Optionen befüllen
+            // 1) Edelstein-Dropdown befüllen
             data.forEach(gem => {
                 gemSelect.add(new Option(`${gem.id}. ${gem.name}`, gem.id));
             });
 
-            // 2) Change-Listener hinzufügen (BEVOR wir dispatchen!)
+            // 2) Change-Listener (vor dem ersten dispatch)
             gemSelect.addEventListener('change', () => {
-                console.log('Gem selected: ', gemSelect.value);
                 const gemId = parseInt(gemSelect.value, 10);
                 const gem = gems.find(g => g.id === gemId);
                 qualitySelect.innerHTML = '';
 
-                // Alle Qualitätsstufen hinzufügen
+                // Labels nur einmal definieren
                 const labels = {
                     'I1': 'Low (I1)',
                     'SI2': 'Mid-Low (SI2)',
@@ -30,12 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     'VS': 'Mid-High (VS)',
                     'VVS': 'High (VVS)'
                 };
+
                 ['I1','SI2','SI1','VS','VVS'].forEach(key => {
                     qualitySelect.add(new Option(labels[key], key));
                 });
             });
 
-            // 3) Erst jetzt einmal feuern, damit Qualität direkt angezeigt wird
+            // 3) Ersten Change auslösen, damit die Qualität sofort angezeigt wird
             gemSelect.dispatchEvent(new Event('change'));
         })
         .catch(err => console.error('Fehler beim Laden der Daten:', err));
@@ -72,28 +71,31 @@ function calculatePrice() {
     const totalPrice = pricePerCarat * carat;
     const qNote = gem.quality_notes && gem.quality_notes[quality] ? gem.quality_notes[quality] : null;
 
+    // Formatierung der Preiszahlen
+    const formatUSD = v => '$' + v.toFixed(0);
+
+    // Ergebnis anzeigen
     resultBox.innerHTML = `
         <div class="result-box">
             <h3>${gem.name}</h3>
             ${gem.notes ? `<div class="general-note">ℹ️ ${gem.notes}</div>` : ''}
-            ${qNote ? `<div class="quality-note">💎 ${qNote.replace(/
-/g, '<br>')}</div>` : ''}
+            ${qNote ? `<div class="quality-note">💎 ${qNote.replace(/\\n/g, '<br>')}</div>` : ''}
             <table>
                 <tr><td>Qualität:</td><td>${quality}</td></tr>
                 <tr><td>Karat:</td><td>${carat.toFixed(2)} ct</td></tr>
-                <tr><td>Preis/ct:</td><td>$${pricePerCarat.toFixed(0)}</td></tr>
-                <tr class="total-price"><td>Gesamtpreis:</td><td>$${totalPrice.toFixed(0)}</td></tr>
+                <tr><td>Preis/ct:</td><td>${formatUSD(pricePerCarat)}</td></tr>
+                <tr class="total-price"><td>Gesamtpreis:</td><td>${formatUSD(totalPrice)}</td></tr>
             </table>
         </div>
     `;
 
+    // Bilder anzeigen
     if (gem.images && gem.images[quality]) {
         gem.images[quality].forEach(url => {
             const img = document.createElement('img');
             img.src = url;
             img.alt = `${gem.name} (${quality})`;
             img.classList.add('quality-image');
-
             img.addEventListener('click', () => {
                 const overlay = document.createElement('div');
                 overlay.classList.add('image-overlay');
@@ -101,12 +103,8 @@ function calculatePrice() {
                 largeImg.src = url;
                 overlay.appendChild(largeImg);
                 document.body.appendChild(overlay);
-
-                overlay.addEventListener('click', () => {
-                    overlay.remove();
-                });
+                overlay.addEventListener('click', () => overlay.remove());
             });
-
             imageBox.appendChild(img);
         });
     }
