@@ -75,7 +75,7 @@ function calculatePrice() {
     const totalPrice = pricePerCarat * carat;
 
     // Formatierung in USD
-    const formatUSD = (value) => value.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+    const formatUSD = (value) => '$' + value.toFixed(2);
 
     // Quality Note falls vorhanden
     const qNote = gem.quality_notes && gem.quality_notes[quality] ?
