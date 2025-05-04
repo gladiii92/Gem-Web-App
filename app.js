@@ -102,8 +102,24 @@ function calculatePrice() {
             img.src = url;
             img.alt = `${gem.name} (${quality})`;
             img.classList.add('quality-image');
+            
+            // Klick-Event für das Vergrößern des Bildes
+            img.addEventListener('click', () => {
+                const imageOverlay = document.createElement('div');
+                imageOverlay.classList.add('image-overlay');
+                const enlargedImage = document.createElement('img');
+                enlargedImage.src = img.src;
+                enlargedImage.alt = img.alt;
+                imageOverlay.appendChild(enlargedImage);
+                document.body.appendChild(imageOverlay);
+                
+                // Wenn das Overlay angeklickt wird, schließen
+                imageOverlay.addEventListener('click', () => {
+                    imageOverlay.remove();
+                });
+            });
+
             imageBox.appendChild(img);
         });
     }
 }
-
