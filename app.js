@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             gems = data;
 
+            // Gem Select-Optionen hinzufügen
             data.forEach(gem => {
                 const option = new Option(
                     `${gem.id}. ${gem.name}`,
@@ -17,14 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 gemSelect.add(option);
             });
 
-            gemSelect.dispatchEvent(new Event('change'));
-
+            // Change-Listener hinzufügen **vor** dem initialen Trigger
             gemSelect.addEventListener('change', () => {
                 const gemId = parseInt(gemSelect.value, 10);
                 const gem = gems.find(g => g.id === gemId);
-                const qualitySelect = document.getElementById('quality-select');
                 qualitySelect.innerHTML = '';
 
+                // Alle Qualitätsstufen hinzufügen
                 ['I1','SI2','SI1','VS','VVS'].forEach(key => {
                     const labels = {
                         'I1': 'Low (I1)',
@@ -36,6 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     qualitySelect.add(new Option(labels[key], key));
                 });
             });
+
+            // Initial auslösen, damit Qualität direkt angezeigt wird
+            gemSelect.dispatchEvent(new Event('change'));
         })
         .catch(err => console.error('Fehler beim Laden der Daten:', err));
 });
@@ -75,7 +78,8 @@ function calculatePrice() {
         <div class="result-box">
             <h3>${gem.name}</h3>
             ${gem.notes ? `<div class="general-note">ℹ️ ${gem.notes}</div>` : ''}
-            ${qNote ? `<div class="quality-note">💎 ${qNote.replace(/\n/g, '<br>')}</div>` : ''}
+            ${qNote ? `<div class="quality-note">💎 ${qNote.replace(/
+/g, '<br>')}</div>` : ''}
             <table>
                 <tr><td>Qualität:</td><td>${quality}</td></tr>
                 <tr><td>Karat:</td><td>${carat.toFixed(2)} ct</td></tr>
@@ -92,7 +96,6 @@ function calculatePrice() {
             img.alt = `${gem.name} (${quality})`;
             img.classList.add('quality-image');
 
-            // Klick-Event zum Vergrößern
             img.addEventListener('click', () => {
                 const overlay = document.createElement('div');
                 overlay.classList.add('image-overlay');
