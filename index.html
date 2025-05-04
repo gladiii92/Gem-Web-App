@@ -2,37 +2,32 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Edelstein Preisrechner</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <title>Edelsteinpreis Berechnung</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <div class="container">
-        <h1>💎 Edelsteinpreis Rechner</h1>
+        <h1>Edelsteinpreis Berechnung</h1>
 
-        <div class="form-group">
-            <label>Steinauswahl:</label>
-            <select id="gem-select" class="form-control"></select>
-        </div>
+        <label for="gem-select">Wählen Sie den Edelstein:</label>
+        <select id="gem-select">
+            <!-- Optionen werden dynamisch eingefügt -->
+        </select>
 
-        <div class="form-group">
-            <label>Qualität:</label>
-            <select id="quality-select" class="form-control">
-                <option value="SI2">Low-Mid (SI2)</option>
-                <option value="SI1">Mid (SI1)</option>
-                <option value="VS">Mid-High (VS)</option>
-                <option value="VVS">High (VVS)</option>
-            </select>
-        </div>
+        <label for="quality-select">Qualität auswählen:</label>
+        <select id="quality-select">
+            <!-- Optionen werden dynamisch eingefügt -->
+        </select>
 
-        <div class="form-group">
-            <label>Karat:</label>
-            <input type="number" id="carat" class="form-control" step="0.01" min="0.1" placeholder="z.B. 1.5">
-        </div>
+        <label for="carat">Karat:</label>
+        <input type="number" id="carat" placeholder="Geben Sie das Karat ein" step="0.01" min="0">
 
-        <button class="btn-calculate" onclick="calculatePrice()">Preis berechnen</button>
+        <button onclick="calculatePrice()">Preis berechnen</button>
 
-        <div id="result" class="result-box"></div>
+        <div id="result" class="result"></div>
+        <div id="image-box" class="image-box"></div>
     </div>
 
     <script src="app.js"></script>
