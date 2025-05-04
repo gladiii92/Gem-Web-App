@@ -1,104 +1,101 @@
-/* Allgemeine Gestaltung */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  line-height: 1.6;
+  background-color: #f9f9f9;
 }
 
-.container {
-    width: 80%;
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    text-align: center;
-    color: #333;
-}
-
-label {
-    display: block;
-    margin-top: 10px;
-    font-size: 1.1em;
-    color: #333;
-}
-
-select, input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1em;
+label, select, input, button {
+  display: block;
+  margin-top: 15px;
+  font-size: 1rem;
 }
 
 button {
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2em;
-    cursor: pointer;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-button:hover {
-    background-color: #45a049;
+.result-box {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
-/* Ergebnisbox */
-.result {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #eaf4e7;
-    border-radius: 8px;
-    border: 1px solid #4CAF50;
-}
-
-.result h3 {
-    margin-top: 0;
-}
-
-.general-note {
-    font-style: italic;
-    color: #555;
-}
-
-.quality-note {
-    margin-top: 10px;
-    font-weight: bold;
-    color: #2a9d8f;
+table {
+  width: 100%;
+  margin-top: 10px;
 }
 
 .total-price {
-    font-size: 1.2em;
-    font-weight: bold;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
-/* Bilder der Qualitätsstufen */
 .image-box {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
+.image-box img {
+  max-width: 150px;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Vergrößertes Bild */
+.image-box img.enlarged {
+  transform: scale(2); /* Vergrößert das Bild */
+  z-index: 10; /* Damit das vergrößerte Bild über anderen Elementen liegt */
+  max-width: 500px; /* Maximale Größe des vergrößerten Bildes */
+}
+
+/* Stile für das Vergrößern des Bildes im Overlay */
+.image-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.image-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain; /* Sorgt dafür, dass das Bild im Overlay nicht verzerrt wird */
+}
+
+/* Wenn das Overlay sichtbar wird */
+.image-overlay.active {
+  display: flex;
+}
+
+/* Stile für die Bildanzeige */
 .quality-image {
-    width: 100%;
-    max-width: 250px;
-    margin: 10px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    transition: transform 0.3s ease-in-out;
+  width: 100%;
+  max-width: 250px;
+  margin: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease-in-out;
 }
 
+/* Hover-Effekt für die Bilder */
 .quality-image:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
