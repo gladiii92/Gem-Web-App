@@ -20,22 +20,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Change-Listener hinzufügen **vor** dem initialen Trigger
             gemSelect.addEventListener('change', () => {
-                const gemId = parseInt(gemSelect.value, 10);
-                const gem = gems.find(g => g.id === gemId);
-                qualitySelect.innerHTML = '';
-
-                // Alle Qualitätsstufen hinzufügen
-                ['I1','SI2','SI1','VS','VVS'].forEach(key => {
-                    const labels = {
-                        'I1': 'Low (I1)',
-                        'SI2': 'Mid-Low (SI2)',
-                        'SI1': 'Mid (SI1)',
-                        'VS': 'Mid-High (VS)',
-                        'VVS': 'High (VVS)'
-                    };
-                    qualitySelect.add(new Option(labels[key], key));
-                });
+            console.log('Gem selected: ', gemSelect.value);  // Debugging: Überprüfen, ob die Auswahl korrekt getriggert wird.
+            const gemId = parseInt(gemSelect.value, 10);
+            const gem = gems.find(g => g.id === gemId);
+            qualitySelect.innerHTML = '';
+        
+            // Alle Qualitätsstufen hinzufügen
+            ['I1','SI2','SI1','VS','VVS'].forEach(key => {
+                const labels = {
+                    'I1': 'Low (I1)',
+                    'SI2': 'Mid-Low (SI2)',
+                    'SI1': 'Mid (SI1)',
+                    'VS': 'Mid-High (VS)',
+                    'VVS': 'High (VVS)'
+                };
+                qualitySelect.add(new Option(labels[key], key));
             });
+        });
 
             // Initial auslösen, damit Qualität direkt angezeigt wird
             gemSelect.dispatchEvent(new Event('change'));
