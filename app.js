@@ -1,6 +1,5 @@
 let gems = [];
 
-// Initial setup: load gems and populate selectors
 document.addEventListener('DOMContentLoaded', () => {
     const gemSelect = document.getElementById('gem-select');
     const qualitySelect = document.getElementById('quality-select');
@@ -9,50 +8,47 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             gems = data;
-            // Populate gem select
+
             data.forEach(gem => {
                 const option = new Option(
-                    `${gem.id}. ${gem.name}${gem.special ? ' (Nur VVS)' : ''}`,
+                    `${gem.id}. ${gem.name}`,
                     gem.id
                 );
                 gemSelect.add(option);
             });
 
-            // Trigger update of quality options
             gemSelect.dispatchEvent(new Event('change'));
 
-            // Update quality options on gem change
             gemSelect.addEventListener('change', () => {
                 const gemId = parseInt(gemSelect.value, 10);
                 const gem = gems.find(g => g.id === gemId);
+                const qualitySelect = document.getElementById('quality-select');
                 qualitySelect.innerHTML = '';
 
-                if (gem.special) {
-                    qualitySelect.add(new Option('High (VVS)', 'VVS'));
-                } else {
-                    ['I1','SI2','SI1','VS','VVS'].forEach(key => {
-                        const label = {
-                            'I1': 'Low (I1)',
-                            'SI2': 'Mid-Low (SI2)',
-                            'SI1': 'Mid (SI1)',
-                            'VS': 'Mid-High (VS)',
-                            'VVS': 'High (VVS)'
-                        }[key];
-                        qualitySelect.add(new Option(label, key));
-                    });
-                }
+                ['I1','SI2','SI1','VS','VVS'].forEach(key => {
+                    const labels = {
+                        'I1': 'Low (I1)',
+                        'SI2': 'Mid-Low (SI2)',
+                        'SI1': 'Mid (SI1)',
+                        'VS': 'Mid-High (VS)',
+                        'VVS': 'High (VVS)'
+                    };
+                    qualitySelect.add(new Option(labels[key], key));
+                });
             });
         })
         .catch(err => console.error('Fehler beim Laden der Daten:', err));
 });
 
-// Preis berechnen und Ergebnis anzeigen
 function calculatePrice() {
     const gemId = parseInt(document.getElementById('gem-select').value, 10);
     const quality = document.getElementById('quality-select').value;
     const carat = parseFloat(document.getElementById('carat').value);
     const resultBox = document.getElementById('result');
-    const imageBox = document.getElementById('image-box'); // Box für die Bilder
+    const imageBox = document.getElementById('image-box');
+
+    resultBox.innerHTML = '';
+    imageBox.innerHTML = '';
 
     if (isNaN(gemId) || !quality || isNaN(carat)) {
         resultBox.innerHTML = '<p class="general-note">Bitte Stein, Qualität und Karat korrekt auswählen.</p>';
@@ -65,7 +61,6 @@ function calculatePrice() {
         return;
     }
 
-    // Finde passende Preisspanne
     const range = gem.price_ranges.find(r => carat >= r.carat_min && carat <= r.carat_max);
     if (!range) {
         resultBox.innerHTML = '<p class="general-note">Keine Preisspanne für dieses Karat.</p>';
@@ -74,11 +69,8 @@ function calculatePrice() {
 
     const pricePerCarat = range[quality] || range.VVS;
     const totalPrice = pricePerCarat * carat;
-
-    // Quality Note falls vorhanden
     const qNote = gem.quality_notes && gem.quality_notes[quality] ? gem.quality_notes[quality] : null;
 
-    // Anzeige des Ergebnisses im Ergebnisbereich
     resultBox.innerHTML = `
         <div class="result-box">
             <h3>${gem.name}</h3>
@@ -87,14 +79,11 @@ function calculatePrice() {
             <table>
                 <tr><td>Qualität:</td><td>${quality}</td></tr>
                 <tr><td>Karat:</td><td>${carat.toFixed(2)} ct</td></tr>
-                <tr><td>Preis/ct:</td><td>$${pricePerCarat.toLocaleString()}</td></tr>
-                <tr class="total-price"><td>Gesamtpreis:</td><td>$${totalPrice.toLocaleString()}</td></tr>
+                <tr><td>Preis/ct:</td><td>$${pricePerCarat.toFixed(0)}</td></tr>
+                <tr class="total-price"><td>Gesamtpreis:</td><td>$${totalPrice.toFixed(0)}</td></tr>
             </table>
         </div>
     `;
-
-    // Bilder anzeigen, wenn vorhanden
-    imageBox.innerHTML = ''; // Leeren der Box, bevor neue Bilder angezeigt werden
 
     if (gem.images && gem.images[quality]) {
         gem.images[quality].forEach(url => {
@@ -102,20 +91,18 @@ function calculatePrice() {
             img.src = url;
             img.alt = `${gem.name} (${quality})`;
             img.classList.add('quality-image');
-            
-            // Klick-Event für das Vergrößern des Bildes
+
+            // Klick-Event zum Vergrößern
             img.addEventListener('click', () => {
-                const imageOverlay = document.createElement('div');
-                imageOverlay.classList.add('image-overlay');
-                const enlargedImage = document.createElement('img');
-                enlargedImage.src = img.src;
-                enlargedImage.alt = img.alt;
-                imageOverlay.appendChild(enlargedImage);
-                document.body.appendChild(imageOverlay);
-                
-                // Wenn das Overlay angeklickt wird, schließen
-                imageOverlay.addEventListener('click', () => {
-                    imageOverlay.remove();
+                const overlay = document.createElement('div');
+                overlay.classList.add('image-overlay');
+                const largeImg = document.createElement('img');
+                largeImg.src = url;
+                overlay.appendChild(largeImg);
+                document.body.appendChild(overlay);
+
+                overlay.addEventListener('click', () => {
+                    overlay.remove();
                 });
             });
 
