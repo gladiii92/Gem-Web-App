@@ -52,6 +52,7 @@ function calculatePrice() {
     const quality = document.getElementById('quality-select').value;
     const carat = parseFloat(document.getElementById('carat').value);
     const resultBox = document.getElementById('result');
+    const imageBox = document.getElementById('image-box'); // Box für die Bilder
 
     if (isNaN(gemId) || !quality || isNaN(carat)) {
         resultBox.innerHTML = '<p class="general-note">Bitte Stein, Qualität und Karat korrekt auswählen.</p>';
@@ -74,13 +75,10 @@ function calculatePrice() {
     const pricePerCarat = range[quality] || range.VVS;
     const totalPrice = pricePerCarat * carat;
 
-    // Formatierung in USD
-    const formatUSD = (value) => '$' + value.toFixed(0);
-
     // Quality Note falls vorhanden
-    const qNote = gem.quality_notes && gem.quality_notes[quality] ?
-                  gem.quality_notes[quality] : null;
+    const qNote = gem.quality_notes && gem.quality_notes[quality] ? gem.quality_notes[quality] : null;
 
+    // Anzeige des Ergebnisses im Ergebnisbereich
     resultBox.innerHTML = `
         <div class="result-box">
             <h3>${gem.name}</h3>
@@ -89,9 +87,23 @@ function calculatePrice() {
             <table>
                 <tr><td>Qualität:</td><td>${quality}</td></tr>
                 <tr><td>Karat:</td><td>${carat.toFixed(2)} ct</td></tr>
-                <tr><td>Preis/ct:</td><td>${formatUSD(pricePerCarat)}</td></tr>
-                <tr class="total-price"><td>Gesamtpreis:</td><td>${formatUSD(totalPrice)}</td></tr>
+                <tr><td>Preis/ct:</td><td>$${pricePerCarat.toLocaleString()}</td></tr>
+                <tr class="total-price"><td>Gesamtpreis:</td><td>$${totalPrice.toLocaleString()}</td></tr>
             </table>
         </div>
     `;
+
+    // Bilder anzeigen, wenn vorhanden
+    imageBox.innerHTML = ''; // Leeren der Box, bevor neue Bilder angezeigt werden
+
+    if (gem.images && gem.images[quality]) {
+        gem.images[quality].forEach(url => {
+            const img = document.createElement('img');
+            img.src = url;
+            img.alt = `${gem.name} (${quality})`;
+            img.classList.add('quality-image');
+            imageBox.appendChild(img);
+        });
+    }
 }
+
