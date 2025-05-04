@@ -86,8 +86,8 @@ function calculatePrice() {
             <table>
                 <tr><td>Qualität:</td><td>${quality}</td></tr>
                 <tr><td>Karat:</td><td>${carat.toFixed(2)} ct</td></tr>
-                <tr><td>Preis/ct:</td><td>€${pricePerCarat.toLocaleString()}</td></tr>
-                <tr class="total-price"><td>Gesamtpreis:</td><td>€${totalPrice.toLocaleString()}</td></tr>
+                <tr><td>Preis/ct:</td><td>$${pricePerCarat.toLocaleString()}</td></tr>
+                <tr class="total-price"><td>Gesamtpreis:</td><td>$${totalPrice.toLocaleString()}</td></tr>
             </table>
         </div>
     `;
