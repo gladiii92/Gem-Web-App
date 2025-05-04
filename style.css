@@ -1,143 +1,104 @@
-:root {
-  --primary-color: #2c3e50;
-  --secondary-color: #3498db;
-  --highlight-color: #e67e22;
-  --background-color: #ecf0f1;
-  --text-color: #333;
-}
-
+/* Allgemeine Gestaltung */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 20px;
-  background-color: var(--background-color);
-  color: var(--text-color);
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 80%;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-  color: var(--secondary-color);
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 2.5em;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 15px;
+    text-align: center;
+    color: #333;
 }
 
-.form-group {
-  margin-bottom: 25px;
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #333;
 }
 
-.form-control {
-  width: 100%;
-  padding: 12px;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  font-size: 16px;
-  transition: border-color 0.3s;
+select, input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
 }
 
-.form-control:focus {
-  border-color: var(--secondary-color);
-  outline: none;
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
 }
 
-.btn-calculate {
-  width: 100%;
-  background: linear-gradient(135deg, var(--secondary-color), #2980b9);
-  color: white;
-  padding: 15px;
-  font-size: 18px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+button:hover {
+    background-color: #45a049;
 }
 
-.btn-calculate:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(52,152,219,0.4);
+/* Ergebnisbox */
+.result {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #eaf4e7;
+    border-radius: 8px;
+    border: 1px solid #4CAF50;
 }
 
-.result-box {
-  margin-top: 30px;
-  padding: 20px;
-  background: #f8f9fa;
-  border-radius: 8px;
-  border-left: 5px solid var(--secondary-color);
+.result h3 {
+    margin-top: 0;
 }
 
 .general-note {
-  color: #d35400;
-  background: #fcefdc;
-  padding: 12px;
-  margin: 15px 0;
-  border-left: 4px solid #e67e22;
-  border-radius: 4px;
-  line-height: 1.5;
+    font-style: italic;
+    color: #555;
 }
 
 .quality-note {
-  color: #27ae60;
-  background: #e8faf3;
-  padding: 12px;
-  margin: 15px 0;
-  border-left: 4px solid #2ecc71;
-  border-radius: 4px;
-  line-height: 1.5;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #2a9d8f;
 }
 
-.result-box table {
-  width: 100%;
-  margin-top: 15px;
-  border-collapse: collapse;
+.total-price {
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
-.result-box td {
-  padding: 10px;
-  border-bottom: 1px solid #eee;
+/* Bilder der Qualitätsstufen */
+.image-box {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.result-box tr:last-child td {
-  border-bottom: none;
+.quality-image {
+    width: 100%;
+    max-width: 250px;
+    margin: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease-in-out;
 }
 
-.total-price td {
-  font-weight: bold;
-  color: var(--secondary-color);
-  font-size: 1.1em;
-  padding-top: 15px;
-}
-
-@media (max-width: 600px) {
-  .container {
-    padding: 20px;
-  }
-
-  h1 {
-    font-size: 2em;
-  }
-
-  .form-control {
-    font-size: 14px;
-  }
-
-  .result-box {
-    padding: 15px;
-  }
-
-  .general-note,
-  .quality-note {
-    font-size: 0.85em;
-    padding: 10px;
-  }
+.quality-image:hover {
+    transform: scale(1.05);
 }
