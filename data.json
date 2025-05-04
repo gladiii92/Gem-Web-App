@@ -136,7 +136,7 @@
   {
     "id": 13,
     "name": "Rubin (Purplish Red / Reddish Purple)",
-    "notes": "20% less worth than Red Ruby",
+    "notes": "Reddish Purple 20% less prices",
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99, "I1": 140, "SI2": 320, "SI1": 500, "VS": 610, "VVS": 720},
       {"carat_min": 1, "carat_max": 1.99, "I1": 340, "SI2": 765, "SI1": 1190, "VS": 1440, "VVS": 1690},
