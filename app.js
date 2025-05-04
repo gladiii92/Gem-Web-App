@@ -98,7 +98,7 @@ function calculatePrice() {
             img.classList.add('quality-image');
             img.addEventListener('click', () => {
                 const overlay = document.createElement('div');
-                overlay.classList.add('image-overlay');
+                overlay.classList.add('image-overlay', 'active');
                 const largeImg = document.createElement('img');
                 largeImg.src = url;
                 overlay.appendChild(largeImg);
