@@ -3,33 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edelsteinpreis Berechnung</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Edelstein Preisrechner</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="container">
-        <h1>Edelsteinpreis Berechnung</h1>
+        <h1>Edelstein Preisrechner</h1>
 
-        <label for="gem-select">Wählen Sie den Edelstein:</label>
-        <select id="gem-select">
-            <!-- Optionen werden dynamisch eingefügt -->
-        </select>
+        <div class="form-group">
+            <label for="gem-select">Edelstein:</label>
+            <select id="gem-select" class="form-control"></select>
+        </div>
 
-        <label for="quality-select">Qualität auswählen:</label>
-        <select id="quality-select">
-            <!-- Optionen werden dynamisch eingefügt -->
-        </select>
+        <div class="form-group">
+            <label for="quality-select">Qualität:</label>
+            <select id="quality-select" class="form-control"></select>
+        </div>
 
-        <label for="carat">Karat:</label>
-        <input type="number" id="carat" placeholder="Geben Sie das Karat ein" step="0.01" min="0">
+        <div class="form-group">
+            <label for="carat">Karat:</label>
+            <input type="number" id="carat" class="form-control" step="0.01" placeholder="z. B. 1.5">
+        </div>
 
-        <button onclick="calculatePrice()">Preis berechnen</button>
+        <button class="btn-calculate" onclick="calculatePrice()">Preis berechnen</button>
 
-        <div id="result" class="result"></div>
+        <div id="result"></div>
         <div id="image-box" class="image-box"></div>
     </div>
 
-    <script src="app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
