@@ -1,43 +1,124 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --highlight-color: #e67e22;
+    --background-color: #ecf0f1;
+    --text-color: #333;
+}
+  
 body {
-  font-family: Arial, sans-serif;
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 20px;
-  line-height: 1.6;
-  background-color: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
-
-label, select, input, button {
-  display: block;
-  margin-top: 15px;
-  font-size: 1rem;
+  
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
-
-button {
-  margin-top: 20px;
-  padding: 10px;
-  font-size: 1rem;
-  cursor: pointer;
+  
+h1 {
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
 }
-
+  
+.form-group {
+    margin-bottom: 25px;
+}
+  
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+  
+.form-control:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+  
+.btn-calculate {
+    width: 100%;
+    background: linear-gradient(135deg, var(--secondary-color), #2980b9);
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+  
+.btn-calculate:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52,152,219,0.4);
+}
+  
 .result-box {
-  margin-top: 20px;
-  padding: 15px;
-  background-color: #ffffff;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 5px solid var(--secondary-color);
 }
-
-table {
-  width: 100%;
-  margin-top: 10px;
+  
+.general-note {
+    color: #d35400;
+    background: #fcefdc;
+    padding: 12px;
+    margin: 15px 0;
+    border-left: 4px solid #e67e22;
+    border-radius: 4px;
+    line-height: 1.5;
 }
-
-.total-price {
-  font-weight: bold;
-  font-size: 1.1rem;
+  
+.quality-note {
+    color: #27ae60;
+    background: #e8faf3;
+    padding: 12px;
+    margin: 15px 0;
+    border-left: 4px solid #2ecc71;
+    border-radius: 4px;
+    line-height: 1.5;
 }
-
+  
+.result-box table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+  
+.result-box td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+  
+.result-box tr:last-child td {
+    border-bottom: none;
+}
+  
+.total-price td {
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-size: 1.1em;
+    padding-top: 15px;
+}
+  
+/* Bilder */
 .image-box {
   margin-top: 20px;
   display: flex;
@@ -53,14 +134,7 @@ table {
   transition: transform 0.3s ease-in-out;
 }
 
-/* Vergrößertes Bild */
-.image-box img.enlarged {
-  transform: scale(2); /* Vergrößert das Bild */
-  z-index: 10; /* Damit das vergrößerte Bild über anderen Elementen liegt */
-  max-width: 500px; /* Maximale Größe des vergrößerten Bildes */
-}
-
-/* Stile für das Vergrößern des Bildes im Overlay */
+/* Overlay */
 .image-overlay {
   display: none;
   position: fixed;
@@ -74,28 +148,12 @@ table {
   z-index: 1000;
 }
 
-.image-overlay img {
-  max-width: 90%;
-  max-height: 90%;
-  object-fit: contain; /* Sorgt dafür, dass das Bild im Overlay nicht verzerrt wird */
-}
-
-/* Wenn das Overlay sichtbar wird */
 .image-overlay.active {
   display: flex;
 }
 
-/* Stile für die Bildanzeige */
-.quality-image {
-  width: 100%;
-  max-width: 250px;
-  margin: 10px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  transition: transform 0.3s ease-in-out;
-}
-
-/* Hover-Effekt für die Bilder */
-.quality-image:hover {
-  transform: scale(1.05);
+.image-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
 }
