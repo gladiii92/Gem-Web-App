@@ -243,7 +243,24 @@
       {"carat_min": 2, "carat_max": 4.99, "I1": 4400, "SI2": 5400, "SI1": 6400, "VS": 7195, "VVS": 7990},
       {"carat_min": 5, "carat_max": 7.99, "I1": 9660, "SI2": 11855, "SI1": 14050, "VS": 15805, "VVS": 17560},
       {"carat_min": 8, "carat_max": 9999, "I1": 14730, "SI2": 18075, "SI1": 21420, "VS": 24095, "VVS": 26780}
-    ]
+    ],
+    "images": {
+      "I1": [
+        "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/2780000-2784999/2780191/871d675d-922d-4cb6-82a6-c4472f450649.jpg"
+        ],
+      "SI2": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Sapphire_SI2_example.jpg/800px-Sapphire_SI2_example.jpg"
+        ],
+      "SI1": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Sapphire_gem.JPG/800px-Sapphire_gem.JPG"
+        ],
+      "VS": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Sapphire_VS_example.jpg/800px-Sapphire_VS_example.jpg"
+        ],
+      "VVS": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Sapphire%2C_Ceylon%2C_Sri_Lanka.jpg/800px-Sapphire%2C_Ceylon%2C_Sri_Lanka.jpg"
+        ]
+      }
   },
   {
     "id": 22,
