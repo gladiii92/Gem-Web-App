@@ -1,5 +1,6 @@
 let gems = [];
 
+// Initial setup: load gems and populate selectors
 document.addEventListener('DOMContentLoaded', () => {
     const gemSelect = document.getElementById('gem-select');
     const qualitySelect = document.getElementById('quality-select');
@@ -9,24 +10,19 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             gems = data;
 
-            // Gem Select-Optionen hinzufügen
+            // 1) Gem-Select mit Optionen befüllen
             data.forEach(gem => {
-                const option = new Option(
-                    `${gem.id}. ${gem.name}`,
-                    gem.id
-                );
-                gemSelect.add(option);
+                gemSelect.add(new Option(`${gem.id}. ${gem.name}`, gem.id));
             });
 
-            // Change-Listener hinzufügen **vor** dem initialen Trigger
+            // 2) Change-Listener hinzufügen (BEVOR wir dispatchen!)
             gemSelect.addEventListener('change', () => {
-            console.log('Gem selected: ', gemSelect.value);  // Debugging: Überprüfen, ob die Auswahl korrekt getriggert wird.
-            const gemId = parseInt(gemSelect.value, 10);
-            const gem = gems.find(g => g.id === gemId);
-            qualitySelect.innerHTML = '';
-        
-            // Alle Qualitätsstufen hinzufügen
-            ['I1','SI2','SI1','VS','VVS'].forEach(key => {
+                console.log('Gem selected: ', gemSelect.value);
+                const gemId = parseInt(gemSelect.value, 10);
+                const gem = gems.find(g => g.id === gemId);
+                qualitySelect.innerHTML = '';
+
+                // Alle Qualitätsstufen hinzufügen
                 const labels = {
                     'I1': 'Low (I1)',
                     'SI2': 'Mid-Low (SI2)',
@@ -34,11 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     'VS': 'Mid-High (VS)',
                     'VVS': 'High (VVS)'
                 };
-                qualitySelect.add(new Option(labels[key], key));
+                ['I1','SI2','SI1','VS','VVS'].forEach(key => {
+                    qualitySelect.add(new Option(labels[key], key));
+                });
             });
-        });
 
-            // Initial auslösen, damit Qualität direkt angezeigt wird
+            // 3) Erst jetzt einmal feuern, damit Qualität direkt angezeigt wird
             gemSelect.dispatchEvent(new Event('change'));
         })
         .catch(err => console.error('Fehler beim Laden der Daten:', err));
