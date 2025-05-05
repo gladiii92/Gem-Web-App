@@ -9,18 +9,17 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             gems = data;
 
-            // 1) Edelstein-Dropdown befüllen
+            // Edelstein-Dropdown befüllen
             data.forEach(gem => {
                 gemSelect.add(new Option(`${gem.id}. ${gem.name}`, gem.id));
             });
 
-            // 2) Change-Listener (vor dem ersten dispatch)
+            // Change-Listener
             gemSelect.addEventListener('change', () => {
                 const gemId = parseInt(gemSelect.value, 10);
                 const gem = gems.find(g => g.id === gemId);
                 qualitySelect.innerHTML = '';
 
-                // Labels nur einmal definieren
                 const labels = {
                     'I1': 'Low (I1)',
                     'SI2': 'Mid-Low (SI2)',
@@ -34,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
 
-            // 3) Ersten Change auslösen, damit die Qualität sofort angezeigt wird
             gemSelect.dispatchEvent(new Event('change'));
         })
         .catch(err => console.error('Fehler beim Laden der Daten:', err));
@@ -67,30 +65,33 @@ function calculatePrice() {
         return;
     }
 
-    const pricePerCarat = range[quality] || range.VVS;
-    const totalPrice = pricePerCarat * carat;
-    const qNote = gem.quality_notes && gem.quality_notes[quality] ? gem.quality_notes[quality] : null;
+    // Range-String splitten und in Zahlen umwandeln
+    const [minStr, maxStr] = (range[quality] || range.VVS).split('-');
+    const minPerCarat = Number(minStr);
+    const maxPerCarat = Number(maxStr);
+    const minTotal = Math.round(minPerCarat * carat);
+    const maxTotal = Math.round(maxPerCarat * carat);
 
-    // Formatierung der Preiszahlen
-    const formatUSD = v => '$' + v.toFixed(0);
+    const qNote = gem.quality_notes?.[quality] || null;
 
-    // Ergebnis anzeigen
+    // Ergebnis anzeigen (Min–Max)
     resultBox.innerHTML = `
         <div class="result-box">
             <h3>${gem.name}</h3>
             ${gem.notes ? `<div class="general-note">ℹ️ ${gem.notes}</div>` : ''}
-            ${qNote ? `<div class="quality-note">💎 ${qNote.replace(/\\n/g, '<br>')}</div>` : ''}
+            ${qNote ? `<div class="quality-note">💎 ${qNote.replace(/
+/g, '<br>')}</div>` : ''}
             <table>
                 <tr><td>Qualität:</td><td>${quality}</td></tr>
                 <tr><td>Karat:</td><td>${carat.toFixed(2)} ct</td></tr>
-                <tr><td>Preis/ct:</td><td>${formatUSD(pricePerCarat)}</td></tr>
-                <tr class="total-price"><td>Gesamtpreis:</td><td>${formatUSD(totalPrice)}</td></tr>
+                <tr><td>Preis/ct:</td><td>$${minPerCarat}–$${maxPerCarat}</td></tr>
+                <tr class="total-price"><td>Gesamtpreis:</td><td>$${minTotal}–$${maxTotal}</td></tr>
             </table>
         </div>
     `;
 
     // Bilder anzeigen
-    if (gem.images && gem.images[quality]) {
+    if (gem.images?.[quality]) {
         gem.images[quality].forEach(url => {
             const img = document.createElement('img');
             img.src = url;
