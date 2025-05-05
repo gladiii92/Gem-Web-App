@@ -79,7 +79,20 @@
     ]
   },
   {
-    "id": 8,
+  "id": 8,
+  "name": "Grossular Garnet/Granat (Mandarin/Orange)",
+  "notes": "No Treatments, almost all VVS - Deep Orange with excellent clarity",
+  "special": true,
+  "price_ranges": [
+    {"carat_min": 0.1, "carat_max": 0.99, "VVS": "500-850"},
+    {"carat_min": 1, "carat_max": 1.99, "VVS": "600-1000"},
+    {"carat_min": 2, "carat_max": 4.99, "VVS": "1300-2200"},
+    {"carat_min": 5, "carat_max": 7.99, "VVS": "1800-2900"},
+    {"carat_min": 8, "carat_max": 9999, "VVS": "2600-4000"}
+  ]
+  },
+  {
+    "id": 9,
     "name": "Saphir (Gelb, Sri Lanka)",
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99, "I1": "170-290", "SI2": "210-355", "SI1": "250-420", "VS": "290-475", "VVS": "320-530"},
@@ -90,7 +103,7 @@
     ]
   },
   {
-    "id": 9,
+    "id": 10,
     "name": "Demantoid Garnet/Granat (Yellowish Green)",
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99, "I1": "170-290", "SI2": "180-302", "SI1": "200-330", "VS": "210-355", "VVS": "230-380"},
@@ -101,7 +114,7 @@
     ]
   },
   {
-    "id": 10,
+    "id": 11,
     "name": "Tsavorit Garnet/Granat (Green)",
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99, "I1": "190-310", "SI2": "220-360", "SI1": "250-410", "VS": "280-460", "VVS": "310-510"},
@@ -112,7 +125,7 @@
     ]
   },
   {
-    "id": 11,
+    "id": 12,
     "name": "Demantoid Garnet/Granat (Green)",
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99, "I1": "310-520", "SI2": "330-555", "SI1": "350-590", "VS": "390-645", "VVS": "420-700"},
@@ -123,7 +136,7 @@
     ]
   },
   {
-    "id": 12,
+    "id": 13,
     "name": "Saphir (Grün, Sri Lanka)",
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99, "I1": "700-1170", "SI2": "860-1435", "SI1": "1020-1700", "VS": "1150-1910", "VVS": "1270-2120"},
@@ -134,7 +147,7 @@
     ]
   },
   {
-    "id": 13,
+    "id": 14,
     "name": "Rubin (Purplish Red / Reddish Purple)",
     "notes": "Reddish Purple 20% lower value",
     "price_ranges": [
@@ -146,7 +159,7 @@
     ]
   },
   {
-    "id": 14,
+    "id": 15,
     "name": "Saphir (Lila, Sri Lanka)",
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99, "I1": "380-640", "SI2": "470-790", "SI1": "560-940", "VS": "630-1055", "VVS": "700-1170"},
@@ -157,7 +170,7 @@
     ]
   },
   {
-    "id": 15,
+    "id": 16,
     "name": "Saphir (Pink, Sri Lanka)",
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99, "I1": "470-780", "SI2": "570-955", "SI1": "680-1130", "VS": "760-1270", "VVS": "850-1410"},
@@ -168,7 +181,7 @@
     ]
   },
   {
-    "id": 16,
+    "id": 17,
     "name": "Alexandrit (Yellow/Green - Red/Orange)",
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99, "I1": "140-240", "SI2": "320-540", "SI1": "500-840", "VS": "620-1025", "VVS": "730-1210"},
@@ -179,7 +192,7 @@
     ]
   },
   {
-    "id": 17,
+    "id": 18,
     "name": "Padparadscha Saphir (Pink-Orange, Sri Lanka)",
     "notes": "Burma-Version: +30-50%, West-Afrika/Vietnam: -20%",
     "price_ranges": [
@@ -191,7 +204,7 @@
     ]
   },
   {
-    "id": 18,
+    "id": 19,
     "name": "Spinell (Orange)",
     "notes": "Blau & Purple ca. 25% weniger!!! // Burma 30% mehr",
     "price_ranges": [
@@ -203,7 +216,7 @@
     ]
   },
   {
-    "id": 19,
+    "id": 20,
     "name": "Smaragd (Grün, Overall)",
     "notes": "i.d.R immer oiled! // not oiled 3-5x more!!! Kolumbien 25% mehr! // Blueish-Green 10% less",
     "price_ranges": [
@@ -215,7 +228,7 @@
     ]
   },
   {
-    "id": 20,
+    "id": 21,
     "name": "Spinell (Rot)",
     "notes": "Burma 30% mehr",
     "price_ranges": [
@@ -227,7 +240,7 @@
     ]
   },
   {
-    "id": 21,
+    "id": 22,
     "name": "Saphir (Blau, Sri Lanka)",
     "notes": "Burma 30-50% mehr!",
     "quality_notes": {
@@ -264,7 +277,7 @@
       }
   },
   {
-    "id": 22,
+    "id": 23,
     "name": "Rubin (Red, Sri Lanka)",
     "notes": "Burma 10x höherer Preis!",
     "price_ranges": [
@@ -276,7 +289,7 @@
     ]
   },
   {
-    "id": 23,
+    "id": 24,
     "name": "Paraiba Tourmaline (Bluish Green)",
     "price_ranges": [
       {"carat_min": 1,   "carat_max": 1.99,   "I1": "10940-18230","SI2": "12760-21270","SI1": "14590-24310","VS": "16040-26740","VVS": "18230-30380"},
@@ -286,7 +299,7 @@
     ]
   },
   {
-    "id": 24,
+    "id": 25,
     "name": "Alexandrit (Blue/Green - Purple/Red)",
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99,   "I1": "580-970",  "SI2": "1310-2175","SI1": "2030-3380","VS": "2460-4100","VVS": "2890-4820"},
@@ -297,7 +310,7 @@
     ]
   },
   {
-    "id": 25,
+    "id": 26,
     "name": "Paraiba Tourmaline (Greenish Blue)",
     "price_ranges": [
       {"carat_min": 1,   "carat_max": 1.99,   "I1": "6020-10030","SI2": "7010-11685","SI1": "8020-13370","VS": "9020-15040","VVS": "10030-16710"},
