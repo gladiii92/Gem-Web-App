@@ -160,7 +160,7 @@
   {
     "id": 15,
     "name": "Spinell (Blau/Purple)",
-    "notes": ""Burma 30% mehr",",
+    "notes": "Burma 30% mehr",
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99, "I1": "160-270", "SI2": "310-520", "SI1": "460-770", "VS": "560-930", "VVS": "650-1090"},
       {"carat_min": 1, "carat_max": 1.99, "I1": "240-410", "SI2": "460-780", "SI1": "690-1150", "VS": "850-1410", "VVS": "1000-1670"},
