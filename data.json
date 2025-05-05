@@ -44,14 +44,13 @@
   {
     "id": 5,
     "name": "Grossular Garnet/Granat (Yellowish Green)",
-    "notes": "No Treatments, almost all VVS",
-    "special": true,
+    "notes": "No Treatments normally",
     "price_ranges": [
-      {"carat_min": 0.1, "carat_max": 0.99, "VVS": "220-360"},
-      {"carat_min": 1, "carat_max": 1.99, "VVS": "260-430"},
-      {"carat_min": 2, "carat_max": 4.99, "VVS": "790-1320"},
-      {"carat_min": 5, "carat_max": 7.99, "VVS": "1200-1990"},
-      {"carat_min": 8, "carat_max": 9999, "VVS": "1680-2800"}
+      {"carat_min": 0.1, "carat_max": 0.99, "I1": "140-230", "SI2": "170-270", "SI1": "220-360", "VS": "250-400", "VVS": "280-440"},
+      {"carat_min": 1, "carat_max": 1.99, "I1": "160-260", "SI2": "190-300", "SI1": "240-380", "VS": "270-430", "VVS": "300-480"},
+      {"carat_min": 2, "carat_max": 4.99, "I1": "470-790", "SI2": "560-950", "SI1": "680-1150", "VS": "750-1300", "VVS": "850-1420"},
+      {"carat_min": 5, "carat_max": 7.99, "I1": "700-1150", "SI2": "830-1400", "SI1": "970-1600", "VS": "1100-1800", "VVS": "1200-2000"},
+      {"carat_min": 8, "carat_max": 9999, "I1": "1000-1650", "SI2": "1200-2000", "SI1": "1400-2300", "VS": "1500-2400", "VVS": "1600-2600"}
     ]
   },
   {
@@ -67,32 +66,6 @@
   },
   {
     "id": 7,
-    "name": "Grossular Garnet/Granat (Green)",
-    "notes": "No Treatments, almost all VVS",
-    "special": true,
-    "price_ranges": [
-      {"carat_min": 0.1, "carat_max": 0.99, "VVS": "240-400"},
-      {"carat_min": 1, "carat_max": 1.99, "VVS": "290-490"},
-      {"carat_min": 2, "carat_max": 4.99, "VVS": "910-1520"},
-      {"carat_min": 5, "carat_max": 7.99, "VVS": "1370-2280"},
-      {"carat_min": 8, "carat_max": 9999, "VVS": "2040-3400"}
-    ]
-  },
-  {
-  "id": 8,
-  "name": "Grossular Garnet/Granat (Mandarin/Orange)",
-  "notes": "No Treatments, almost all VVS - Deep Orange with excellent clarity",
-  "special": true,
-  "price_ranges": [
-    {"carat_min": 0.1, "carat_max": 0.99, "VVS": "500-850"},
-    {"carat_min": 1, "carat_max": 1.99, "VVS": "600-1000"},
-    {"carat_min": 2, "carat_max": 4.99, "VVS": "1300-2200"},
-    {"carat_min": 5, "carat_max": 7.99, "VVS": "1800-2900"},
-    {"carat_min": 8, "carat_max": 9999, "VVS": "2600-4000"}
-  ]
-  },
-  {
-    "id": 9,
     "name": "Saphir (Gelb, Sri Lanka)",
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99, "I1": "170-290", "SI2": "210-355", "SI1": "250-420", "VS": "290-475", "VVS": "320-530"},
@@ -103,8 +76,21 @@
     ]
   },
   {
-    "id": 10,
+    "id": 8,
+    "name": "Grossular Garnet/Granat (Green)",
+    "notes": "No Treatments normally",
+    "price_ranges": [
+      {"carat_min": 0.1, "carat_max": 0.99, "I1": "180-300", "SI2": "220-350", "SI1": "270-420", "VS": "310-480", "VVS": "340-530"},
+      {"carat_min": 1, "carat_max": 1.99, "I1": "220-350", "SI2": "270-420", "SI1": "320-510", "VS": "360-570", "VVS": "390-620"},
+      {"carat_min": 2, "carat_max": 4.99, "I1": "650-1050", "SI2": "750-1200", "SI1": "880-1450", "VS": "1000-1600", "VVS": "1100-1800"},
+      {"carat_min": 5, "carat_max": 7.99, "I1": "950-1550", "SI2": "1150-1850", "SI1": "1350-2200", "VS": "1500-2400", "VVS": "1600-2600"},
+      {"carat_min": 8, "carat_max": 9999, "I1": "1400-2300", "SI2": "1700-2700", "SI1": "2000-3200", "VS": "2200-3500", "VVS": "2400-3800"}
+    ]
+  },
+  {
+    "id": 9,
     "name": "Demantoid Garnet/Granat (Yellowish Green)",
+    "notes": "No Treatments normally",
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99, "I1": "170-290", "SI2": "180-302", "SI1": "200-330", "VS": "210-355", "VVS": "230-380"},
       {"carat_min": 1, "carat_max": 1.99, "I1": "390-650", "SI2": "420-694", "SI1": "440-730", "VS": "480-795", "VVS": "520-860"},
@@ -114,7 +100,7 @@
     ]
   },
   {
-    "id": 11,
+    "id": 10,
     "name": "Tsavorit Garnet/Granat (Green)",
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99, "I1": "190-310", "SI2": "220-360", "SI1": "250-410", "VS": "280-460", "VVS": "310-510"},
@@ -124,6 +110,19 @@
       {"carat_min": 8, "carat_max": 9999, "I1": "1500-2500", "SI2": "1700-2850", "SI1": "1920-3200", "VS": "2190-3650", "VVS": "2460-4100"}
     ]
   },
+  {
+  "id": 11,
+  "name": "Grossular Garnet/Granat (Mandarin/Orange)",
+  "notes": "No Treatments - Deep Orange",
+  "price_ranges": [
+      {"carat_min": 0.1, "carat_max": 0.99, "I1": "250-420", "SI2": "300-480", "SI1": "370-600", "VS": "420-680", "VVS": "460-750"},
+      {"carat_min": 1, "carat_max": 1.99, "I1": "300-500", "SI2": "350-580", "SI1": "430-690", "VS": "490-780", "VVS": "530-850"},
+      {"carat_min": 2, "carat_max": 4.99, "I1": "750-1200", "SI2": "900-1500", "SI1": "1100-1800", "VS": "1250-2000", "VVS": "1400-2200"},
+      {"carat_min": 5, "carat_max": 7.99, "I1": "1100-1800", "SI2": "1300-2100", "SI1": "1500-2500", "VS": "1700-2800", "VVS": "1900-3100"},
+      {"carat_min": 8, "carat_max": 9999, "I1": "1600-2600", "SI2": "1900-3100", "SI1": "2200-3600", "VS": "2400-4000", "VVS": "2600-4200"}
+    ]
+  },
+
   {
     "id": 12,
     "name": "Demantoid Garnet/Granat (Green)",
