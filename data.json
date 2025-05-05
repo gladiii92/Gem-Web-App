@@ -111,10 +111,10 @@
     ]
   },
   {
-  "id": 11,
-  "name": "Grossular Garnet/Granat (Mandarin/Orange)",
-  "notes": "No Treatments - Deep Orange",
-  "price_ranges": [
+    "id": 11,
+    "name": "Grossular Garnet/Granat (Mandarin/Orange)",
+    "notes": "No Treatments - Deep Orange",
+    "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99, "I1": "250-420", "SI2": "300-480", "SI1": "370-600", "VS": "420-680", "VVS": "460-750"},
       {"carat_min": 1, "carat_max": 1.99, "I1": "300-500", "SI2": "350-580", "SI1": "430-690", "VS": "490-780", "VVS": "530-850"},
       {"carat_min": 2, "carat_max": 4.99, "I1": "750-1200", "SI2": "900-1500", "SI1": "1100-1800", "VS": "1250-2000", "VVS": "1400-2200"},
@@ -158,10 +158,10 @@
     ]
   },
   {
-  "id": 15,
-  "name": "Spinell (Blau/Purple)",
-  "notes": "-",
-  "price_ranges": [
+    "id": 15,
+    "name": "Spinell (Blau/Purple)",
+    "notes": "-",
+    "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99, "I1": "160-270", "SI2": "310-520", "SI1": "460-770", "VS": "560-930", "VVS": "650-1090"},
       {"carat_min": 1, "carat_max": 1.99, "I1": "240-410", "SI2": "460-780", "SI1": "690-1150", "VS": "850-1410", "VVS": "1000-1670"},
       {"carat_min": 2, "carat_max": 4.99, "I1": "560-920", "SI2": "1050-1750", "SI1": "1550-2580", "VS": "1880-3130", "VVS": "2220-3680"},
