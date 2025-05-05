@@ -160,7 +160,7 @@
   {
     "id": 15,
     "name": "Spinell (Blau/Purple)",
-    "notes": "-",
+    "notes": ""Burma 30% mehr",",
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99, "I1": "160-270", "SI2": "310-520", "SI1": "460-770", "VS": "560-930", "VVS": "650-1090"},
       {"carat_min": 1, "carat_max": 1.99, "I1": "240-410", "SI2": "460-780", "SI1": "690-1150", "VS": "850-1410", "VVS": "1000-1670"},
@@ -217,7 +217,7 @@
   {
     "id": 20,
     "name": "Spinell (Orange)",
-    "notes": "Blau & Purple ca. 25% weniger!!! // Burma 30% mehr",
+    "notes": "Burma 30% mehr",
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99,   "I1": "220-360",  "SI2": "410-690",  "SI1": "610-1020",  "VS": "740-1235",  "VVS": "870-1450"},
       {"carat_min": 1,   "carat_max": 1.99,   "I1": "320-540",  "SI2": "620-1035", "SI1": "920-1530",  "VS": "1130-1875", "VVS": "1330-2220"},
