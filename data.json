@@ -231,11 +231,11 @@
     "name": "Saphir (Blau, Sri Lanka)",
     "notes": "Burma 30-50% mehr!",
     "quality_notes": {
-      "VVS": "Einkaufspreis ca. 30-50$/ct\nNur natürliche Steine",
-      "VS": "Einkaufspreis ca. 25$/ct",
-      "SI1": "Maximal 25$/ct",
+      "I1": "Maximal 5$/ct",
       "SI2": "Maximal 15$/ct",
-      "I1": "Maximal 5$/ct"
+      "SI1": "Maximal 25$/ct",
+      "VS": "Einkaufspreis ca. 25$/ct",
+      "VVS": "Einkaufspreis ca. 30-50$/ct\nNur natürliche Steine"
     },
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99,   "I1": "580-970",  "SI2": "710-1190", "SI1": "850-1410",  "VS": "950-1590",  "VVS": "1060-1770"},
