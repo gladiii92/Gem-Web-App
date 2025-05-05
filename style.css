@@ -5,7 +5,7 @@
     --background-color: #ecf0f1;
     --text-color: #333;
 }
-  
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -14,7 +14,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
 }
-  
+
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -23,7 +23,7 @@ body {
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
-  
+
 h1 {
     color: var(--secondary-color);
     text-align: center;
@@ -32,11 +32,11 @@ h1 {
     border-bottom: 2px solid #eee;
     padding-bottom: 15px;
 }
-  
+
 .form-group {
     margin-bottom: 25px;
 }
-  
+
 .form-control {
     width: 100%;
     padding: 12px;
@@ -45,12 +45,12 @@ h1 {
     font-size: 16px;
     transition: border-color 0.3s;
 }
-  
+
 .form-control:focus {
     border-color: var(--secondary-color);
     outline: none;
 }
-  
+
 .btn-calculate {
     width: 100%;
     background: linear-gradient(135deg, var(--secondary-color), #2980b9);
@@ -62,12 +62,12 @@ h1 {
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
 }
-  
+
 .btn-calculate:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(52,152,219,0.4);
 }
-  
+
 .result-box {
     margin-top: 30px;
     padding: 20px;
@@ -75,7 +75,7 @@ h1 {
     border-radius: 8px;
     border-left: 5px solid var(--secondary-color);
 }
-  
+
 .general-note {
     color: #d35400;
     background: #fcefdc;
@@ -85,7 +85,7 @@ h1 {
     border-radius: 4px;
     line-height: 1.5;
 }
-  
+
 .quality-note {
     color: #27ae60;
     background: #e8faf3;
@@ -95,30 +95,31 @@ h1 {
     border-radius: 4px;
     line-height: 1.5;
 }
-  
+
 .result-box table {
     width: 100%;
     margin-top: 15px;
     border-collapse: collapse;
+    table-layout: fixed;
 }
-  
+
 .result-box td {
     padding: 10px;
     border-bottom: 1px solid #eee;
+    white-space: nowrap;
 }
-  
+
 .result-box tr:last-child td {
     border-bottom: none;
 }
-  
+
 .total-price td {
     font-weight: bold;
     color: var(--secondary-color);
     font-size: 1.1em;
     padding-top: 15px;
 }
-  
-/* Bilder */
+
 .image-box {
   margin-top: 20px;
   display: flex;
@@ -134,7 +135,6 @@ h1 {
   transition: transform 0.3s ease-in-out;
 }
 
-/* Overlay */
 .image-overlay {
   display: none;
   position: fixed;
