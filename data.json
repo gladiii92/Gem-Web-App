@@ -240,8 +240,8 @@
   },
   {
     "id": 22,
-    "name": "Spinell (Rot)",
-    "notes": "Burma 30% mehr",
+    "name": "Spinell (Rot & Kobaltblau)",
+    "notes": "Kobaltblau 50% mehr // Burma 30% mehr",
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99,   "I1": "290-480",  "SI2": "550-920",  "SI1": "820-1360",  "VS": "990-1650",  "VVS": "1160-1940"},
       {"carat_min": 1,   "carat_max": 1.99,   "I1": "440-730",  "SI2": "830-1385", "SI1": "1220-2040", "VS": "1490-2475", "VVS": "1750-2910"},
