@@ -85,6 +85,7 @@ function calculatePrice() {
                 <tr><td>Karat:</td><td>${carat.toFixed(2)} ct</td></tr>
                 <tr><td>Preis/ct:</td><td>$${minPerCarat}–$${maxPerCarat}</td></tr>
                 <tr class="total-price"><td>Gesamtpreis:</td><td>$${minTotal}–$${maxTotal}</td></tr>
+                <tr class="discount-info"><td colspan="2"><strong>Abschläge:</strong> ID 1–9 = 10% | ID 10–24 = 30% | ID 25–27 = 50%</td></tr>
             </table>
         </div>
     `;
