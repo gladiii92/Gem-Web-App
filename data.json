@@ -171,7 +171,7 @@
   },
   {
     "id": 16,
-    "name": "Saphir (Lila, Sri Lanka)",
+    "name": "Saphir (Purple, Sri Lanka)",
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99, "I1": "380-640", "SI2": "470-790", "SI1": "560-940", "VS": "630-1055", "VVS": "700-1170"},
       {"carat_min": 1, "carat_max": 1.99, "I1": "810-1350", "SI2": "990-1655", "SI1": "1180-1960", "VS": "1320-2205", "VVS": "1470-2450"},
@@ -240,8 +240,8 @@
   },
   {
     "id": 22,
-    "name": "Spinell (Rot & Kobaltblau)",
-    "notes": "Kobaltblau 50% mehr // Burma 30% mehr",
+    "name": "Spinell (Rot & Jedi(Pink) & Kobaltblau)",
+    "notes": "Jedi ca. 0-50% less // Kobaltblau ca. 50-75% less // Burma 30% mehr",
     "price_ranges": [
       {"carat_min": 0.1, "carat_max": 0.99,   "I1": "290-480",  "SI2": "550-920",  "SI1": "820-1360",  "VS": "990-1650",  "VVS": "1160-1940"},
       {"carat_min": 1,   "carat_max": 1.99,   "I1": "440-730",  "SI2": "830-1385", "SI1": "1220-2040", "VS": "1490-2475", "VVS": "1750-2910"},
