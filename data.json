@@ -215,8 +215,27 @@
         {"carat_min": 5, "carat_max": 7.99, "I1": "1400-2300", "SI2": "2100-3500", "SI1": "2800-4600", "VS": "3500-5800", "VVS": "4100-6800"},
         {"carat_min": 8, "carat_max": 15, "I1": "2300-3800", "SI2": "3500-5800", "SI1": "4600-7600", "VS": "5800-9600", "VVS": "6800-11300"},
         {"carat_min": 15.01, "carat_max": 9999}
+        ],
+    "images": {
+        "I1": [
+        "",
+        ""
+        ],
+        "SI2": [
+        ""
+        ],
+        "SI1": [
+        ""
+        ],
+        "VS": [
+        ""
+        ],
+        "VVS": [
+        "https://imgcdn1.gempundit.com/media/wysiwyg/Blogs/pink-sapphire-benefits-blog-content-iumage-4-060423.jpg"
         ]
+      }
     },
+    {
     {
     "id": 18,
     "name": "Smaragd (Grün, Overall)",
