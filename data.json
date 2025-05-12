@@ -52,7 +52,7 @@
     {
     "id": 5,
     "name": "Saphir (Weiß, Sri Lanka)",
-    "notes": "Milchiger Weiß -20% | Transparente Steine +30%",
+    "notes": "Ceylon-Origin +20% | Burma +30-50% | Transparente Steine +30% | Milchiger Weiß -20%",
     "price_ranges": [
         {"carat_min": 0.1, "carat_max": 0.99, "I1": "50-90", "SI2": "70-120", "SI1": "90-150", "VS": "110-180", "VVS": "130-210"},
         {"carat_min": 1, "carat_max": 1.99, "I1": "90-140", "SI2": "120-200", "SI1": "150-260", "VS": "180-320", "VVS": "210-380"},
@@ -111,7 +111,14 @@
     {
     "id": 10,
     "name": "Saphir (Gelb, Sri Lanka)",
-    "notes": "Heat Treatment üblich | Kanariengelb +50%",
+    "notes": "Ceylon-Origin +20% | Burma +30-50% | Heat Treatment üblich | Kanariengelb +50%",
+    "quality_notes": {
+        "I1": "Stark eingeschlossen, milchig – max. 1$/ct",
+        "SI2": "Leichte Trübung, sichtbare Fehler – max. 1$/ct",
+        "SI1": "Gute Farbe, kleine Einschlüsse – max. 1$/ct",
+        "VS": "Klar, mittlere Farbe, sehr geringe Einschlüsse – max. 1$/ct",
+        "VVS": "Lupenrein, Top-Qualität (natürlich), Top-Farbe – max. 35$/ct"
+        },
     "price_ranges": [
         {"carat_min": 0.1, "carat_max": 0.99, "I1": "100-180", "SI2": "150-260", "SI1": "200-350", "VS": "250-440", "VVS": "300-530"},
         {"carat_min": 1, "carat_max": 1.99, "I1": "180-300", "SI2": "260-440", "SI1": "350-590", "VS": "440-740", "VVS": "530-890"},
@@ -148,7 +155,7 @@
     {
     "id": 13,
     "name": "Saphir (Purple, Sri Lanka)",
-    "notes": "Lavendeltöne +20% | Stark gesättigt +50%",
+    "notes": "Ceylon-Origin +20% | Burma +30-50% | Lavendeltöne +20% | Stark gesättigt +50%",
     "price_ranges": [
         {"carat_min": 0.1, "carat_max": 0.99, "I1": "180-300", "SI2": "250-420", "SI1": "320-530", "VS": "400-670", "VVS": "480-800"},
         {"carat_min": 1, "carat_max": 1.99, "I1": "300-500", "SI2": "420-700", "SI1": "530-900", "VS": "670-1150", "VVS": "800-1350"},
@@ -173,8 +180,8 @@
     },
     {
     "id": 15,
-    "name": "Saphir (Grün, Sri Lanka)",
-    "notes": "Teal-Farbtöne +30% | Milchige Steine -40%",
+    "name": "Saphir (Grün/Teal, Sri Lanka)",
+    "notes": "Ceylon-Origin +20% | Burma +30-50% | Teal-Farbtöne +30% | Milchige Steine -40%",
     "price_ranges": [
         {"carat_min": 0.1, "carat_max": 0.99, "I1": "200-350", "SI2": "300-500", "SI1": "400-700", "VS": "500-900", "VVS": "600-1100"},
         {"carat_min": 1, "carat_max": 1.99, "I1": "350-600", "SI2": "500-850", "SI1": "700-1200", "VS": "900-1500", "VVS": "1100-1900"},
@@ -200,7 +207,7 @@
     {
     "id": 17,
     "name": "Saphir (Pink, Sri Lanka)",
-    "notes": "Hot Pink (ohne Orange) +200% | Geheizte Steine -30%",
+    "notes": "Ceylon-Origin +20% | Burma +30-50% | Hot Pink (ohne Orange) +200% | Geheizte Steine -30%",
     "price_ranges": [
         {"carat_min": 0.1, "carat_max": 0.99, "I1": "300-500", "SI2": "450-750", "SI1": "600-1000", "VS": "750-1250", "VVS": "900-1500"},
         {"carat_min": 1, "carat_max": 1.99, "I1": "500-850", "SI2": "750-1250", "SI1": "1000-1700", "VS": "1250-2100", "VVS": "1500-2500"},
@@ -290,7 +297,7 @@
     {
     "id": 24,
     "name": "Padparadscha Saphir (Pink-Orange, Sri Lanka)",
-    "notes": "Burma +30-50% | West-Afrika/Vietnam -20% | Natürliche Farbe selten",
+    "notes": "Ceylon-Origin +20% | Burma +30-50% | Natürliche Farbe selten | West-Afrika/Vietnam -20%",
     "price_ranges": [
         {"carat_min": 0.1, "carat_max": 0.99, "I1": "500-850", "SI2": "700-1200", "SI1": "900-1600", "VS": "1100-2000", "VVS": "1300-2400"},
         {"carat_min": 1, "carat_max": 1.99, "I1": "850-1500", "SI2": "1200-2100", "SI1": "1600-2800", "VS": "2000-3500", "VVS": "2400-4200"},
@@ -303,7 +310,7 @@
     {
     "id": 25,
     "name": "Saphir (Blau, Sri Lanka)",
-    "notes": "Ceylon-Origin +20% | Burma +30-50% | Geheizt -30% | Cornflower Blue +200%",
+    "notes": "Ceylon-Origin +20% | Burma +30-50% | Cornflower Blue +200% | Geheizt -30%",
     "quality_notes": {
         "I1": "Stark eingeschlossen, milchig – max. 100$/ct",
         "SI2": "Leichte Trübung, sichtbare Fehler – max. 400$/ct",
