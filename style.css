@@ -157,3 +157,10 @@ h1 {
   max-height: 90%;
   object-fit: contain;
 }
+
+#quality-select,
+#carat {
+  height: 47px;
+  width: 800px;
+  box-sizing: border-box;
+}
