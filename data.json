@@ -113,11 +113,11 @@
     "name": "Saphir (Gelb, Sri Lanka)",
     "notes": "Ceylon-Origin +20% | Burma +30-50% | Heat Treatment üblich | Kanariengelb +50%",
     "quality_notes": {
-        "I1": "Stark eingeschlossen, milchig – max. 1$/ct",
-        "SI2": "Leichte Trübung, sichtbare Fehler – max. 1$/ct",
-        "SI1": "Gute Farbe, kleine Einschlüsse – max. 1$/ct",
-        "VS": "Klar, mittlere Farbe, sehr geringe Einschlüsse – max. 1$/ct",
-        "VVS": "Lupenrein, Top-Qualität (natürlich), Top-Farbe – max. 35$/ct"
+        "I1": "Maximal 1$/ct - no buy!",
+        "SI2": "Maximal 1$/ct",
+        "SI1": "Maximal 1$/ct",
+        "VS": "Einkaufspreis ca. 1$/ct",
+        "VVS": "Einkaufspreis ca. 35$/ct"
         },
     "price_ranges": [
         {"carat_min": 0.1, "carat_max": 0.99, "I1": "100-180", "SI2": "150-260", "SI1": "200-350", "VS": "250-440", "VVS": "300-530"},
@@ -312,11 +312,11 @@
     "name": "Saphir (Blau, Sri Lanka)",
     "notes": "Ceylon-Origin +20% | Burma +30-50% | Cornflower Blue +200% | Geheizt -30%",
     "quality_notes": {
-        "I1": "Stark eingeschlossen, milchig – max. 100$/ct",
-        "SI2": "Leichte Trübung, sichtbare Fehler – max. 400$/ct",
-        "SI1": "Gute Farbe, kleine Einschlüsse – max. 800$/ct",
-        "VS": "Klar, mittlere Farbe, sehr geringe Einschlüsse – max. 1.500$/ct",
-        "VVS": "Lupenrein, Top-Qualität (natürlich), Top-Farbe – max. 3.000$/ct"
+        "I1": "Maximal 1$/ct - no buy!",
+        "SI2": "Maximal 1$/ct",
+        "SI1": "Maximal 1$/ct",
+        "VS": "Einkaufspreis ca. 1$/ct",
+        "VVS": "Einkaufspreis ca. 1$/ct"
         },
     "price_ranges": [
         {"carat_min": 0.1, "carat_max": 0.99, "I1": "80-150", "SI2": "200-400", "SI1": "400-800", "VS": "800-1500", "VVS": "1500-3000"},
@@ -324,7 +324,25 @@
         {"carat_min": 2, "carat_max": 4.99, "I1": "300-600", "SI2": "800-1600", "SI1": "1600-3200", "VS": "3000-6000", "VVS": "6000-12000"},
         {"carat_min": 5, "carat_max": 15, "I1": "600-1200", "SI2": "1600-3200", "SI1": "3200-6400", "VS": "6000-12000", "VVS": "12000-24000"},
         {"carat_min": 15.01, "carat_max": 9999}
+        ],
+    "images": {
+        "I1": [
+        "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/2780000-2784999/2780191/871d675d-922d-4cb6-82a6-c4472f450649.jpg",
+        "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/2775000-2779999/2778440/e979d3a3-4c9e-4a27-8a74-b8dba88d8548.jpg"
+        ],
+        "SI2": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Sapphire_SI2_example.jpg/800px-Sapphire_SI2_example.jpg"
+        ],
+        "SI1": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Sapphire_gem.JPG/800px-Sapphire_gem.JPG"
+        ],
+        "VS": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Sapphire_VS_example.jpg/800px-Sapphire_VS_example.jpg"
+        ],
+        "VVS": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Sapphire%2C_Ceylon%2C_Sri_Lanka.jpg/800px-Sapphire%2C_Ceylon%2C_Sri_Lanka.jpg"
         ]
+      }
     },
     {
     "id": 26,
