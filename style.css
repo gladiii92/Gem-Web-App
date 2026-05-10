@@ -1,0 +1,178 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --highlight-color: #e67e22;
+    --background-color: #ecf0f1;
+    --text-color: #333;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  h1 {
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 25px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  
+  .form-control:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+  }
+  
+  .btn-calculate {
+    width: 100%;
+    background: linear-gradient(135deg, var(--secondary-color), #2980b9);
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .btn-calculate:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52,152,219,0.4);
+  }
+  
+  .result-box {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 5px solid var(--secondary-color);
+  }
+  
+  .general-note {
+    color: #d35400;
+    background: #fcefdc;
+    padding: 12px;
+    margin: 15px 0;
+    border-left: 4px solid #e67e22;
+    border-radius: 4px;
+    line-height: 1.5;
+  }
+  
+  .quality-note {
+    color: #27ae60;
+    background: #e8faf3;
+    padding: 12px;
+    margin: 15px 0;
+    border-left: 4px solid #2ecc71;
+    border-radius: 4px;
+    line-height: 1.5;
+  }
+  
+  .result-box table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+  }
+  
+  .result-box td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .result-box tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .total-price td {
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-size: 1.1em;
+    padding-top: 15px;
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 2em;
+    }
+  
+    .form-control {
+      font-size: 14px;
+    }
+  
+    .result-box {
+      padding: 15px;
+    }
+  
+    .general-note,
+    .quality-note {
+      font-size: 0.85em;
+      padding: 10px;
+    }
+  }
+
+/* Price Mode Badges */
+.result-header { margin-bottom: 10px; }
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.78em;
+  font-weight: 600;
+  margin-right: 6px;
+}
+.badge-wholesale { background: #d4edda; color: #155724; }
+.badge-retail    { background: #cce5ff; color: #004085; }
+.badge-warn      { background: #fff3cd; color: #856404; }
+
+/* History */
+.history-section { margin-top: 35px; border-top: 1px solid #eee; padding-top: 20px; }
+.history-header  { display: flex; justify-content: space-between; align-items: center; }
+.history-entry   { display: grid; grid-template-columns: 2fr 2fr 1fr 1fr;
+                   gap: 8px; padding: 10px 0; border-bottom: 1px solid #f0f0f0;
+                   font-size: 0.88em; align-items: center; }
+.history-gem     { font-weight: 600; color: var(--primary-color); }
+.history-price   { font-weight: 700; color: var(--secondary-color); text-align: right; }
+.history-date    { color: #999; font-size: 0.82em; text-align: right; }
+.history-empty   { color: #aaa; font-style: italic; }
+.btn-clear       { background: none; border: 1px solid #ddd; border-radius: 6px;
+                   padding: 5px 12px; cursor: pointer; font-size: 0.82em; color: #888; }
+.btn-clear:hover { border-color: #e74c3c; color: #e74c3c; }
+.error           { color: #c0392b; font-weight: 600; }
+
+.source-warn { background: #fff8e1; border-left: 4px solid #f9a825; color: #7a5c00; padding: 8px 12px; font-size: 0.82em; border-radius: 4px; margin-bottom: 10px;}
+
+@media (max-width: 600px) {
+  .history-entry { grid-template-columns: 1fr 1fr; }
+}

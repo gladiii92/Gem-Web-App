@@ -1,0 +1,27 @@
+# Abhängigkeiten (falls später npm kommt)
+node_modules/
+
+# Umgebungsvariablen — NIEMALS pushen
+.env
+.env.local
+.env.production
+
+# Betriebssystem
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/settings.json
+.idea/
+
+# Python (für späteren Crawler)
+__pycache__/
+*.pyc
+venv/
+.venv/
+*.egg-info/
+
+# Temporäre Dateien
+*.log
+migrate_data.py
