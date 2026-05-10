@@ -2,6 +2,15 @@ import { loadGems, getGemById } from './data.js';
 import { calculatePrice, getAvailableGrades } from './pricing.js';
 import { saveToHistory, clearHistory, renderHistory } from './history.js';
 
+// Mode-State — wird durch Toggle-Buttons gesetzt
+let currentMode = 'retail';
+
+window.setMode = function(mode) {
+  currentMode = mode;
+  document.getElementById('btn-retail').classList.toggle('active', mode === 'retail');
+  document.getElementById('btn-wholesale').classList.toggle('active', mode === 'wholesale');
+};
+
 const GRADE_LABELS = {
   'I1': 'Low (I1)', 'SI2': 'Mid-Low (SI2)', 'SI1': 'Mid (SI1)',
   'VS': 'Mid-High (VS)', 'VVS': 'High (VVS)'
@@ -46,7 +55,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const gem     = getGemById(parseInt(gemSelect.value, 10));
     const quality = qualitySelect.value;
     const carat   = parseFloat(caratInput.value);
-    const mode    = modeSelect?.value || 'retail';
+    const mode    = currentMode;
 
     const result = calculatePrice(gem, quality, carat, mode);
 
