@@ -27,4 +27,4 @@ venv/
 migrate_data.py
 
 # Wichtige Datei
-data.json
+data.jsondata.json 
