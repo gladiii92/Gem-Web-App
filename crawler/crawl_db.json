@@ -5956,7 +5956,7 @@
     "price_type": "retail",
     "name_raw": "Chrome Tourmaline - 3.71 carats",
     "gem_category": "tourmaline",
-    "category": "unknown_tourmaline",
+    "category": "Chrome Tourmaline (Green)",
     "carat": 3.71,
     "clarity": "VVS",
     "treatment": "unheated",
@@ -5970,7 +5970,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/955000-959999/958949/5d18e5d07ec78.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/chrome-tourmaline-371-carats-958949",
     "crawled_at": "2026-05-10T09:01:24.615024+00:00",
-    "category_id": null
+    "category_id": 30
   },
   {
     "source_id": "gemrock_981433",
@@ -6146,7 +6146,7 @@
     "price_type": "retail",
     "name_raw": "Chrome Tourmaline - 6.16 carats",
     "gem_category": "tourmaline",
-    "category": "unknown_tourmaline",
+    "category": "Chrome Tourmaline (Green)",
     "carat": 6.16,
     "clarity": "VVS",
     "treatment": "unheated",
@@ -6161,7 +6161,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/1125000-1129999/1128086/5e4813fe35e46.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/chrome-tourmaline-616-carats-1128086",
     "crawled_at": "2026-05-10T09:01:24.615024+00:00",
-    "category_id": null
+    "category_id": 30
   },
   {
     "source_id": "gemrock_984419",
@@ -6212,7 +6212,7 @@
     "price_type": "retail",
     "name_raw": "Siberian Rubellite - 2.70 carats",
     "gem_category": "tourmaline",
-    "category": "unknown_tourmaline",
+    "category": "Rubellite (Pink/Red)",
     "carat": 2.7,
     "clarity": "VVS",
     "treatment": "unheated",
@@ -6226,7 +6226,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/1395000-1399999/1396566/600a4609ccb0b.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/siberian-rubellite-270-carats-1396566",
     "crawled_at": "2026-05-10T09:01:24.615024+00:00",
-    "category_id": null
+    "category_id": 28
   },
   {
     "source_id": "gemrock_1584502",
@@ -6256,7 +6256,7 @@
     "price_type": "retail",
     "name_raw": "Chrome Tourmaline - 2.94 carats",
     "gem_category": "tourmaline",
-    "category": "unknown_tourmaline",
+    "category": "Chrome Tourmaline (Green)",
     "carat": 2.94,
     "clarity": "SI1",
     "treatment": "unknown",
@@ -6271,7 +6271,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/1110000-1114999/1111806/5e2fb66faaabf.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/chrome-tourmaline-294-carats-1111806",
     "crawled_at": "2026-05-10T09:01:24.615024+00:00",
-    "category_id": null
+    "category_id": 30
   },
   {
     "source_id": "gemrock_3201622",
@@ -6357,7 +6357,7 @@
     "price_type": "retail",
     "name_raw": "HGTL CERTIFIED 3.19 Ct Natural Rubellite Transparent Tourmaline Ring Size G",
     "gem_category": "tourmaline",
-    "category": "unknown_tourmaline",
+    "category": "Rubellite (Pink/Red)",
     "carat": 3.19,
     "clarity": "SI1",
     "treatment": "unheated",
@@ -6370,7 +6370,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/1355000-1359999/1356435/5fbcafff38586.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/hgtl-certified-319-ct-natural-rubellite-transparent-tourmaline-ring-size-g-3215668",
     "crawled_at": "2026-05-10T09:01:24.616023+00:00",
-    "category_id": null
+    "category_id": 28
   },
   {
     "source_id": "gemrock_3209168",
@@ -6658,7 +6658,7 @@
     "price_type": "retail",
     "name_raw": "8.80 cts Natural Rubellite Tourmaline – Pinkish Red Color 12.5 12 8 mm",
     "gem_category": "tourmaline",
-    "category": "unknown_tourmaline",
+    "category": "Rubellite (Pink/Red)",
     "carat": 8.8,
     "clarity": "I1",
     "treatment": "unheated",
@@ -6669,7 +6669,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/3095000-3099999/3097686/6ff6e864-cc29-4280-b513-e2867ffd9317.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/880-cts-natural-rubellite-tourmaline-pinkish-red-color-125-12-8-mm-3097686",
     "crawled_at": "2026-05-10T09:01:29.487652+00:00",
-    "category_id": null
+    "category_id": 28
   },
   {
     "source_id": "gemrock_1623724",
@@ -6677,7 +6677,7 @@
     "price_type": "retail",
     "name_raw": "Amazing 36.34 ct Natural Indicolite Tourmaline",
     "gem_category": "tourmaline",
-    "category": "unknown_tourmaline",
+    "category": "Indicolite (Blue/Blue-Green)",
     "carat": 36.34,
     "clarity": null,
     "treatment": "unheated",
@@ -6691,7 +6691,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/1620000-1624999/1623724/61697be1e4c9c.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/amazing-3634-ct-natural-indicolite-tourmaline-1623724",
     "crawled_at": "2026-05-10T09:01:29.487652+00:00",
-    "category_id": null
+    "category_id": 29
   },
   {
     "source_id": "gemrock_2003208",
@@ -6902,7 +6902,7 @@
     "price_type": "retail",
     "name_raw": "2.90 CTS PHTHALO GREEN INDICOLITE TOURMALINE 100% NATURAL UNHEATED",
     "gem_category": "tourmaline",
-    "category": "unknown_tourmaline",
+    "category": "Indicolite (Blue/Blue-Green)",
     "carat": 2.9,
     "clarity": "VS",
     "treatment": "unheated",
@@ -6915,7 +6915,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/2915000-2919999/2915574/26ff01ab-4a4b-4d21-b20b-f73e392ab895.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/290-cts-phthalo-green-indicolite-tourmaline-100-natural-unheated-2915574",
     "crawled_at": "2026-05-10T09:01:29.488652+00:00",
-    "category_id": null
+    "category_id": 29
   },
   {
     "source_id": "gemrock_2980170",
@@ -6923,7 +6923,7 @@
     "price_type": "retail",
     "name_raw": "Genuine Brazilian Rubellite 1.00 ct - The True, Pure Pink-Red Tourmaline",
     "gem_category": "tourmaline",
-    "category": "unknown_tourmaline",
+    "category": "Rubellite (Pink/Red)",
     "carat": 1.0,
     "clarity": "SI1",
     "treatment": "heated",
@@ -6934,7 +6934,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/2980000-2984999/2980170/d3ed8589-38e8-4cf4-991e-a81f03e7d149.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/genuine-brazilian-rubellite-100-ct-the-true-pure-pink-red-tourmaline-2980170",
     "crawled_at": "2026-05-10T09:01:29.488652+00:00",
-    "category_id": null
+    "category_id": 28
   },
   {
     "source_id": "gemrock_2986078",
@@ -6942,7 +6942,7 @@
     "price_type": "retail",
     "name_raw": "Genuine Brazilian Rubellite 2.92 ct - The True, Pure Pink-Red Tourmaline",
     "gem_category": "tourmaline",
-    "category": "unknown_tourmaline",
+    "category": "Rubellite (Pink/Red)",
     "carat": 2.92,
     "clarity": "SI1",
     "treatment": "heated",
@@ -6953,7 +6953,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/2985000-2989999/2986078/b79a891b-4668-4142-8196-a66df4ebfbbf.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/genuine-brazilian-rubellite-292-ct-the-true-pure-pink-red-tourmaline-2986078",
     "crawled_at": "2026-05-10T09:01:29.488652+00:00",
-    "category_id": null
+    "category_id": 28
   },
   {
     "source_id": "gemrock_2410510",
@@ -7100,7 +7100,7 @@
     "price_type": "retail",
     "name_raw": "3.14Cts Fine Luster Natural Chrome Tourmaline Nice Oval Shape",
     "gem_category": "tourmaline",
-    "category": "unknown_tourmaline",
+    "category": "Chrome Tourmaline (Green)",
     "carat": 3.14,
     "clarity": "VVS",
     "treatment": "unheated",
@@ -7113,7 +7113,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/2740000-2744999/2741680/af8c2331-1c26-4e40-a9ab-d3c182b83670.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/314cts-fine-luster-natural-chrome-tourmaline-nice-oval-shape-2741680",
     "crawled_at": "2026-05-10T09:01:29.488652+00:00",
-    "category_id": null
+    "category_id": 30
   },
   {
     "source_id": "gemrock_2878404",
@@ -7165,7 +7165,7 @@
     "price_type": "retail",
     "name_raw": "1.05 Ct Natural Blue Indicolite Transparent Tourmaline Gemstone",
     "gem_category": "tourmaline",
-    "category": "unknown_tourmaline",
+    "category": "Indicolite (Blue/Blue-Green)",
     "carat": 1.05,
     "clarity": "VS",
     "treatment": "unheated",
@@ -7178,7 +7178,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/1545000-1549999/1549608/3fc955a0-10d5-4e55-b4d1-2775ee5d1eb0.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/105-ct-natural-blue-indicolite-transparent-tourmaline-gemstone-1549608",
     "crawled_at": "2026-05-10T09:01:34.401461+00:00",
-    "category_id": null
+    "category_id": 29
   },
   {
     "source_id": "gemrock_2616100",
@@ -11774,7 +11774,7 @@
     "price_type": "retail",
     "name_raw": "2.19 CRTs Natural Beautiful Rhodolite Garnet Gemstones.",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 2.19,
     "clarity": "VS",
     "treatment": "unheated",
@@ -11785,7 +11785,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/3210000-3214999/3212591/3d940a46-96f1-4d0c-b317-29544a1c9345.jpeg",
     "lot_url": "https://www.gemrockauctions.com/products/219-crts-natural-beautiful-rhodolite-garnet-gemstones-3212591",
     "crawled_at": "2026-05-10T09:02:45.541822+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "gemrock_1180572",
@@ -11815,7 +11815,7 @@
     "price_type": "retail",
     "name_raw": "Pyralspite (Malaya) Garnet - 5.49 carats",
     "gem_category": "garnet",
-    "category": "Grossular Garnet/Granat (Mandarin/Orange)",
+    "category": "Malaya Garnet (Orange/Pink)",
     "carat": 5.49,
     "clarity": "VVS",
     "treatment": "unheated",
@@ -11831,7 +11831,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/1205000-1209999/1205744/5ecbf6e287bf5.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/pyralspite-malaya-garnet-549-carats-1205744",
     "crawled_at": "2026-05-10T09:02:45.541822+00:00",
-    "category_id": 8
+    "category_id": 33
   },
   {
     "source_id": "gemrock_1396538",
@@ -11839,7 +11839,7 @@
     "price_type": "retail",
     "name_raw": "Pyralspite (Malaya) Garnet - 5.10 carats",
     "gem_category": "garnet",
-    "category": "Grossular Garnet/Granat (Mandarin/Orange)",
+    "category": "Malaya Garnet (Orange/Pink)",
     "carat": 5.1,
     "clarity": "VVS",
     "treatment": "unheated",
@@ -11853,7 +11853,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/1395000-1399999/1396538/600a292573a08.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/pyralspite-malaya-garnet-510-carats-1396538",
     "crawled_at": "2026-05-10T09:02:45.541822+00:00",
-    "category_id": 8
+    "category_id": 33
   },
   {
     "source_id": "gemrock_3207211",
@@ -11921,7 +11921,7 @@
     "price_type": "retail",
     "name_raw": "2.52CTS RHODOLITE GARNET FACETED PG-2075 Preciousgems",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 2.52,
     "clarity": null,
     "treatment": "unheated",
@@ -11934,7 +11934,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/655000-659999/657225/57bae5ac-2d82-4bbb-ad78-fcbe374c137a.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/252cts-rhodolite-garnet-faceted-pg-2075-preciousgems-3213347",
     "crawled_at": "2026-05-10T09:02:45.541822+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "gemrock_2162290",
@@ -11964,7 +11964,7 @@
     "price_type": "retail",
     "name_raw": "Rhodolite Garnet | Purplish Red | Round Cut | 2.38 CT",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 2.38,
     "clarity": "VVS",
     "treatment": "unheated",
@@ -11975,7 +11975,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/2555000-2559999/2556619/217ffb39-7660-48ea-8fd4-12682326e518.jpeg",
     "lot_url": "https://www.gemrockauctions.com/products/rhodolite-garnet-purplish-red-round-cut-238-ct-2568094",
     "crawled_at": "2026-05-10T09:02:45.541822+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "gemrock_3165432",
@@ -12088,7 +12088,7 @@
     "price_type": "retail",
     "name_raw": "2.86 Carat Vibrant African VS Rhodolite Garnet - Gorgeous",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 2.86,
     "clarity": "VS",
     "treatment": "unheated",
@@ -12102,7 +12102,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/1680000-1684999/1680157/d68a06f0-5358-4c76-ba94-334ce5c5ca09.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/286-carat-vibrant-african-vs-rhodolite-garnet-gorgeous-1901232",
     "crawled_at": "2026-05-10T09:02:45.542822+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "gemrock_1531324",
@@ -12217,7 +12217,7 @@
     "price_type": "retail",
     "name_raw": "2.78 CTS ROSE RED RHODOLITE GARNET 100% NATURAL UNHEATED SRILANKA MINE",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 2.78,
     "clarity": "VS",
     "treatment": "unheated",
@@ -12230,7 +12230,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/3170000-3174999/3172180/a57e9071-96f3-4667-adcc-ec27bdf3dd5e.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/278-cts-rose-red-rhodolite-garnet-100-natural-unheated-srilanka-mine-3172180",
     "crawled_at": "2026-05-10T09:02:45.542822+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "gemrock_2689964",
@@ -12317,7 +12317,7 @@
     "price_type": "retail",
     "name_raw": "Amazing 2.28CRTs Natural Malaya Garnet Gemstone.",
     "gem_category": "garnet",
-    "category": "Grossular Garnet/Granat (Green)",
+    "category": "Malaya Garnet (Orange/Pink)",
     "carat": 2.28,
     "clarity": "VS",
     "treatment": "unheated",
@@ -12328,7 +12328,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/3090000-3094999/3092828/8a72bac6-cdfe-4386-9633-1a58f3315bb8.jpeg",
     "lot_url": "https://www.gemrockauctions.com/products/amazing-228crts-natural-malaya-garnet-gemstone-3092828",
     "crawled_at": "2026-05-10T09:02:45.542822+00:00",
-    "category_id": 2
+    "category_id": 33
   },
   {
     "source_id": "gemrock_3160476",
@@ -12357,7 +12357,7 @@
     "price_type": "retail",
     "name_raw": "2.24 ct. VS Top Quality Natural Purplish Pink Rhodolite Garnet Mozambique",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 2.24,
     "clarity": "VS",
     "treatment": "unheated",
@@ -12370,7 +12370,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/1590000-1594999/1593680/8fe7cb1e-920c-4139-b77d-f1430f3f5f13.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/224-ct-vs-top-quality-natural-purplish-pink-rhodolite-garnet-mozambique-1593680",
     "crawled_at": "2026-05-10T09:02:45.542822+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "gemrock_3136466",
@@ -12538,7 +12538,7 @@
     "price_type": "retail",
     "name_raw": "3.20 Ct /2 Pcs Finest Quality Rhodolite Garnet",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 3.2,
     "clarity": "VS",
     "treatment": "unheated",
@@ -12549,7 +12549,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/3135000-3139999/3139518/7dd2531c-a901-4059-91d6-38a644eb3bb5.jpeg",
     "lot_url": "https://www.gemrockauctions.com/products/320-ct-2-pcs-finest-quality-rhodolite-garnet-3139518",
     "crawled_at": "2026-05-10T09:02:50.435554+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "gemrock_3095040",
@@ -12595,7 +12595,7 @@
     "price_type": "retail",
     "name_raw": "NR rhodolite garnet with excellent brilliance 2.45 Carats 8 6 5 mm",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 2.45,
     "clarity": "VS",
     "treatment": "unheated",
@@ -12606,7 +12606,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/3080000-3084999/3084400/02432ddd-8dd8-4ca3-93c9-64d98dfd079b.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/nr-rhodolite-garnet-with-excellent-brilliance-245-carats-8-6-5-mm-3084400",
     "crawled_at": "2026-05-10T09:02:50.435554+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "gemrock_2631136",
@@ -12679,7 +12679,7 @@
     "price_type": "retail",
     "name_raw": "66.87 carat natural Malaya garnet from Tanzania",
     "gem_category": "garnet",
-    "category": "Grossular Garnet/Granat (Green)",
+    "category": "Malaya Garnet (Orange/Pink)",
     "carat": 67.87,
     "clarity": null,
     "treatment": "unheated",
@@ -12690,7 +12690,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/3105000-3109999/3109166/85f07a7e-f370-4fa8-8fbe-716a6dd2baec.jpeg",
     "lot_url": "https://www.gemrockauctions.com/products/6687-carat-natural-malaya-garnet-from-tanzania-3109166",
     "crawled_at": "2026-05-10T09:02:50.435554+00:00",
-    "category_id": 2
+    "category_id": 33
   },
   {
     "source_id": "gemrock_3181196",
@@ -12758,7 +12758,7 @@
     "price_type": "retail",
     "name_raw": "1.45 carats Rhodolite garnet with perfect symetrical in Hexagonal shape",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 1.45,
     "clarity": "VVS",
     "treatment": "unheated",
@@ -12769,7 +12769,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/3170000-3174999/3171886/2e4c8c28-e6cb-4fd1-82f5-a165a2c378e8.jpeg",
     "lot_url": "https://www.gemrockauctions.com/products/145-carats-rhodolite-garnet-with-perfect-symetrical-in-hexagonal-shape-3171886",
     "crawled_at": "2026-05-10T09:02:50.435554+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "gemrock_3031438",
@@ -12777,7 +12777,7 @@
     "price_type": "retail",
     "name_raw": "1 CTS CERTIFIED MALAYA GARNET TBM-1348 -Trueblueminerals E",
     "gem_category": "garnet",
-    "category": "Grossular Garnet/Granat (Green)",
+    "category": "Malaya Garnet (Orange/Pink)",
     "carat": 1.0,
     "clarity": null,
     "treatment": "unheated",
@@ -12788,7 +12788,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/1375000-1379999/1377780/db549f9c-733d-453b-9240-1982a423505a.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/1-cts-certified-malaya-garnet-tbm-1348-trueblueminerals-e-3031438",
     "crawled_at": "2026-05-10T09:02:50.435554+00:00",
-    "category_id": 2
+    "category_id": 33
   },
   {
     "source_id": "gemrock_2591838",
@@ -12796,7 +12796,7 @@
     "price_type": "retail",
     "name_raw": "Rare Color Change Garnet 0.73 Ct Untreated",
     "gem_category": "garnet",
-    "category": "unknown_garnet",
+    "category": "Color-Change Garnet",
     "carat": 0.73,
     "clarity": null,
     "treatment": "unheated",
@@ -12807,7 +12807,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/2590000-2594999/2591838/a994e5b0-5cc0-4241-ad92-6878a5e3d943.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/rare-color-change-garnet-073-ct-untreated-2591838",
     "crawled_at": "2026-05-10T09:02:50.436556+00:00",
-    "category_id": null
+    "category_id": 34
   },
   {
     "source_id": "gemrock_2331494",
@@ -12815,7 +12815,7 @@
     "price_type": "retail",
     "name_raw": "Rhodolite, 2.675ct, super stone, well facetted and top colour!",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 2.675,
     "clarity": "VS",
     "treatment": "unheated",
@@ -12826,7 +12826,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/2330000-2334999/2331494/19713399-5988-4427-a171-7d0f58cadfbd.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/rhodolite-2675ct-super-stone-well-facetted-and-top-colour-2331494",
     "crawled_at": "2026-05-10T09:02:50.436556+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "gemrock_1613756",
@@ -12897,7 +12897,7 @@
     "price_type": "retail",
     "name_raw": "6.79 CTS VIVID COLECTION RHODOLITE GARNET 100% NATURAL UNHEATED SRILANKA",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 6.79,
     "clarity": "VVS",
     "treatment": "unheated",
@@ -12910,7 +12910,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/2455000-2459999/2459832/ad6de8d4-bb06-4914-87b5-c4312cca5dbe.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/679-cts-vivid-colection-rhodolite-garnet-100-natural-unheated-srilanka-2459832",
     "crawled_at": "2026-05-10T09:02:50.436556+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "gemrock_2906460",
@@ -12939,7 +12939,7 @@
     "price_type": "retail",
     "name_raw": "2.46 Ct Natural Vivid Raspberry Pink Rhodolite Garnet Umba Tanzania",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 2.46,
     "clarity": "VVS",
     "treatment": "unheated",
@@ -12952,7 +12952,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/3195000-3199999/3198584/d4e3a5cf-06fc-4bf2-9f2f-2d8d34c19711.jpeg",
     "lot_url": "https://www.gemrockauctions.com/products/246-ct-natural-vivid-raspberry-pink-rhodolite-garnet-umba-tanzania-3198584",
     "crawled_at": "2026-05-10T09:02:50.436556+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "gemrock_2946738",
@@ -12960,7 +12960,7 @@
     "price_type": "retail",
     "name_raw": "12Pcs/ 4.12 Ct. Round Diamond Cut 4 to 4.5 mm Cherry Pink Rhodolite Garnet",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 4.12,
     "clarity": "VVS",
     "treatment": "unheated",
@@ -12971,7 +12971,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/2945000-2949999/2946738/31b29c50-a118-4c9d-b2ab-f81ae7f2eb7b.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/12pcs-412-ct-round-diamond-cut-4-to-45-mm-cherry-pink-rhodolite-garnet-2946738",
     "crawled_at": "2026-05-10T09:02:50.436556+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "gemrock_1763808",
@@ -12979,7 +12979,7 @@
     "price_type": "retail",
     "name_raw": "Almandine 2.00Ct Natural Vivid Blood Red Almandine Garnet E2711/B26",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Almandine Garnet (Deep Red)",
     "carat": 2.0,
     "clarity": "VS",
     "treatment": "unknown",
@@ -12992,7 +12992,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/1760000-1764999/1763808/6baac3e1-c34e-4e5c-8f69-94b6a8d02b0f.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/almandine-200ct-natural-vivid-blood-red-almandine-garnet-e2711b26-1763808",
     "crawled_at": "2026-05-10T09:02:50.436556+00:00",
-    "category_id": null
+    "category_id": 36
   },
   {
     "source_id": "gemrock_2256538",
@@ -13040,7 +13040,7 @@
     "price_type": "retail",
     "name_raw": "18.73C Stunning Faceted Natural Deep Reddish ALMANDITE GARNET Huge Gemstone",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Almandine Garnet (Deep Red)",
     "carat": 18.73,
     "clarity": null,
     "treatment": "unheated",
@@ -13051,7 +13051,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/2910000-2914999/2911472/5ab8c6da-1994-4020-b389-8b8b3dc48cb3.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/1873c-stunning-faceted-natural-deep-reddish-almandite-garnet-huge-gemstone-2911472",
     "crawled_at": "2026-05-10T09:02:50.436556+00:00",
-    "category_id": null
+    "category_id": 36
   },
   {
     "source_id": "gemrock_2623688",
@@ -13059,7 +13059,7 @@
     "price_type": "retail",
     "name_raw": "Almandine 1.43Ct Natural Red Almandine Garnet EN474/B2",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Almandine Garnet (Deep Red)",
     "carat": 1.43,
     "clarity": "VS",
     "treatment": "unknown",
@@ -13070,7 +13070,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/2620000-2624999/2623688/5f02024e-ed82-4e1b-ac60-84b447fbbc82.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/almandine-143ct-natural-red-almandine-garnet-en474b2-2623688",
     "crawled_at": "2026-05-10T09:02:55.317612+00:00",
-    "category_id": null
+    "category_id": 36
   },
   {
     "source_id": "gemrock_2874806",
@@ -13099,7 +13099,7 @@
     "price_type": "retail",
     "name_raw": "CUSTOM CUT - 1.90ct RHODOLITE GARNET - TANZANIA",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 1.9,
     "clarity": "VVS",
     "treatment": "unheated",
@@ -13110,7 +13110,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/2725000-2729999/2725564/65b93d54-bd95-4b64-a908-e197d135621f.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/custom-cut-190ct-rhodolite-garnet-tanzania-3075496",
     "crawled_at": "2026-05-10T09:02:55.317612+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "gemrock_3002668",
@@ -13118,7 +13118,7 @@
     "price_type": "retail",
     "name_raw": "Unheated 2.17 Ct Red Rhodolite Garnet",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 2.17,
     "clarity": "VS",
     "treatment": "unheated",
@@ -13129,7 +13129,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/3000000-3004999/3002668/7175b829-8ebd-4c3d-b912-d1e40cc9befc.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/unheated-217-ct-red-rhodolite-garnet-3002668",
     "crawled_at": "2026-05-10T09:02:55.317612+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "gemrock_3031494",
@@ -13137,7 +13137,7 @@
     "price_type": "retail",
     "name_raw": "2.85 CTS CERTIFIED MALAYA GARNET TBM-1338 Trueblueminerals E",
     "gem_category": "garnet",
-    "category": "Grossular Garnet/Granat (Green)",
+    "category": "Malaya Garnet (Orange/Pink)",
     "carat": 2.85,
     "clarity": null,
     "treatment": "unheated",
@@ -13148,7 +13148,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/825000-829999/827790/22b21eed-34ca-4ca8-9934-c689f4a9ba00.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/285-cts-certified-malaya-garnet-tbm-1338-trueblueminerals-e-3031494",
     "crawled_at": "2026-05-10T09:02:55.317612+00:00",
-    "category_id": 2
+    "category_id": 33
   },
   {
     "source_id": "gemrock_2084884",
@@ -13452,7 +13452,7 @@
     "price_type": "retail",
     "name_raw": "1.50 CTS COLOUR CHANGE GARNET PG-320 Preciousgems",
     "gem_category": "garnet",
-    "category": "unknown_garnet",
+    "category": "Color-Change Garnet",
     "carat": 1.5,
     "clarity": null,
     "treatment": "unheated",
@@ -13463,7 +13463,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/1340000-1344999/1342486/3eb623be-b76f-4591-9827-1fdbe61bc7e6.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/150-cts-colour-change-garnet-pg-320-preciousgems-2559848",
     "crawled_at": "2026-05-10T09:02:55.318612+00:00",
-    "category_id": null
+    "category_id": 34
   },
   {
     "source_id": "gemrock_2446154",
@@ -13511,7 +13511,7 @@
     "price_type": "retail",
     "name_raw": "Alluring 1.20 Ct Natural Rhodolite Garnet",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 1.2,
     "clarity": "VS",
     "treatment": "unheated",
@@ -13524,7 +13524,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/2805000-2809999/2805142/0813669b-6c41-4f1f-8d1f-e61cdc84ed66.jpeg",
     "lot_url": "https://www.gemrockauctions.com/products/alluring-120-ct-natural-rhodolite-garnet-2805142",
     "crawled_at": "2026-05-10T09:02:55.318612+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "gemrock_2225570",
@@ -13612,7 +13612,7 @@
     "price_type": "retail",
     "name_raw": "Amazing 3.89CRTs Natural Rhodolite Garnet Gemstone.",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 3.89,
     "clarity": "VS",
     "treatment": "unheated",
@@ -13623,7 +13623,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/3150000-3154999/3153434/f342d9a5-4cdc-4dec-bef6-5956903076a6.jpeg",
     "lot_url": "https://www.gemrockauctions.com/products/amazing-389crts-natural-rhodolite-garnet-gemstone-3153434",
     "crawled_at": "2026-05-10T09:02:55.318612+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "gemrock_2753524",
@@ -17853,7 +17853,7 @@
     "price_type": "wholesale",
     "name_raw": "Marvelous 0.70 Ct Natural Rhodolite Garnet Lustrous Luster RD553- Z20",
     "gem_category": "mixed",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 0.7,
     "clarity": "VS",
     "treatment": "unheated",
@@ -17866,7 +17866,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/3050000-3054999/3054626/d2a58b8c-c19b-4a35-9cea-ba3927f2ee4c.jpeg",
     "lot_url": "https://www.gemrockauctions.com/products/marvelous-070-ct-natural-rhodolite-garnet-lustrous-luster-rd553-z20-3212328",
     "crawled_at": "2026-05-10T09:04:37.215871+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "gemrock_3207991",
@@ -19542,7 +19542,7 @@
     "price_type": "wholesale",
     "name_raw": "Natural Morganite 0.80 Carats Gemstone Cushion Shape",
     "gem_category": "mixed",
-    "category": "unknown",
+    "category": "Morganite (Pink/Peach)",
     "carat": 0.8,
     "clarity": "I1",
     "treatment": "unheated",
@@ -19555,7 +19555,7 @@
     "image_url": "https://liveplatforms-production.b-cdn.net/tenants/gr/uploads/images/3215000-3219999/3216150/2c43980e-fc95-46da-aac1-8f69ef82435e.jpg",
     "lot_url": "https://www.gemrockauctions.com/products/natural-morganite-080-carats-gemstone-cushion-shape-3216150",
     "crawled_at": "2026-05-10T09:04:47.051130+00:00",
-    "category_id": null
+    "category_id": 37
   },
   {
     "source_id": "gemrock_3216153",
@@ -26140,7 +26140,7 @@
     "price_type": "retail",
     "name_raw": "2342 Ct Natural Watermelon Tourmaline Polished Crystal Slice Parcel Jewelry",
     "gem_category": "tourmaline",
-    "category": "unknown_tourmaline",
+    "category": "Watermelon Tourmaline (Pink/Green)",
     "carat": 23.42,
     "clarity": null,
     "treatment": "unheated",
@@ -26151,7 +26151,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/2342-ct-natural-watermelon-tourmaline-polished-crystal-slice-parcel-jewelry/id-j_28436752/",
     "crawled_at": "2026-05-10T17:21:33.145246+00:00",
-    "category_id": null
+    "category_id": 31
   },
   {
     "source_id": "1stdibs_j_29114302",
@@ -26197,7 +26197,7 @@
     "price_type": "retail",
     "name_raw": "990 Carat Natural Loose Indicolite Tourmalines Lot Gemstones",
     "gem_category": "tourmaline",
-    "category": "unknown_tourmaline",
+    "category": "Indicolite (Blue/Blue-Green)",
     "carat": 9.9,
     "clarity": null,
     "treatment": "unknown",
@@ -26208,7 +26208,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/990-carat-natural-loose-indicolite-tourmalines-lot-gemstones/id-j_24912132/",
     "crawled_at": "2026-05-10T17:21:42.324082+00:00",
-    "category_id": null
+    "category_id": 29
   },
   {
     "source_id": "1stdibs_j_28442972",
@@ -26330,7 +26330,7 @@
     "price_type": "retail",
     "name_raw": "Gfco Certified 1551Ct Natural Watermelon Tourmaline Gemstone Origin Afghanistan",
     "gem_category": "tourmaline",
-    "category": "unknown_tourmaline",
+    "category": "Watermelon Tourmaline (Pink/Green)",
     "carat": 15.51,
     "clarity": null,
     "treatment": "unheated",
@@ -26341,7 +26341,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/gfco-certified-1551ct-natural-watermelon-tourmaline-gemstone-origin-afghanistan/id-j_24054442/",
     "crawled_at": "2026-05-10T17:22:07.400755+00:00",
-    "category_id": null
+    "category_id": 31
   },
   {
     "source_id": "1stdibs_j_27117912",
@@ -26387,7 +26387,7 @@
     "price_type": "retail",
     "name_raw": "Gfco Certified 391Ct Natural Rubellite Tourmaline Gemstone Scissor Cut",
     "gem_category": "tourmaline",
-    "category": "unknown_tourmaline",
+    "category": "Rubellite (Pink/Red)",
     "carat": 3.91,
     "clarity": null,
     "treatment": "unheated",
@@ -26398,7 +26398,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/gfco-certified-391ct-natural-rubellite-tourmaline-gemstone-scissor-cut/id-j_24178452/",
     "crawled_at": "2026-05-10T17:22:16.344750+00:00",
-    "category_id": null
+    "category_id": 28
   },
   {
     "source_id": "1stdibs_j_28124082",
@@ -26425,7 +26425,7 @@
     "price_type": "retail",
     "name_raw": "Superb Natural Indicolite Tourmaline 165 Carats Loupe Clean Afghan Tourmaline",
     "gem_category": "tourmaline",
-    "category": "unknown_tourmaline",
+    "category": "Indicolite (Blue/Blue-Green)",
     "carat": 1.65,
     "clarity": "VVS",
     "treatment": "unheated",
@@ -26436,7 +26436,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/superb-natural-indicolite-tourmaline-165-carats-loupe-clean-afghan-tourmaline/id-j_18300082/",
     "crawled_at": "2026-05-10T17:22:22.315231+00:00",
-    "category_id": null
+    "category_id": 29
   },
   {
     "source_id": "1stdibs_j_28658792",
@@ -26615,7 +26615,7 @@
     "price_type": "retail",
     "name_raw": "Indicolite Tourmaline 150 Carats Baguette Cut Natural Loose Afghani Gemstone",
     "gem_category": "tourmaline",
-    "category": "unknown_tourmaline",
+    "category": "Indicolite (Blue/Blue-Green)",
     "carat": 1.5,
     "clarity": "VVS",
     "treatment": "unheated",
@@ -26626,7 +26626,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/indicolite-tourmaline-150-carats-baguette-cut-natural-loose-afghani-gemstone/id-j_20415652/",
     "crawled_at": "2026-05-10T17:22:52.508093+00:00",
-    "category_id": null
+    "category_id": 29
   },
   {
     "source_id": "1stdibs_j_24283892",
@@ -26634,7 +26634,7 @@
     "price_type": "retail",
     "name_raw": "215 Carat Natural Loose Indicolite Tourmaline Square Shape Gemstone",
     "gem_category": "tourmaline",
-    "category": "unknown_tourmaline",
+    "category": "Indicolite (Blue/Blue-Green)",
     "carat": 2.15,
     "clarity": null,
     "treatment": "unknown",
@@ -26645,7 +26645,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/215-carat-natural-loose-indicolite-tourmaline-square-shape-gemstone/id-j_24283892/",
     "crawled_at": "2026-05-10T17:22:59.582611+00:00",
-    "category_id": null
+    "category_id": 29
   },
   {
     "source_id": "1stdibs_j_27978692",
@@ -26938,7 +26938,7 @@
     "price_type": "retail",
     "name_raw": "Natural Tourmaline Rubellite Loose Gemstone 211 Ct Vivid Pink Certificate",
     "gem_category": "tourmaline",
-    "category": "unknown_tourmaline",
+    "category": "Rubellite (Pink/Red)",
     "carat": 2.11,
     "clarity": null,
     "treatment": "unheated",
@@ -26949,7 +26949,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/natural-tourmaline-rubellite-loose-gemstone-211-ct-vivid-pink-certificate/id-j_26156492/",
     "crawled_at": "2026-05-10T17:23:51.445965+00:00",
-    "category_id": null
+    "category_id": 28
   },
   {
     "source_id": "1stdibs_j_28318362",
@@ -27109,7 +27109,7 @@
     "price_type": "retail",
     "name_raw": "Tourmaline Rubellite 753Ct Natural Gemstone Oval Mozambique Gfco Certificate",
     "gem_category": "tourmaline",
-    "category": "unknown_tourmaline",
+    "category": "Rubellite (Pink/Red)",
     "carat": 7.53,
     "clarity": null,
     "treatment": "unheated",
@@ -27120,7 +27120,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/tourmaline-rubellite-753ct-natural-gemstone-oval-mozambique-gfco-certificate/id-j_26945932/",
     "crawled_at": "2026-05-10T17:24:21.176915+00:00",
-    "category_id": null
+    "category_id": 28
   },
   {
     "source_id": "1stdibs_j_28172402",
@@ -27261,7 +27261,7 @@
     "price_type": "retail",
     "name_raw": "170 Carat Natural Loose Rubellite Tourmaline Cushion Shape Gemstone",
     "gem_category": "tourmaline",
-    "category": "unknown_tourmaline",
+    "category": "Rubellite (Pink/Red)",
     "carat": 1.7,
     "clarity": null,
     "treatment": "unknown",
@@ -27272,7 +27272,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/170-carat-natural-loose-rubellite-tourmaline-cushion-shape-gemstone/id-j_26647582/",
     "crawled_at": "2026-05-10T17:24:45.109268+00:00",
-    "category_id": null
+    "category_id": 28
   },
   {
     "source_id": "1stdibs_j_28317882",
@@ -27736,7 +27736,7 @@
     "price_type": "retail",
     "name_raw": "Garnet Rhodolite Loose 652Ct Natural Gemstone Cushion Cut Tanzania Gfco",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 6.52,
     "clarity": null,
     "treatment": "unheated",
@@ -27747,7 +27747,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/garnet-rhodolite-loose-652ct-natural-gemstone-cushion-cut-tanzania-gfco/id-j_25980782/",
     "crawled_at": "2026-05-10T17:26:23.607186+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "1stdibs_j_29258322",
@@ -27755,7 +27755,7 @@
     "price_type": "retail",
     "name_raw": "680 Carat Natural Loose Rhodolite Garnet Lot Jewellery Making",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 6.8,
     "clarity": null,
     "treatment": "unknown",
@@ -27766,7 +27766,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/680-carat-natural-loose-rhodolite-garnet-lot-jewellery-making/id-j_29258322/",
     "crawled_at": "2026-05-10T17:26:26.873042+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "1stdibs_j_26291132",
@@ -27812,7 +27812,7 @@
     "price_type": "retail",
     "name_raw": "225 Carat Natural Loose Rhodolite Garnet Oval Shape Gemstone",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 2.25,
     "clarity": null,
     "treatment": "unknown",
@@ -27823,7 +27823,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/225-carat-natural-loose-rhodolite-garnet-oval-shape-gemstone/id-j_24931992/",
     "crawled_at": "2026-05-10T17:26:36.854228+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "1stdibs_j_28387212",
@@ -27888,7 +27888,7 @@
     "price_type": "retail",
     "name_raw": "Aig Certified 996 Carat Natural Loose Almandine Garnet Cushion Shape Gemstone",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Almandine Garnet (Deep Red)",
     "carat": 9.96,
     "clarity": null,
     "treatment": "unheated",
@@ -27899,7 +27899,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/aig-certified-996-carat-natural-loose-almandine-garnet-cushion-shape-gemstone/id-j_27874202/",
     "crawled_at": "2026-05-10T17:26:48.812064+00:00",
-    "category_id": null
+    "category_id": 36
   },
   {
     "source_id": "1stdibs_j_28225002",
@@ -27907,7 +27907,7 @@
     "price_type": "retail",
     "name_raw": "Deep Red Rhodolite Garnet 486 Ct Trillion Cut Natural Loose Gemstone Ring",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 4.86,
     "clarity": "SI1",
     "treatment": "unheated",
@@ -27918,7 +27918,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/deep-red-rhodolite-garnet-486-ct-trillion-cut-natural-loose-gemstone-ring/id-j_28225002/",
     "crawled_at": "2026-05-10T17:26:51.811376+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "1stdibs_j_27480952",
@@ -27926,7 +27926,7 @@
     "price_type": "retail",
     "name_raw": "Gfco Certified 719 Carat Natural Rhodolite Garnet Loose Tanzanians Gemstone",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 7.19,
     "clarity": null,
     "treatment": "unknown",
@@ -27937,7 +27937,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/gfco-certified-719-carat-natural-rhodolite-garnet-loose-tanzanians-gemstone/id-j_27480952/",
     "crawled_at": "2026-05-10T17:26:54.795819+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "1stdibs_j_27979012",
@@ -27983,7 +27983,7 @@
     "price_type": "retail",
     "name_raw": "560 Carat Deep Red Rhodolite Garnet Cushion Cut Natural Loose Gemstone Ring",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 5.6,
     "clarity": "SI1",
     "treatment": "unheated",
@@ -27994,7 +27994,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/560-carat-deep-red-rhodolite-garnet-cushion-cut-natural-loose-gemstone-ring/id-j_28385912/",
     "crawled_at": "2026-05-10T17:27:03.806988+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "1stdibs_j_27884552",
@@ -28002,7 +28002,7 @@
     "price_type": "retail",
     "name_raw": "615 Carat Natural Loose Almandine Garnet Oval Shape Gem",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Almandine Garnet (Deep Red)",
     "carat": 6.15,
     "clarity": null,
     "treatment": "unknown",
@@ -28013,7 +28013,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/615-carat-natural-loose-almandine-garnet-oval-shape-gem/id-j_27884552/",
     "crawled_at": "2026-05-10T17:27:06.775717+00:00",
-    "category_id": null
+    "category_id": 36
   },
   {
     "source_id": "1stdibs_j_27926482",
@@ -28116,7 +28116,7 @@
     "price_type": "retail",
     "name_raw": "Deep Red Rhodolite Garnet 889 Carat Cushion Cut Natural Loose Gemstone Ring",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 8.89,
     "clarity": "SI1",
     "treatment": "unheated",
@@ -28127,7 +28127,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/deep-red-rhodolite-garnet-889-carat-cushion-cut-natural-loose-gemstone-ring/id-j_28216822/",
     "crawled_at": "2026-05-10T17:27:24.730589+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "1stdibs_j_18542972",
@@ -28135,7 +28135,7 @@
     "price_type": "retail",
     "name_raw": "Gorgeous Natural Loose Red Rhodolite Garnet Gemstone 245 Carat Si Clarity",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 2.45,
     "clarity": "SI1",
     "treatment": "unheated",
@@ -28146,7 +28146,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/gorgeous-natural-loose-red-rhodolite-garnet-gemstone-245-carat-si-clarity/id-j_18542972/",
     "crawled_at": "2026-05-10T17:27:27.732098+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "1stdibs_j_27903902",
@@ -28154,7 +28154,7 @@
     "price_type": "retail",
     "name_raw": "620 Carat Natural Loose Rhodolite Garnet Cushion Shape Gemstone From Tanzania",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 6.2,
     "clarity": null,
     "treatment": "unknown",
@@ -28165,7 +28165,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/620-carat-natural-loose-rhodolite-garnet-cushion-shape-gemstone-from-tanzania/id-j_27903902/",
     "crawled_at": "2026-05-10T17:27:30.700367+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "1stdibs_j_18338712",
@@ -28268,7 +28268,7 @@
     "price_type": "retail",
     "name_raw": "Fine 188Ct Purplish Pink Rhodolite Garnet Heart Cut Loose Gem 78X65Mm",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 1.88,
     "clarity": null,
     "treatment": "unheated",
@@ -28279,7 +28279,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/fine-188ct-purplish-pink-rhodolite-garnet-heart-cut-loose-gem-78x65mm/id-j_16518302/",
     "crawled_at": "2026-05-10T17:27:48.655536+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "1stdibs_j_28115372",
@@ -28363,7 +28363,7 @@
     "price_type": "retail",
     "name_raw": "Natural Garnet Rhodolite Gemstone 1392 Ct Cushion Cut Tanzania Certificate",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 13.92,
     "clarity": "VVS",
     "treatment": "unheated",
@@ -28374,7 +28374,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/natural-garnet-rhodolite-gemstone-1392-ct-cushion-cut-tanzania-certificate/id-j_25865812/",
     "crawled_at": "2026-05-10T17:28:03.566813+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "1stdibs_j_28393922",
@@ -28420,7 +28420,7 @@
     "price_type": "retail",
     "name_raw": "719 Carats Certified Natural Rhodolite Garnet Loose Gemstone Oval Cut",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 7.19,
     "clarity": null,
     "treatment": "unheated",
@@ -28431,7 +28431,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/719-carats-certified-natural-rhodolite-garnet-loose-gemstone-oval-cut/id-j_27979152/",
     "crawled_at": "2026-05-10T17:28:12.523270+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "1stdibs_j_28069372",
@@ -28496,7 +28496,7 @@
     "price_type": "retail",
     "name_raw": "1718 Ct Natural Reddish Pink Rhodolite Garnet Oval Cut Loose Gemstones Parcel",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 17.18,
     "clarity": null,
     "treatment": "unheated",
@@ -28507,7 +28507,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/1718-ct-natural-reddish-pink-rhodolite-garnet-oval-cut-loose-gemstones-parcel/id-j_28557662/",
     "crawled_at": "2026-05-10T17:28:27.483971+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "1stdibs_j_28323032",
@@ -28553,7 +28553,7 @@
     "price_type": "retail",
     "name_raw": "Garnet 514Ct Pyrope Almandine Natural Gemstone Heart Tanzania Certificate Agl",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Pyrope Garnet (Red)",
     "carat": 5.14,
     "clarity": "VVS",
     "treatment": "unheated",
@@ -28564,7 +28564,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/garnet-514ct-pyrope-almandine-natural-gemstone-heart-tanzania-certificate-agl/id-j_28583242/",
     "crawled_at": "2026-05-10T17:28:36.469531+00:00",
-    "category_id": null
+    "category_id": 35
   },
   {
     "source_id": "1stdibs_j_28387252",
@@ -28610,7 +28610,7 @@
     "price_type": "retail",
     "name_raw": "695 Carat Natural Loose Rhodolite Garnet Cushion Cut Gemstone From Tanzania",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 6.95,
     "clarity": null,
     "treatment": "unknown",
@@ -28621,7 +28621,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/695-carat-natural-loose-rhodolite-garnet-cushion-cut-gemstone-from-tanzania/id-j_28022172/",
     "crawled_at": "2026-05-10T17:28:45.445066+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "1stdibs_j_26875792",
@@ -28667,7 +28667,7 @@
     "price_type": "retail",
     "name_raw": "240 Cts Natural Loose Red Rhodolite Garnet Cushion Cut Gemstone From Tanzania",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 2.4,
     "clarity": null,
     "treatment": "unknown",
@@ -28678,7 +28678,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/240-cts-natural-loose-red-rhodolite-garnet-cushion-cut-gemstone-from-tanzania/id-j_19840072/",
     "crawled_at": "2026-05-10T17:28:54.411399+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "1stdibs_j_27874502",
@@ -28705,7 +28705,7 @@
     "price_type": "retail",
     "name_raw": "Garnet Rhodolite Losse 815Ct Natural Gemstone Cushion Cut Tanzania Gia",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 8.15,
     "clarity": null,
     "treatment": "unheated",
@@ -28716,7 +28716,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/garnet-rhodolite-losse-815ct-natural-gemstone-cushion-cut-tanzania-gia/id-j_25980332/",
     "crawled_at": "2026-05-10T17:29:00.378913+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "1stdibs_j_26782172",
@@ -28724,7 +28724,7 @@
     "price_type": "retail",
     "name_raw": "890 Carat Natural Loose Rhodolite Garnet Pair Heart Shape Gemstone",
     "gem_category": "garnet",
-    "category": "unknown_rhodolite",
+    "category": "Rhodolite Garnet (Pink/Purple)",
     "carat": 8.9,
     "clarity": null,
     "treatment": "unknown",
@@ -28735,7 +28735,7 @@
     "image_url": null,
     "lot_url": "https://www.1stdibs.com/jewelry/loose-gemstones/890-carat-natural-loose-rhodolite-garnet-pair-heart-shape-gemstone/id-j_26782172/",
     "crawled_at": "2026-05-10T17:29:03.358308+00:00",
-    "category_id": null
+    "category_id": 32
   },
   {
     "source_id": "1stdibs_j_28220202",
