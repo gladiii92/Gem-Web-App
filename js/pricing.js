@@ -1,7 +1,6 @@
 // PRICING ENGINE
 // Datenformat: range[quality] = { retail_min, retail_max, wholesale_min, wholesale_max, _wholesale_source }
 // _wholesale_source: 'auto_1_5' | 'crawler' | 'manual'
-// Crawler schreibt später wholesale_min/max + _wholesale_source = 'crawler' — pricing.js ändert sich NICHT
 
 const GRADE_KEYS = ['I1', 'SI2', 'SI1', 'VS', 'VVS'];
 
@@ -14,36 +13,47 @@ function rangeHasPrices(range) {
 }
 
 /**
- * @param {Object} gem
- * @param {'I1'|'SI2'|'SI1'|'VS'|'VVS'} quality
- * @param {number} carat
- * @param {'retail'|'wholesale'} mode
- * @returns {{ minPerCarat, maxPerCarat, minTotal, maxTotal, wholesaleSource }|{ error: string }}
+ * @returns {{ allGrades, crawlerStats, wholesaleSource }|{ error: string }}
+ * allGrades: [ { grade, minPerCarat, maxPerCarat, minTotal, maxTotal } ]
+ * crawlerStats: { gemrock: { retail, wholesale, by_clarity }, '1stdibs': { retail } } | null
  */
 export function calculatePrice(gem, quality, carat, mode = 'retail') {
-  if (!gem || !quality || !carat || carat <= 0) {
+  if (!gem || !quality || !carat || carat <= 0)
     return { error: 'Bitte alle Felder korrekt ausfüllen.' };
-  }
 
   const range = findPriceRange(gem, carat);
   if (!range) return { error: 'Keine Preisspanne für dieses Karat gefunden.' };
 
-  if (!rangeHasPrices(range)) {
+  if (!rangeHasPrices(range))
     return { error: `⚠️ Kein Ankauf empfohlen für ${gem.name} über ${range.carat_min} ct.` };
-  }
 
-  const gradeData = range[quality];
-  if (!gradeData) return { error: 'Keine Preisdaten für diese Qualitätsstufe.' };
+  // ── Alle Clarity-Grades berechnen ─────────────────────────────────────────
+  const allGrades = GRADE_KEYS
+    .filter(g => range[g] !== undefined)
+    .map(g => {
+      const gradeData = range[g];
+      const minKey = mode === 'wholesale' ? 'wholesale_min' : 'retail_min';
+      const maxKey = mode === 'wholesale' ? 'wholesale_max' : 'retail_max';
+      return {
+        grade:        g,
+        minPerCarat:  gradeData[minKey]  ?? null,
+        maxPerCarat:  gradeData[maxKey]  ?? null,
+        minTotal:     gradeData[minKey]  ? Math.round(gradeData[minKey]  * carat) : null,
+        maxTotal:     gradeData[maxKey]  ? Math.round(gradeData[maxKey]  * carat) : null,
+        wholesaleSource: gradeData._wholesale_source ?? null,
+      };
+    });
 
-  const minKey = mode === 'wholesale' ? 'wholesale_min' : 'retail_min';
-  const maxKey = mode === 'wholesale' ? 'wholesale_max' : 'retail_max';
+  // ── Crawler-Stats aus _crawler_stats.by_source ────────────────────────────
+  const crawlerStats = range._crawler_stats?.by_source ?? null;
+
+  // Ausgewählte Grade für Rückwärtskompatibilität
+  const selected = allGrades.find(g => g.grade === quality) || allGrades.at(-1);
 
   return {
-    minPerCarat:    gradeData[minKey],
-    maxPerCarat:    gradeData[maxKey],
-    minTotal:       Math.round(gradeData[minKey] * carat),
-    maxTotal:       Math.round(gradeData[maxKey] * carat),
-    wholesaleSource: gradeData._wholesale_source ?? null, // 'auto_1_5' | 'crawler' | 'manual'
+    ...selected,
+    allGrades,
+    crawlerStats,
   };
 }
 
