@@ -198,31 +198,91 @@ function renderClarityTable(allGrades, selectedGrade) {
   </table>`;
 }
 
-// ── Marktdaten-Block ────────────────────────────────────────────────────────
-function renderMarketBlock(crawlerStats, mode) {
-  if (!crawlerStats) return '';
+function renderMarketBlock(crawlerStats, mode, allGrades, selectedGrade) {
+  if (!crawlerStats || !allGrades || allGrades.length === 0) return '';
+
+  function buildClarityRows(byClarity, priceType) {
+    return allGrades.map(g => {
+      const isSelected = g.grade === selectedGrade;
+      const gradeStats = byClarity?.[g.grade]?.[priceType];
+      return `<tr class="${isSelected ? 'selected-grade' : ''}">
+        <td>${GRADE_LABELS[g.grade] || g.grade}</td>
+        <td>${gradeStats ? fmt(gradeStats.min)    : '–'}</td>
+        <td>${gradeStats ? fmt(gradeStats.max)    : '–'}</td>
+        <td>${gradeStats ? fmt(gradeStats.median) : '–'}</td>
+      </tr>`;
+    }).join('');
+  }
 
   if (mode === 'retail') {
-    const ll = crawlerStats['1stdibs']?.retail;
-    if (!ll) return '';
+    const src        = crawlerStats['1stdibs'];
+    const byClarity  = src?.by_clarity ?? {};
+    const fallback   = src?.retail;
+    // Mindestens eine Grade muss Daten haben, sonst kein Block
+    const hasData = allGrades.some(g => byClarity[g.grade]?.retail);
+    if (!hasData && !fallback) return '';
+
+    // Fallback: wenn by_clarity leer → alle Zeilen mit Gesamt-Stats füllen
+    const rows = hasData
+      ? buildClarityRows(byClarity, 'retail')
+      : allGrades.map(g => {
+          const isSelected = g.grade === selectedGrade;
+          return `<tr class="${isSelected ? 'selected-grade' : ''}">
+            <td>${GRADE_LABELS[g.grade] || g.grade}</td>
+            <td>${fmt(fallback?.min)}</td>
+            <td>${fmt(fallback?.max)}</td>
+            <td>${fmt(fallback?.median)}</td>
+          </tr>`;
+        }).join('');
+
     return `<table class="market-table">
-      <thead><tr><th>Luxury-Layer (1stDibs)</th><th>Min</th><th>Max</th><th>Median</th></tr></thead>
-      <tbody><tr>
-        <td>💎 Endkunden-Markt</td>
-        <td>${fmt(ll.min)}</td><td>${fmt(ll.max)}</td><td>${fmt(ll.median)}</td>
-      </tr></tbody>
+      <thead><tr>
+        <th>Luxury-Layer</th>
+        <th>Min</th><th>Max</th><th>Median</th>
+      </tr></thead>
+      <tbody>
+        ${rows}
+        <tr><td colspan="4" style="font-size:0.72rem;color:var(--text-muted);padding:5px 10px">
+          Endkunden-Markt
+        </td></tr>
+      </tbody>
     </table>`;
   }
 
   if (mode === 'wholesale') {
-    const wl = crawlerStats['gemrock']?.wholesale || crawlerStats['gemrock']?.retail;
-    if (!wl) return '';
+    const src       = crawlerStats['gemrock'];
+    const byClarity = src?.by_clarity ?? {};
+    const fallback  = src?.wholesale || src?.retail;
+    const hasData   = allGrades.some(g => byClarity[g.grade]?.wholesale || byClarity[g.grade]?.retail);
+    if (!hasData && !fallback) return '';
+
+    const priceType = src?.by_clarity
+      ? (allGrades.some(g => byClarity[g.grade]?.wholesale) ? 'wholesale' : 'retail')
+      : null;
+
+    const rows = hasData
+      ? buildClarityRows(byClarity, priceType || 'retail')
+      : allGrades.map(g => {
+          const isSelected = g.grade === selectedGrade;
+          return `<tr class="${isSelected ? 'selected-grade' : ''}">
+            <td>${GRADE_LABELS[g.grade] || g.grade}</td>
+            <td>${fmt(fallback?.min)}</td>
+            <td>${fmt(fallback?.max)}</td>
+            <td>–</td>
+          </tr>`;
+        }).join('');
+
     return `<table class="market-table">
-      <thead><tr><th>Wholesale-Layer (GemRock)</th><th>Min</th><th>Max</th><th>Median</th></tr></thead>
-      <tbody><tr>
-        <td>🏭 Händler-Einkauf</td>
-        <td>${fmt(wl.min)}</td><td>${fmt(wl.max)}</td><td>${fmt(wl.median)}</td>
-      </tr></tbody>
+      <thead><tr>
+        <th>Wholesale-Layer</th>
+        <th>Min</th><th>Max</th><th>Median</th>
+      </tr></thead>
+      <tbody>
+        ${rows}
+        <tr><td colspan="4" style="font-size:0.72rem;color:var(--text-muted);padding:5px 10px">
+          Händler-Einkauf
+        </td></tr>
+      </tbody>
     </table>`;
   }
   return '';
@@ -271,7 +331,7 @@ function renderResult(gem, result, carat, quality) {
       ${modNote}
       ${renderClarityTable(allGrades, quality)}
       ${nNote}
-      ${renderMarketBlock(crawlerStats, currentMode)}
+      ${renderMarketBlock(crawlerStats, currentMode, allGrades, quality)}
       ${gem.notes ? `<div class="general-note">ℹ️ ${gem.notes}</div>` : ''}
       <div class="carat-info">${carat.toFixed(2)} ct</div>
     </div>`;

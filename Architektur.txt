@@ -2,9 +2,14 @@ Gem-Web-App/
 ├── data.json
 ├── index.html
 ├── style.css
+├── generate_worker.py
+├── migrate_data.py
+├── Architektur.txt
+├── Ablauf.txt
 ├── crawler/
-│   ├── crawl_db.json          ← 1523 Einträge, Quelle für Few-Shot Beispiele
+│   ├── crawl_db.json          ← 6523 Einträge, Quelle für Few-Shot Beispiele
 │   ├── gemrock_crawler.py
+│   ├── analyze_db.py
 │   ├── parser.py
 │   ├── 1stdibs_crawler.py
 │   ├── config.py
@@ -15,12 +20,18 @@ Gem-Web-App/
 │   ├── manual_import.py
 │   ├── db.py
 │   └── requirements.txt
+├── workers/
+│   ├── index.js
+│   └── worker_template.js
 ├── js/
+│   ├── data.js
+│   ├── history.js
 │   ├── ui.js
 │   ├── pricing.js
 │   ├── modifiers.js
 │   └── vision.js              ← NEU — Frontend Vision Logic
 └── vision/
+    ├── corrections.json
     ├── vision_api.py          ← Flask Proxy (localhost:5000)
     ├── vision_prompt.py       ← Prompt-Builder mit Few-Shot + LOOK_ALIKE_GUIDE
     └── requirements.txt       ← flask, flask-cors, requests, Pillow

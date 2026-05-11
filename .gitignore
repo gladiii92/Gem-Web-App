@@ -27,6 +27,11 @@ venv/
 migrate_data.py
 
 # Wichtige Datei
-data.jsondata.json 
-crawl_db.json
+crawler/crawl_db.json
+data.json
+vision/corrections.json
+workers/index.js
+
+#Meine Dateien
+Architektur.txt
 Ablauf.txt

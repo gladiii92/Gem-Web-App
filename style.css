@@ -403,13 +403,17 @@ select.form-control option {
   color: var(--text-muted);
   border-bottom: 1px solid var(--border-color);
 }
+.clarity-table th:first-child,
+.market-table th:first-child {
+  text-align: left;
+}
 .clarity-table td {
   padding: 9px 10px;
   border-bottom: 1px solid rgba(42,47,69,0.4);
   color: var(--text-secondary);
 }
 .clarity-table td:not(:first-child) {
-  text-align: right;
+  text-align: left;
   font-weight: 500;
   color: var(--text-primary);
 }
@@ -443,14 +447,14 @@ select.form-control option {
   background: rgba(42,47,69,0.3);
   text-align: left;
 }
-.market-table th:not(:first-child) { text-align: right; }
+.market-table th:not(:first-child) { text-align: left; }
 .market-table td {
   padding: 10px 10px;
   color: var(--text-secondary);
   border-top: 1px solid rgba(42,47,69,0.4);
 }
 .market-table td:not(:first-child) {
-  text-align: right;
+  text-align: left;
   font-weight: 600;
   color: var(--gold-light);
 }
