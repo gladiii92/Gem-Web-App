@@ -1,14 +1,51 @@
+// ui.js v3 — korrekte IDs, gruppiertes Dropdown, Clarity-Befüllung, Modifier-Toggles
+
 import { loadGems, getGemById } from './data.js';
 import { calculatePrice, getAvailableGrades } from './pricing.js';
 import { saveToHistory, clearHistory, renderHistory } from './history.js';
+import { getModifiersForGem, formatFactor } from './modifiers.js';
 
-let currentMode = 'retail';
+let currentMode     = 'retail';
+let activeModifiers = [];
 
+// ── Mode-Umschaltung ────────────────────────────────────────────────────────
 window.setMode = function(mode) {
   currentMode = mode;
   document.getElementById('btn-retail').classList.toggle('active', mode === 'retail');
   document.getElementById('btn-wholesale').classList.toggle('active', mode === 'wholesale');
+  triggerRecalc();
 };
+
+// ── Dropdown-Gruppen (günstig → teuer, korrekte IDs) ───────────────────────
+const GEM_GROUPS = [
+  { label: 'Topas',       ids: [1] },
+  { label: 'Granat',      ids: [2, 3, 4, 8, 9, 11, 12, 32, 33, 34, 35, 36] },
+  { label: 'Spinell',     ids: [14, 16, 20] },
+  { label: 'Turmalin',    ids: [28, 29, 30, 31, 26, 27] },
+  { label: 'Morganit',    ids: [37] },
+  { label: 'Smaragd',     ids: [18] },
+  { label: 'Tansanit',    ids: [6, 7] },
+  { label: 'Saphir',      ids: [5, 10, 13, 15, 17, 25, 24] },
+  { label: 'Rubin',       ids: [19, 21] },
+  { label: 'Alexandrit',  ids: [22, 23] },
+  { label: 'Paraiba',     ids: [26, 27] },
+];
+
+// Paraiba ist in Turmalin UND Paraiba — deduplizieren beim Render
+// Lösung: Paraiba-Gruppe überschreibt, Turmalin ohne Paraiba
+const GEM_GROUPS_CLEAN = [
+  { label: 'Topas',       ids: [1] },
+  { label: 'Granat',      ids: [2, 3, 4, 8, 9, 11, 12, 32, 33, 34, 35, 36] },
+  { label: 'Spinell',     ids: [14, 16, 20] },
+  { label: 'Turmalin',    ids: [28, 29, 30, 31] },
+  { label: 'Morganit',    ids: [37] },
+  { label: 'Smaragd',     ids: [18] },
+  { label: 'Tansanit',    ids: [6, 7] },
+  { label: 'Saphir',      ids: [5, 10, 13, 15, 17, 25, 24] },
+  { label: 'Rubin',       ids: [19, 21] },
+  { label: 'Alexandrit',  ids: [22, 23] },
+  { label: 'Paraiba',     ids: [26, 27] },
+];
 
 const GRADE_LABELS = {
   'I1':  'Low (I1)',
@@ -20,191 +57,291 @@ const GRADE_LABELS = {
 
 const fmt = (n) => n != null ? '$' + Math.round(n).toLocaleString('de-DE') : '–';
 
-// ── Stones Counter ────────────────────────────────────────────────────────────
+// ── Stones Counter ──────────────────────────────────────────────────────────
 function renderStonesCounter(gems) {
   const el = document.getElementById('stones-counter');
   if (!el) return;
-  const total = gems.reduce((sum, g) => {
-    return sum + (g.retail_sample_count || 0) + (g.wholesale_sample_count || 0);
-  }, 0);
-  el.textContent = `* ${total.toLocaleString('de-DE')} stones analyzed`;
+  const total = gems.reduce((sum, g) =>
+    sum + (g.retail_sample_count || 0) + (g.wholesale_sample_count || 0), 0);
+  el.textContent = `* ${total.toLocaleString('de-DE')} stones in database and analyzed`;
 }
 
-// ── Marktdaten-Block ──────────────────────────────────────────────────────────
-function renderMarketBlock(crawlerStats) {
-  if (!crawlerStats) return '';
+// ── Gruppiertes Dropdown befüllen ───────────────────────────────────────────
+function buildGemDropdown(gems) {
+  const select = document.getElementById('gem-select');
+  if (!select) return;
+  select.innerHTML = '<option value="">– Stein wählen –</option>';
 
-  const gemrock = crawlerStats.gemrock;
-  const stdibs  = crawlerStats['1stdibs'];
-  const wl      = gemrock?.wholesale || gemrock?.retail;
-  const ll      = stdibs?.retail;
+  const gemMap = {};
+  gems.forEach(g => { gemMap[g.id] = g; });
 
-  if (!wl && !ll) return '';
+  const usedIds = new Set();
 
-  const totalN = [
-    gemrock?.retail?.n_raw    || 0,
-    gemrock?.wholesale?.n_raw || 0,
-    stdibs?.retail?.n_raw     || 0,
-  ].reduce((a, b) => a + b, 0);
+  GEM_GROUPS_CLEAN.forEach(group => {
+    const validIds = group.ids.filter(id => gemMap[id] && !usedIds.has(id));
+    if (validIds.length === 0) return;
 
-  let rows = '';
-  if (wl) {
-    rows += `<tr>
-      <td style="color:var(--text-secondary);font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;padding:10px 0;border-bottom:1px solid rgba(42,47,69,0.6);">Wholesale-Layer</td>
-      <td style="text-align:right;padding:10px 0;border-bottom:1px solid rgba(42,47,69,0.6);">${fmt(wl.min)}</td>
-      <td style="text-align:right;padding:10px 0;border-bottom:1px solid rgba(42,47,69,0.6);">${fmt(wl.max)}</td>
-      <td style="text-align:right;padding:10px 0;border-bottom:1px solid rgba(42,47,69,0.6);color:var(--gold);">${fmt(wl.median)}</td>
-    </tr>`;
+    const optgroup = document.createElement('optgroup');
+    optgroup.label = group.label;
+
+    validIds.forEach(id => {
+      usedIds.add(id);
+      const g = gemMap[id];
+      const opt = document.createElement('option');
+      opt.value = g.id;
+      opt.textContent = g.name;
+      optgroup.appendChild(opt);
+    });
+    select.appendChild(optgroup);
+  });
+
+  // Steine die in keiner Gruppe sind → Fallback
+  const ungrouped = gems.filter(g => !usedIds.has(g.id));
+  if (ungrouped.length > 0) {
+    const optgroup = document.createElement('optgroup');
+    optgroup.label = 'Weitere';
+    ungrouped.forEach(g => {
+      const opt = document.createElement('option');
+      opt.value = g.id;
+      opt.textContent = g.name;
+      optgroup.appendChild(opt);
+    });
+    select.appendChild(optgroup);
   }
-  if (ll) {
-    rows += `<tr>
-      <td style="color:var(--text-secondary);font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;padding:10px 0;">Luxury-Layer</td>
-      <td style="text-align:right;padding:10px 0;">${fmt(ll.min)}</td>
-      <td style="text-align:right;padding:10px 0;">${fmt(ll.max)}</td>
-      <td style="text-align:right;padding:10px 0;color:var(--gold);">${fmt(ll.median)}</td>
-    </tr>`;
-  }
-
-  return `
-    <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border-color);">
-      <p style="font-size:0.72rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted);margin-bottom:12px;">
-        Marktdaten
-        <span style="font-weight:400;margin-left:6px;">(${totalN.toLocaleString('de-DE')} Steine analysiert)</span>
-      </p>
-      <table style="width:100%;border-collapse:collapse;">
-        <thead>
-          <tr>
-            <th style="text-align:left;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);padding-bottom:8px;">Markt</th>
-            <th style="text-align:right;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);padding-bottom:8px;">Min</th>
-            <th style="text-align:right;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);padding-bottom:8px;">Max</th>
-            <th style="text-align:right;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);padding-bottom:8px;">Ø Median</th>
-          </tr>
-        </thead>
-        <tbody>${rows}</tbody>
-      </table>
-    </div>`;
 }
 
-// ── Init ──────────────────────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', async () => {
-  const gemSelect     = document.getElementById('gem-select');
-  const qualitySelect = document.getElementById('quality-select');
-  const caratInput    = document.getElementById('carat');
-  const resultBox     = document.getElementById('result');
+// ── Clarity-Dropdown befüllen ───────────────────────────────────────────────
+function buildClarityDropdown(gem) {
+  const select = document.getElementById('quality-select');
+  if (!select) return;
+  select.innerHTML = '<option value="">– Clarity wählen –</option>';
+  const grades = getAvailableGrades(gem);
+  grades.forEach(g => {
+    const opt = document.createElement('option');
+    opt.value = g;
+    opt.textContent = GRADE_LABELS[g] || g;
+    select.appendChild(opt);
+  });
+  // Standard: höchste Grade vorauswählen
+  if (grades.length > 0) select.value = grades.at(-1);
+}
 
-  let gems;
-  try {
-    gems = await loadGems();
-  } catch {
-    resultBox.innerHTML = '<div class="error">Daten konnten nicht geladen werden.</div>';
+// ── Modifier-Buttons rendern ────────────────────────────────────────────────
+function renderModifierButtons(gem) {
+  const container = document.getElementById('modifier-buttons');
+  if (!container) return;
+
+  const modifiers = getModifiersForGem(gem.id);
+  if (modifiers.length === 0) {
+    container.innerHTML = '';
     return;
   }
 
-  renderStonesCounter(gems);
-  gems.forEach(gem => gemSelect.add(new Option(`${gem.id}. ${gem.name}`, gem.id)));
-  updateQualityOptions();
-  renderHistory('history');
-
-  gemSelect.addEventListener('change', updateQualityOptions);
-  document.getElementById('calc-btn').addEventListener('click', doCalculate);
-  document.getElementById('clear-history')?.addEventListener('click', () => {
-    clearHistory();
-    renderHistory('history');
+  const typeLabels = { origin: 'Herkunft', color: 'Farbe', treatment: 'Behandlung' };
+  const grouped = {};
+  modifiers.forEach(m => {
+    if (!grouped[m.type]) grouped[m.type] = [];
+    grouped[m.type].push(m);
   });
 
-  function updateQualityOptions() {
-    const gem = getGemById(parseInt(gemSelect.value, 10));
-    if (!gem) return;
-    qualitySelect.innerHTML = '';
-    getAvailableGrades(gem).forEach(g =>
-      qualitySelect.add(new Option(GRADE_LABELS[g], g))
-    );
+  let html = '<div class="modifier-section">';
+  html += '<div class="modifier-warning">⚠️ Preisanpassungen sind Schätzwerte</div>';
+
+  Object.entries(grouped).forEach(([type, mods]) => {
+    html += `<div class="modifier-group">
+      <span class="modifier-type-label">${typeLabels[type] || type}</span>`;
+    mods.forEach(m => {
+      const isActive = activeModifiers.includes(m.id);
+      const factorLabel = formatFactor(m.factor);
+      const factorClass = m.factor >= 1 ? 'mod-positive' : 'mod-negative';
+      html += `<button
+        class="modifier-btn${isActive ? ' active' : ''}"
+        data-mod-id="${m.id}">
+        ${m.label}&nbsp;<span class="${factorClass}">${factorLabel}</span>
+      </button>`;
+    });
+    html += `</div>`;
+  });
+  html += '</div>';
+  container.innerHTML = html;
+
+  // Event-Delegation statt onclick im HTML
+  container.querySelectorAll('.modifier-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.modId;
+      if (activeModifiers.includes(id)) {
+        activeModifiers = activeModifiers.filter(x => x !== id);
+        btn.classList.remove('active');
+      } else {
+        activeModifiers.push(id);
+        btn.classList.add('active');
+      }
+      triggerRecalc();
+    });
+  });
+}
+
+// ── Clarity-Tabelle ─────────────────────────────────────────────────────────
+function renderClarityTable(allGrades, selectedGrade) {
+  if (!allGrades || allGrades.length === 0) return '';
+  const rows = allGrades.map(g => {
+    const isSelected = g.grade === selectedGrade;
+    return `<tr class="${isSelected ? 'selected-grade' : ''}">
+      <td>${GRADE_LABELS[g.grade] || g.grade}</td>
+      <td>${fmt(g.minTotal)}</td>
+      <td>${fmt(g.maxTotal)}</td>
+    </tr>`;
+  }).join('');
+  return `<table class="clarity-table">
+    <thead><tr><th>Clarity</th><th>Min</th><th>Max</th></tr></thead>
+    <tbody>${rows}</tbody>
+  </table>`;
+}
+
+// ── Marktdaten-Block ────────────────────────────────────────────────────────
+function renderMarketBlock(crawlerStats, mode) {
+  if (!crawlerStats) return '';
+
+  if (mode === 'retail') {
+    const ll = crawlerStats['1stdibs']?.retail;
+    if (!ll) return '';
+    return `<table class="market-table">
+      <thead><tr><th>Luxury-Layer (1stDibs)</th><th>Min</th><th>Max</th><th>Median</th></tr></thead>
+      <tbody><tr>
+        <td>💎 Endkunden-Markt</td>
+        <td>${fmt(ll.min)}</td><td>${fmt(ll.max)}</td><td>${fmt(ll.median)}</td>
+      </tr></tbody>
+    </table>`;
   }
 
-  function doCalculate() {
-    const gem     = getGemById(parseInt(gemSelect.value, 10));
-    const quality = qualitySelect.value;
-    const carat   = parseFloat(caratInput.value);
-    const mode    = currentMode;
+  if (mode === 'wholesale') {
+    const wl = crawlerStats['gemrock']?.wholesale || crawlerStats['gemrock']?.retail;
+    if (!wl) return '';
+    return `<table class="market-table">
+      <thead><tr><th>Wholesale-Layer (GemRock)</th><th>Min</th><th>Max</th><th>Median</th></tr></thead>
+      <tbody><tr>
+        <td>🏭 Händler-Einkauf</td>
+        <td>${fmt(wl.min)}</td><td>${fmt(wl.max)}</td><td>${fmt(wl.median)}</td>
+      </tr></tbody>
+    </table>`;
+  }
+  return '';
+}
 
-    const result = calculatePrice(gem, quality, carat, mode);
+// ── Ergebnis rendern ────────────────────────────────────────────────────────
+function renderResult(gem, result, carat, quality) {
+  const resultDiv = document.getElementById('result');
+  if (!resultDiv) return;
 
-    if (result.error) {
-      resultBox.innerHTML = `<div class="error">${result.error}</div>`;
-      return;
-    }
+  if (result.error) {
+    resultDiv.innerHTML = `<div class="error">${result.error}</div>`;
+    return;
+  }
 
-    const modeTag   = mode === 'wholesale' ? 'wholesale' : 'retail';
-    const modeBadge = `<span class="badge badge-${modeTag}">${mode === 'wholesale' ? 'Großhandel' : 'Retail'}</span>`;
+  const { allGrades, crawlerStats, modFactor } = result;
 
-    // ── Clarity-Tabelle ───────────────────────────────────────────────────────
-    const gradeRows = result.allGrades.map(g => {
-      const isSelected = g.grade === quality;
-      const rowStyle   = isSelected
-        ? 'background:rgba(201,168,76,0.08);'
-        : '';
-      const priceStyle = isSelected
-        ? 'color:var(--gold);font-weight:700;'
-        : 'color:var(--text-primary);';
-      const hasData = g.minTotal != null && g.maxTotal != null;
+  const totalN = [
+    crawlerStats?.gemrock?.retail?.n_raw || 0,
+    crawlerStats?.gemrock?.wholesale?.n_raw || 0,
+    crawlerStats?.['1stdibs']?.retail?.n_raw || 0,
+  ].reduce((a, b) => a + b, 0);
 
-      return `<tr style="${rowStyle}">
-        <td style="color:var(--text-secondary);font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;padding:10px 0;border-bottom:1px solid rgba(42,47,69,0.6);width:40%;">
-          ${GRADE_LABELS[g.grade] || g.grade}
-        </td>
-        <td style="text-align:right;padding:10px 0;border-bottom:1px solid rgba(42,47,69,0.6);${priceStyle}">
-          ${hasData ? fmt(g.minTotal) : '–'}
-        </td>
-        <td style="text-align:right;padding:10px 0;border-bottom:1px solid rgba(42,47,69,0.6);${priceStyle}">
-          ${hasData ? fmt(g.maxTotal) : '–'}
-        </td>
-      </tr>`;
-    }).join('');
+  const modNote = modFactor !== 1.0
+    ? `<div class="modifier-active-note">
+        Aktive Anpassungen: ×${modFactor.toFixed(2)}
+        (${Math.round((modFactor - 1) * 100) >= 0 ? '+' : ''}${Math.round((modFactor - 1) * 100)}%)
+      </div>`
+    : '';
 
-    // ── Wholesale-Warnung ─────────────────────────────────────────────────────
-    const sourceWarn = (mode === 'wholesale' && result.wholesaleSource === 'auto_1_5')
-      ? '<div class="source-warn">⚠️ Großhandelspreise geschätzt (1/5 Retail) — noch keine Crawler-Daten.</div>'
-      : '';
+  const nNote = totalN > 0
+    ? `<div class="market-n-note">${totalN} Steine analysiert</div>`
+    : '';
 
-    // ── Notes ─────────────────────────────────────────────────────────────────
-    const notes = gem.notes
-      ? `<div class="general-note">ℹ️ ${gem.notes}</div>`
-      : '';
+  const modeLabel = currentMode === 'retail' ? 'Retail' : 'Grosshandel';
+  const modeBadge = currentMode === 'retail'
+    ? '<span class="badge badge-retail">Retail</span>'
+    : '<span class="badge badge-wholesale">Grosshandel</span>';
 
-    resultBox.innerHTML = `
-      <div class="result-card">
-        <div class="result-header">
-          <span class="result-gem-name">${gem.name}</span>
-          ${modeBadge}
-        </div>
-        ${sourceWarn}
-        <table style="width:100%;border-collapse:collapse;">
-          <thead>
-            <tr>
-              <th style="text-align:left;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);padding-bottom:10px;">Clarity</th>
-              <th style="text-align:right;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);padding-bottom:10px;">Min</th>
-              <th style="text-align:right;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);padding-bottom:10px;">Max</th>
-            </tr>
-          </thead>
-          <tbody>${gradeRows}</tbody>
-        </table>
-        ${renderMarketBlock(result.crawlerStats)}
-        ${notes}
-        <div style="margin-top:14px;font-size:0.75rem;color:var(--text-muted);">
-          ${carat.toFixed(2)} ct
-        </div>
+  resultDiv.innerHTML = `
+    <div class="result-card">
+      <div class="result-header">
+        <span class="result-gem-name">${gem.name}</span>
+        ${modeBadge}
       </div>
-    `;
+      ${modNote}
+      ${renderClarityTable(allGrades, quality)}
+      ${nNote}
+      ${renderMarketBlock(crawlerStats, currentMode)}
+      ${gem.notes ? `<div class="general-note">ℹ️ ${gem.notes}</div>` : ''}
+      <div class="carat-info">${carat.toFixed(2)} ct</div>
+    </div>`;
+}
 
-    if (result.minTotal != null) {
-      saveToHistory({
-        gemName:    gem.name,
-        quality,
-        carat,
-        mode,
-        totalPrice: result.maxTotal,  // history zeigt Max-Preis als Referenzwert
-      });
-      renderHistory('history');
-    }
+// ── Recalc ──────────────────────────────────────────────────────────────────
+function triggerRecalc() {
+  const gemId   = parseInt(document.getElementById('gem-select')?.value);
+  const quality = document.getElementById('quality-select')?.value;
+  const carat   = parseFloat(document.getElementById('carat-input')?.value);
+  if (!gemId || !quality || !carat || carat <= 0) return;
+  const gem = getGemById(gemId);
+  if (!gem) return;
+  const result = calculatePrice(gem, quality, carat, currentMode, activeModifiers);
+  renderResult(gem, result, carat, quality);
+}
+
+// ── Gem-Wechsel ─────────────────────────────────────────────────────────────
+function onGemChange(gem) {
+  activeModifiers = [];
+  buildClarityDropdown(gem);
+  renderModifierButtons(gem);
+  triggerRecalc();
+}
+
+// ── Submit ──────────────────────────────────────────────────────────────────
+window.calculateAndDisplay = function() {
+  const gemId   = parseInt(document.getElementById('gem-select')?.value);
+  const quality = document.getElementById('quality-select')?.value;
+  const carat   = parseFloat(document.getElementById('carat-input')?.value);
+
+  if (!gemId || !quality || !carat || carat <= 0) {
+    document.getElementById('result').innerHTML =
+      '<div class="error">Bitte alle Felder ausfüllen.</div>';
+    return;
   }
+
+  const gem = getGemById(gemId);
+  if (!gem) return;
+
+  const result = calculatePrice(gem, quality, carat, currentMode, activeModifiers);
+  renderResult(gem, result, carat, quality);
+
+  saveToHistory({
+    gemName:    gem.name,
+    quality,
+    carat,
+    mode:       currentMode,
+    totalPrice: result.maxTotal ?? result.minTotal ?? 0,
+    timestamp:  new Date().toISOString(),
+  });
+};
+
+// ── Init ────────────────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', async () => {
+  const gems = await loadGems();
+  buildGemDropdown(gems);
+  renderStonesCounter(gems);
+  renderHistory();
+
+  document.getElementById('gem-select')?.addEventListener('change', (e) => {
+    const gem = getGemById(parseInt(e.target.value));
+    if (gem) onGemChange(gem);
+  });
+
+  document.getElementById('quality-select')?.addEventListener('change', triggerRecalc);
+  document.getElementById('carat-input')?.addEventListener('input', triggerRecalc);
+
+  document.getElementById('clear-history')?.addEventListener('click', () => {
+    clearHistory();
+    renderHistory();
+  });
 });

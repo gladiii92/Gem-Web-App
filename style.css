@@ -378,3 +378,189 @@ select.form-control option {
   .result-table td:first-child { width: 45%; }
   .total-row td { font-size: 1rem !important; }
 }
+
+
+
+/* ============================================================
+   ERGÄNZUNGEN zu style.css — Modifier, Clarity, Market Tables
+   An das Ende von style.css anfügen
+   ============================================================ */
+
+/* ── Clarity-Tabelle ──────────────────────────────────────── */
+.clarity-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0 8px;
+  font-size: 0.88rem;
+}
+.clarity-table th {
+  text-align: left;
+  padding: 6px 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-color);
+}
+.clarity-table td {
+  padding: 9px 10px;
+  border-bottom: 1px solid rgba(42,47,69,0.4);
+  color: var(--text-secondary);
+}
+.clarity-table td:not(:first-child) {
+  text-align: right;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+.clarity-table tr.selected-grade td {
+  background: rgba(201,168,76,0.08);
+  color: var(--gold-light);
+  font-weight: 600;
+}
+.clarity-table tr.selected-grade td:first-child {
+  border-left: 2px solid var(--gold);
+}
+.clarity-table tr:last-child td { border-bottom: none; }
+
+/* ── Markt-Tabelle ────────────────────────────────────────── */
+.market-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0 8px;
+  font-size: 0.85rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.market-table th {
+  padding: 8px 10px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: rgba(42,47,69,0.3);
+  text-align: left;
+}
+.market-table th:not(:first-child) { text-align: right; }
+.market-table td {
+  padding: 10px 10px;
+  color: var(--text-secondary);
+  border-top: 1px solid rgba(42,47,69,0.4);
+}
+.market-table td:not(:first-child) {
+  text-align: right;
+  font-weight: 600;
+  color: var(--gold-light);
+}
+
+.market-n-note {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  letter-spacing: 0.05em;
+}
+
+/* ── Modifier Section ─────────────────────────────────────── */
+.modifier-section {
+  margin: 8px 0 18px;
+  padding: 14px;
+  background: rgba(18,21,31,0.6);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+}
+.modifier-warning {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(42,47,69,0.5);
+}
+.modifier-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.modifier-group:last-child { margin-bottom: 0; }
+.modifier-type-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  min-width: 72px;
+}
+.modifier-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 12px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+.modifier-btn:hover {
+  border-color: var(--gold-dim);
+  color: var(--text-primary);
+}
+.modifier-btn.active {
+  background: rgba(201,168,76,0.12);
+  border-color: var(--gold-dim);
+  color: var(--gold-light);
+}
+.mod-positive {
+  color: var(--accent-green);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+.mod-negative {
+  color: var(--accent-red);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+.modifier-btn.active .mod-positive { color: #5ddb8a; }
+.modifier-btn.active .mod-negative { color: #ff7b6b; }
+
+/* ── Modifier aktiv Note ──────────────────────────────────── */
+.modifier-active-note {
+  font-size: 0.78rem;
+  color: var(--gold);
+  background: rgba(201,168,76,0.07);
+  border-left: 3px solid var(--gold-dim);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 7px 12px;
+  margin-bottom: 10px;
+}
+
+/* ── Carat Info ───────────────────────────────────────────── */
+.carat-info {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: right;
+  margin-top: 10px;
+  letter-spacing: 0.08em;
+}
+
+/* ── optgroup Styling ─────────────────────────────────────── */
+select.form-control optgroup {
+  background: var(--bg-secondary);
+  color: var(--gold-dim);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+select.form-control option {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  padding: 4px 8px;
+}

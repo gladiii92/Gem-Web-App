@@ -1,12 +1,14 @@
 """
-PARSER v3 — GemRock speichert alle Daten als JSON im x-data Attribut.
+PARSER v4 — GemRock speichert alle Daten als JSON im x-data Attribut.
 Kein fragiles HTML-Parsing mehr — direkt aus dem Datenstrom.
+
+Änderungen v4:
+- Laufende Auktionen (status="open") werden gefiltert — nur closed + catalogue
 """
 import re
 import json
 import html as html_module
 from config import EUR_TO_USD
-
 
 def extract_auction_json(item_soup) -> dict | None:
     """
@@ -20,7 +22,6 @@ def extract_auction_json(item_soup) -> dict | None:
     x_data_raw = outer_div.get("x-data", "")
     x_data_decoded = html_module.unescape(x_data_raw)
 
-    # JSON-Block nach "auction:" extrahieren
     match = re.search(r'auction:\s*(\{.*?\}),\s*\n\s*init', x_data_decoded, re.DOTALL)
     if not match:
         return None
@@ -29,7 +30,6 @@ def extract_auction_json(item_soup) -> dict | None:
         return json.loads(match.group(1))
     except json.JSONDecodeError:
         return None
-
 
 def parse_treatment_from_variants(variants: list) -> str:
     """Liest Treatment direkt aus variants-Array."""
@@ -41,7 +41,6 @@ def parse_treatment_from_variants(variants: list) -> str:
     if any(k in all_values for k in ["heated", "heat", "beryllium", "glass"]):
         return "heated"
     return "unknown"
-
 
 def parse_clarity(text: str) -> str | None:
     clarity_map = {
@@ -65,7 +64,6 @@ def parse_clarity(text: str) -> str | None:
             return grade
     return None
 
-
 def parse_origin(text: str) -> str | None:
     origins = [
         "Sri Lanka", "Ceylon", "Burma", "Myanmar", "Colombia", "Brazil",
@@ -78,29 +76,33 @@ def parse_origin(text: str) -> str | None:
             return "Sri Lanka" if origin == "Ceylon" else origin
     return None
 
-
 def parse_colours(colours: list) -> str:
     return ", ".join(colours) if colours else ""
-
 
 def parse_gemrock_lot(item_soup, gem_category: str) -> dict | None:
     """
     Parst ein .ais-Hits-item durch direktes JSON-Parsing aus x-data.
-    Gibt None zurück wenn Pflichtfelder fehlen.
+    Gibt None zurück wenn:
+      - Pflichtfelder fehlen (price, weight)
+      - Laufende Auktion (type=auction, status=open) — Startgebote sind kein Marktwert
     """
     auction = extract_auction_json(item_soup)
     if not auction:
         return None
 
-    price = auction.get("price")
+    # Laufende Auktionen ausfiltern — nur abgeschlossene Auktionen + Catalogue
+    if auction.get("type") == "auction" and auction.get("status") == "open":
+        return None
+
+    price  = auction.get("price")
     weight = auction.get("weight")
 
     if not price or not weight or price <= 0 or weight <= 0:
         return None
 
-    title     = auction.get("title", "")
-    variants  = auction.get("variants", [])
-    colours   = auction.get("colours", [])
+    title    = auction.get("title", "")
+    variants = auction.get("variants", [])
+    colours  = auction.get("colours", [])
     full_text = title + " " + parse_colours(colours)
 
     return {
@@ -120,4 +122,8 @@ def parse_gemrock_lot(item_soup, gem_category: str) -> dict | None:
         "image_url":    auction.get("image"),
         "lot_url":      auction.get("url"),
         "crawled_at":   None,
+        # Zusätzliche Felder für Qualitätskontrolle
+        "auction_status": auction.get("status"),   # "closed" | "catalogue" | None
+        "num_bids":       auction.get("num_bids"),  # Anzahl Gebote — Qualitätsindikator
+        "ends_at":        auction.get("ends_at"),   # Endzeitpunkt der Auktion
     }
