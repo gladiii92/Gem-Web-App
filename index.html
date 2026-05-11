@@ -48,6 +48,64 @@
 
     </div>
 
+    <!-- ══════════════════════════════════════════════════════════
+        VISION CARD v4 — Multi-Bild Upload mit Thumbnail-Vorschau
+        ══════════════════════════════════════════════════════════ -->
+    <div class="card vision-card">
+
+      <div class="vision-card-title">
+        <span>🔍 KI-Steinerkennung</span>
+        <span id="vision-status"></span>
+      </div>
+
+      <!-- Bild 1 (Pflicht) -->
+      <div class="vision-upload-area">
+        <label class="vision-upload-label" for="vision-upload">
+          <span>📷</span>
+          Bild 1 hochladen (Pflicht · JPG, PNG, WebP · max. 10MB)
+        </label>
+        <input type="file" id="vision-upload" accept="image/jpeg,image/png,image/webp">
+      </div>
+
+      <!-- Bild 2 (optional) -->
+      <div class="vision-upload-area vision-upload-optional">
+        <label class="vision-upload-label" for="vision-upload-2">
+          <span>📷</span>
+          Bild 2 — anderer Winkel (optional)
+        </label>
+        <input type="file" id="vision-upload-2" accept="image/jpeg,image/png,image/webp">
+      </div>
+
+      <!-- Bild 3 (optional) -->
+      <div class="vision-upload-area vision-upload-optional">
+        <label class="vision-upload-label" for="vision-upload-3">
+          <span>📷</span>
+          Bild 3 — weiterer Winkel (optional)
+        </label>
+        <input type="file" id="vision-upload-3" accept="image/jpeg,image/png,image/webp">
+      </div>
+
+      <!-- Thumbnail-Vorschau Zeile -->
+      <div class="vision-previews-row" id="vision-previews-row"></div>
+
+      <!-- Hidden img tags (weiterhin für JS benötigt) -->
+      <img id="vision-preview"   hidden alt="">
+      <img id="vision-preview-2" hidden alt="">
+      <img id="vision-preview-3" hidden alt="">
+
+      <!-- Analyse-Button -->
+      <button class="btn-vision-analyze" id="vision-analyze-btn">
+        Stein analysieren
+      </button>
+
+      <!-- Ergebnis -->
+      <div id="vision-result"></div>
+
+    </div>
+
+
+
+
     <div class="card history-section">
       <div class="history-header">
         <h3>Letzte Berechnungen</h3>
@@ -59,5 +117,6 @@
   </div>
 
   <script type="module" src="./js/ui.js"></script>
+  <script type="module" src="./js/vision.js"></script>
 </body>
 </html>

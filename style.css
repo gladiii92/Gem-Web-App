@@ -564,3 +564,359 @@ select.form-control option {
   color: var(--text-primary);
   padding: 4px 8px;
 }
+
+
+/* ============================================================
+   VISION CARD — an das Ende von style.css anhängen
+   ============================================================ */
+
+/* ── Vision Card ──────────────────────────────────────────── */
+.vision-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-card);
+}
+.vision-card-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ── Status Indicator ─────────────────────────────────────── */
+.vision-status-ok   { font-size: 0.72rem; color: var(--accent-green); }
+.vision-status-warn { font-size: 0.72rem; color: #f0b429; }
+.vision-status-off  { font-size: 0.72rem; color: var(--text-muted); }
+.vision-status-off code {
+  background: rgba(255,255,255,0.05);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.68rem;
+}
+
+/* ── Upload Area ──────────────────────────────────────────── */
+.vision-upload-area {
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 14px;
+  cursor: pointer;
+  transition: border-color var(--transition);
+}
+.vision-upload-area:hover { border-color: var(--gold-dim); }
+
+.vision-upload-label {
+  display: block;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+.vision-upload-label span {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+#vision-upload { display: none; }
+
+#vision-preview {
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  margin-top: 10px;
+  background: var(--bg-input);
+}
+
+/* ── Analyze Button ───────────────────────────────────────── */
+.btn-vision-analyze {
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(135deg, #1a2a3a 0%, #1e3248 100%);
+  border: 1px solid var(--accent-blue);
+  border-radius: var(--radius-sm);
+  color: var(--accent-blue);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--transition);
+  margin-bottom: 14px;
+}
+.btn-vision-analyze:hover {
+  background: rgba(74,158,255,0.1);
+  box-shadow: 0 0 16px rgba(74,158,255,0.15);
+}
+.btn-vision-analyze:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Loading ──────────────────────────────────────────────── */
+.vision-loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  padding: 12px 0;
+}
+.vision-spinner {
+  width: 16px; height: 16px;
+  border: 2px solid var(--border-color);
+  border-top-color: var(--accent-blue);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Result Card ──────────────────────────────────────────── */
+.vision-result-card {
+  background: linear-gradient(135deg, #0f1929 0%, #111e30 100%);
+  border: 1px solid rgba(74,158,255,0.25);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  margin-top: 4px;
+}
+.vision-result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(42,47,69,0.6);
+}
+.vision-stone-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent-blue);
+}
+.vision-confidence {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.06em;
+}
+.conf-high { background: rgba(46,204,113,0.12); color: var(--accent-green); border: 1px solid rgba(46,204,113,0.3); }
+.conf-mid  { background: rgba(240,180,41,0.1);  color: #f0b429;             border: 1px solid rgba(240,180,41,0.3); }
+.conf-low  { background: rgba(231,76,60,0.1);   color: var(--accent-red);   border: 1px solid rgba(231,76,60,0.3); }
+
+.vision-result-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.vision-field {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.vision-field-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.vision-field-value {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.vision-estimate-tag {
+  font-size: 0.65rem;
+  background: rgba(240,180,41,0.1);
+  color: #f0b429;
+  border: 1px solid rgba(240,180,41,0.3);
+  border-radius: 10px;
+  padding: 1px 7px;
+}
+.vision-known-tag {
+  font-size: 0.65rem;
+  background: rgba(46,204,113,0.1);
+  color: var(--accent-green);
+  border: 1px solid rgba(46,204,113,0.3);
+  border-radius: 10px;
+  padding: 1px 7px;
+}
+.vision-autofill-note {
+  font-size: 0.75rem;
+  color: var(--accent-green);
+  margin-top: 8px;
+}
+.vision-warn-note {
+  font-size: 0.75rem;
+  color: #f0b429;
+  margin-top: 8px;
+}
+.vision-notes {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  background: rgba(255,255,255,0.03);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+.vision-error {
+  background: rgba(231,76,60,0.1);
+  border: 1px solid rgba(231,76,60,0.3);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  color: #ff6b6b;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+@media (max-width: 480px) {
+  .vision-result-grid { grid-template-columns: 1fr; }
+}
+
+
+
+/* ============================================================
+   VISION KANDIDATEN-KARTEN — ans Ende von style.css anhängen
+   (ergänzt die vorherigen vision_additions.css)
+   ============================================================ */
+
+/* ── Kandidaten-Karten ────────────────────────────────────── */
+.vision-candidate-card {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  margin-bottom: 10px;
+  background: rgba(255,255,255,0.02);
+  transition: border-color var(--transition);
+}
+.vision-candidate-card:last-child { margin-bottom: 0; }
+.vision-candidate-card.top-candidate {
+  border-color: rgba(74,158,255,0.4);
+  background: linear-gradient(135deg, #0f1929 0%, #111e30 100%);
+}
+
+.vision-candidate-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.vision-candidate-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.top-candidate .vision-candidate-name { color: var(--accent-blue); }
+
+/* Reasoning */
+.vision-reasoning {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin: 8px 0 10px;
+  line-height: 1.4;
+  padding-left: 4px;
+  border-left: 2px solid rgba(42,47,69,0.8);
+}
+
+/* Apply-Button */
+.btn-apply-candidate {
+  width: 100%;
+  padding: 8px;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: all var(--transition);
+  margin-top: 8px;
+}
+.btn-apply-candidate:hover {
+  border-color: var(--gold-dim);
+  color: var(--gold-light);
+  background: rgba(201,168,76,0.05);
+}
+.btn-apply-candidate:disabled {
+  color: var(--accent-green);
+  border-color: rgba(46,204,113,0.3);
+  cursor: default;
+}
+
+/* Uncertainty + Quality Notes */
+.vision-uncertainty-note {
+  font-size: 0.78rem;
+  color: #f0b429;
+  background: rgba(240,180,41,0.07);
+  border-left: 3px solid rgba(240,180,41,0.4);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+}
+.vision-quality-note {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  background: rgba(255,255,255,0.02);
+  border-radius: var(--radius-sm);
+}
+
+
+/* Upload optional — etwas dezenter als Pflichtfeld */
+.vision-upload-optional {
+  opacity: 0.7;
+  border-style: dotted;
+  margin-top: 8px;
+  padding: 12px;
+}
+.vision-upload-optional:hover { opacity: 1; border-style: dashed; }
+.vision-upload-optional .vision-upload-label span { font-size: 1.1rem; }
+
+
+/* ============================================================
+   VISION PREVIEW — kleine Thumbnail-Vorschau
+   Ersetzt die vorherige #vision-preview Regel in style.css
+   ============================================================ */
+
+.vision-previews-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.vision-preview-thumb {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  background: var(--bg-input);
+  cursor: pointer;
+  transition: border-color var(--transition);
+}
+.vision-preview-thumb:hover {
+  border-color: var(--gold-dim);
+}
+
+/* Altes großes Preview deaktivieren — wird durch thumbs ersetzt */
+#vision-preview,
+#vision-preview-2,
+#vision-preview-3 {
+  display: none !important;
+}

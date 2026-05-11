@@ -1490,20 +1490,40 @@
             "gemrock": {
               "retail": {
                 "min": 12.0,
-                "max": 150.0,
+                "max": 240.0,
                 "median": 50.0,
-                "n": 3,
-                "n_raw": 3,
-                "outliers_removed": 0
+                "n": 34,
+                "n_raw": 35,
+                "outliers_removed": 1
               },
               "by_clarity": {
-                "VS": {
+                "SI2": {
                   "retail": {
-                    "min": 150.0,
-                    "max": 150.0,
-                    "median": 150.0,
+                    "min": 390.0,
+                    "max": 390.0,
+                    "median": 390.0,
                     "n": 1,
                     "n_raw": 1,
+                    "outliers_removed": 0
+                  }
+                },
+                "SI1": {
+                  "retail": {
+                    "min": 30.0,
+                    "max": 35.0,
+                    "median": 32.5,
+                    "n": 2,
+                    "n_raw": 2,
+                    "outliers_removed": 0
+                  }
+                },
+                "VS": {
+                  "retail": {
+                    "min": 50.0,
+                    "max": 200.0,
+                    "median": 150.0,
+                    "n": 16,
+                    "n_raw": 16,
                     "outliers_removed": 0
                   }
                 },
@@ -1511,10 +1531,10 @@
                   "retail": {
                     "min": 12.0,
                     "max": 50.0,
-                    "median": 31.0,
-                    "n": 2,
-                    "n_raw": 2,
-                    "outliers_removed": 0
+                    "median": 25.0,
+                    "n": 11,
+                    "n_raw": 12,
+                    "outliers_removed": 1
                   }
                 }
               }
@@ -1559,6 +1579,42 @@
           "wholesale_min": 42,
           "wholesale_max": 76,
           "_wholesale_source": "auto_1_5"
+        },
+        "_crawler_stats": {
+          "by_source": {
+            "gemrock": {
+              "retail": {
+                "min": 30.0,
+                "max": 858.0,
+                "median": 150.0,
+                "n": 23,
+                "n_raw": 24,
+                "outliers_removed": 1
+              },
+              "by_clarity": {
+                "VS": {
+                  "retail": {
+                    "min": 30.0,
+                    "max": 450.0,
+                    "median": 88.0,
+                    "n": 11,
+                    "n_raw": 12,
+                    "outliers_removed": 1
+                  }
+                },
+                "VVS": {
+                  "retail": {
+                    "min": 150.0,
+                    "max": 950.0,
+                    "median": 432.0,
+                    "n": 7,
+                    "n_raw": 7,
+                    "outliers_removed": 0
+                  }
+                }
+              }
+            }
+          }
         }
       },
       {
@@ -1598,6 +1654,62 @@
           "wholesale_min": 76,
           "wholesale_max": 120,
           "_wholesale_source": "auto_1_5"
+        },
+        "_crawler_stats": {
+          "by_source": {
+            "gemrock": {
+              "retail": {
+                "min": 40.0,
+                "max": 749.0,
+                "median": 149.5,
+                "n": 12,
+                "n_raw": 15,
+                "outliers_removed": 3
+              },
+              "by_clarity": {
+                "SI2": {
+                  "retail": {
+                    "min": 650.0,
+                    "max": 650.0,
+                    "median": 650.0,
+                    "n": 1,
+                    "n_raw": 1,
+                    "outliers_removed": 0
+                  }
+                },
+                "SI1": {
+                  "retail": {
+                    "min": 2665.0,
+                    "max": 4319.0,
+                    "median": 3492.0,
+                    "n": 2,
+                    "n_raw": 2,
+                    "outliers_removed": 0
+                  }
+                },
+                "VS": {
+                  "retail": {
+                    "min": 40.0,
+                    "max": 168.0,
+                    "median": 100.0,
+                    "n": 4,
+                    "n_raw": 4,
+                    "outliers_removed": 0
+                  }
+                },
+                "VVS": {
+                  "retail": {
+                    "min": 500.0,
+                    "max": 1880.0,
+                    "median": 749.0,
+                    "n": 3,
+                    "n_raw": 3,
+                    "outliers_removed": 0
+                  }
+                }
+              }
+            }
+          }
         }
       },
       {
@@ -1637,6 +1749,42 @@
           "wholesale_min": 120,
           "wholesale_max": 188,
           "_wholesale_source": "auto_1_5"
+        },
+        "_crawler_stats": {
+          "by_source": {
+            "gemrock": {
+              "retail": {
+                "min": 100.0,
+                "max": 2400.0,
+                "median": 578.0,
+                "n": 7,
+                "n_raw": 7,
+                "outliers_removed": 0
+              },
+              "by_clarity": {
+                "SI1": {
+                  "retail": {
+                    "min": 1299.0,
+                    "max": 2400.0,
+                    "median": 1849.5,
+                    "n": 2,
+                    "n_raw": 2,
+                    "outliers_removed": 0
+                  }
+                },
+                "VS": {
+                  "retail": {
+                    "min": 100.0,
+                    "max": 1200.0,
+                    "median": 298.0,
+                    "n": 3,
+                    "n_raw": 3,
+                    "outliers_removed": 0
+                  }
+                }
+              }
+            }
+          }
         }
       },
       {
@@ -1676,6 +1824,42 @@
           "wholesale_min": 188,
           "wholesale_max": 300,
           "_wholesale_source": "auto_1_5"
+        },
+        "_crawler_stats": {
+          "by_source": {
+            "gemrock": {
+              "retail": {
+                "min": 518.0,
+                "max": 6500.0,
+                "median": 1792.0,
+                "n": 3,
+                "n_raw": 3,
+                "outliers_removed": 0
+              },
+              "by_clarity": {
+                "VS": {
+                  "retail": {
+                    "min": 518.0,
+                    "max": 518.0,
+                    "median": 518.0,
+                    "n": 1,
+                    "n_raw": 1,
+                    "outliers_removed": 0
+                  }
+                },
+                "VVS": {
+                  "retail": {
+                    "min": 6500.0,
+                    "max": 6500.0,
+                    "median": 6500.0,
+                    "n": 1,
+                    "n_raw": 1,
+                    "outliers_removed": 0
+                  }
+                }
+              }
+            }
+          }
         }
       },
       {
@@ -1684,9 +1868,9 @@
       }
     ],
     "retail_price_min": 12.0,
-    "retail_price_max": 150.0,
-    "retail_price_median": 50.0,
-    "retail_sample_count": 3,
+    "retail_price_max": 780.0,
+    "retail_price_median": 105.0,
+    "retail_sample_count": 76,
     "_retail_source": "crawler"
   },
   {
@@ -3035,42 +3219,42 @@
           "by_source": {
             "gemrock": {
               "retail": {
-                "min": 35.0,
-                "max": 150.0,
-                "median": 112.5,
-                "n": 6,
-                "n_raw": 6,
-                "outliers_removed": 0
+                "min": 12.0,
+                "max": 280.0,
+                "median": 90.0,
+                "n": 248,
+                "n_raw": 273,
+                "outliers_removed": 25
               },
               "by_clarity": {
                 "SI1": {
                   "retail": {
                     "min": 75.0,
-                    "max": 75.0,
-                    "median": 75.0,
-                    "n": 1,
-                    "n_raw": 1,
+                    "max": 280.0,
+                    "median": 145.0,
+                    "n": 3,
+                    "n_raw": 3,
                     "outliers_removed": 0
                   }
                 },
                 "VS": {
                   "retail": {
-                    "min": 90.0,
-                    "max": 135.0,
-                    "median": 112.5,
-                    "n": 2,
-                    "n_raw": 2,
-                    "outliers_removed": 0
+                    "min": 33.0,
+                    "max": 275.0,
+                    "median": 100.0,
+                    "n": 56,
+                    "n_raw": 63,
+                    "outliers_removed": 7
                   }
                 },
                 "VVS": {
                   "retail": {
-                    "min": 35.0,
-                    "max": 150.0,
-                    "median": 92.5,
-                    "n": 2,
-                    "n_raw": 2,
-                    "outliers_removed": 0
+                    "min": 15.0,
+                    "max": 330.0,
+                    "median": 70.0,
+                    "n": 116,
+                    "n_raw": 125,
+                    "outliers_removed": 9
                   }
                 }
               }
@@ -3120,32 +3304,52 @@
           "by_source": {
             "gemrock": {
               "retail": {
-                "min": 100.0,
-                "max": 2215.0,
-                "median": 390.0,
-                "n": 6,
-                "n_raw": 6,
-                "outliers_removed": 0
+                "min": 25.0,
+                "max": 900.0,
+                "median": 200.0,
+                "n": 243,
+                "n_raw": 274,
+                "outliers_removed": 31
               },
               "by_clarity": {
+                "SI2": {
+                  "retail": {
+                    "min": 80.0,
+                    "max": 121.0,
+                    "median": 100.5,
+                    "n": 2,
+                    "n_raw": 2,
+                    "outliers_removed": 0
+                  }
+                },
+                "SI1": {
+                  "retail": {
+                    "min": 70.0,
+                    "max": 1248.0,
+                    "median": 337.5,
+                    "n": 12,
+                    "n_raw": 13,
+                    "outliers_removed": 1
+                  }
+                },
                 "VS": {
                   "retail": {
-                    "min": 100.0,
-                    "max": 1060.0,
-                    "median": 600.0,
-                    "n": 3,
-                    "n_raw": 3,
-                    "outliers_removed": 0
+                    "min": 35.0,
+                    "max": 500.0,
+                    "median": 176.0,
+                    "n": 78,
+                    "n_raw": 87,
+                    "outliers_removed": 9
                   }
                 },
                 "VVS": {
                   "retail": {
-                    "min": 100.0,
-                    "max": 2215.0,
-                    "median": 1157.5,
-                    "n": 2,
-                    "n_raw": 2,
-                    "outliers_removed": 0
+                    "min": 40.0,
+                    "max": 1910.0,
+                    "median": 350.0,
+                    "n": 83,
+                    "n_raw": 95,
+                    "outliers_removed": 12
                   }
                 }
               }
@@ -3205,22 +3409,62 @@
           "by_source": {
             "gemrock": {
               "retail": {
-                "min": 290.0,
-                "max": 3000.0,
-                "median": 900.0,
-                "n": 3,
-                "n_raw": 3,
-                "outliers_removed": 0
+                "min": 20.0,
+                "max": 3630.0,
+                "median": 500.0,
+                "n": 113,
+                "n_raw": 126,
+                "outliers_removed": 13
               },
               "by_clarity": {
-                "SI1": {
+                "I1": {
                   "retail": {
-                    "min": 3000.0,
-                    "max": 3000.0,
-                    "median": 3000.0,
+                    "min": 2500.0,
+                    "max": 2500.0,
+                    "median": 2500.0,
                     "n": 1,
                     "n_raw": 1,
                     "outliers_removed": 0
+                  }
+                },
+                "SI2": {
+                  "retail": {
+                    "min": 220.0,
+                    "max": 1638.0,
+                    "median": 365.0,
+                    "n": 5,
+                    "n_raw": 5,
+                    "outliers_removed": 0
+                  }
+                },
+                "SI1": {
+                  "retail": {
+                    "min": 232.0,
+                    "max": 3630.0,
+                    "median": 1100.0,
+                    "n": 11,
+                    "n_raw": 11,
+                    "outliers_removed": 0
+                  }
+                },
+                "VS": {
+                  "retail": {
+                    "min": 98.0,
+                    "max": 2700.0,
+                    "median": 366.0,
+                    "n": 25,
+                    "n_raw": 28,
+                    "outliers_removed": 3
+                  }
+                },
+                "VVS": {
+                  "retail": {
+                    "min": 170.0,
+                    "max": 6465.0,
+                    "median": 863.0,
+                    "n": 37,
+                    "n_raw": 38,
+                    "outliers_removed": 1
                   }
                 }
               }
@@ -3275,6 +3519,62 @@
           "wholesale_min": 298,
           "wholesale_max": 496,
           "_wholesale_source": "auto_1_5"
+        },
+        "_crawler_stats": {
+          "by_source": {
+            "gemrock": {
+              "retail": {
+                "min": 25.0,
+                "max": 13292.0,
+                "median": 1328.5,
+                "n": 30,
+                "n_raw": 31,
+                "outliers_removed": 1
+              },
+              "by_clarity": {
+                "SI2": {
+                  "retail": {
+                    "min": 1190.0,
+                    "max": 5823.0,
+                    "median": 2391.0,
+                    "n": 4,
+                    "n_raw": 4,
+                    "outliers_removed": 0
+                  }
+                },
+                "SI1": {
+                  "retail": {
+                    "min": 1006.0,
+                    "max": 17374.0,
+                    "median": 6396.5,
+                    "n": 6,
+                    "n_raw": 6,
+                    "outliers_removed": 0
+                  }
+                },
+                "VS": {
+                  "retail": {
+                    "min": 150.0,
+                    "max": 690.0,
+                    "median": 420.0,
+                    "n": 2,
+                    "n_raw": 2,
+                    "outliers_removed": 0
+                  }
+                },
+                "VVS": {
+                  "retail": {
+                    "min": 659.0,
+                    "max": 13292.0,
+                    "median": 5055.0,
+                    "n": 8,
+                    "n_raw": 8,
+                    "outliers_removed": 0
+                  }
+                }
+              }
+            }
+          }
         }
       },
       {
@@ -3319,12 +3619,54 @@
           "by_source": {
             "gemrock": {
               "retail": {
-                "min": 50.0,
-                "max": 50.0,
-                "median": 50.0,
-                "n": 1,
-                "n_raw": 1,
-                "outliers_removed": 0
+                "min": 40.0,
+                "max": 17400.0,
+                "median": 749.0,
+                "n": 20,
+                "n_raw": 21,
+                "outliers_removed": 1
+              },
+              "by_clarity": {
+                "SI2": {
+                  "retail": {
+                    "min": 5112.0,
+                    "max": 5112.0,
+                    "median": 5112.0,
+                    "n": 1,
+                    "n_raw": 1,
+                    "outliers_removed": 0
+                  }
+                },
+                "SI1": {
+                  "retail": {
+                    "min": 10110.0,
+                    "max": 17400.0,
+                    "median": 10595.0,
+                    "n": 3,
+                    "n_raw": 3,
+                    "outliers_removed": 0
+                  }
+                },
+                "VS": {
+                  "retail": {
+                    "min": 120.0,
+                    "max": 11320.0,
+                    "median": 3999.0,
+                    "n": 5,
+                    "n_raw": 5,
+                    "outliers_removed": 0
+                  }
+                },
+                "VVS": {
+                  "retail": {
+                    "min": 440.0,
+                    "max": 41045.0,
+                    "median": 13568.0,
+                    "n": 3,
+                    "n_raw": 3,
+                    "outliers_removed": 0
+                  }
+                }
               }
             }
           }
@@ -3335,10 +3677,10 @@
         "carat_max": 9999
       }
     ],
-    "retail_price_min": 35.0,
-    "retail_price_max": 2215.0,
-    "retail_price_median": 165.0,
-    "retail_sample_count": 18,
+    "retail_price_min": 12.0,
+    "retail_price_max": 1083.46,
+    "retail_price_median": 150.0,
+    "retail_sample_count": 642,
     "_retail_source": "crawler"
   },
   {
@@ -3894,12 +4236,54 @@
           "by_source": {
             "gemrock": {
               "retail": {
-                "min": 1326.0,
-                "max": 1326.0,
-                "median": 1326.0,
-                "n": 1,
-                "n_raw": 1,
-                "outliers_removed": 0
+                "min": 15.0,
+                "max": 546.0,
+                "median": 137.0,
+                "n": 88,
+                "n_raw": 96,
+                "outliers_removed": 8
+              },
+              "by_clarity": {
+                "SI2": {
+                  "retail": {
+                    "min": 390.0,
+                    "max": 546.0,
+                    "median": 546.0,
+                    "n": 3,
+                    "n_raw": 3,
+                    "outliers_removed": 0
+                  }
+                },
+                "SI1": {
+                  "retail": {
+                    "min": 150.0,
+                    "max": 300.0,
+                    "median": 232.5,
+                    "n": 8,
+                    "n_raw": 9,
+                    "outliers_removed": 1
+                  }
+                },
+                "VS": {
+                  "retail": {
+                    "min": 38.0,
+                    "max": 360.0,
+                    "median": 135.0,
+                    "n": 25,
+                    "n_raw": 28,
+                    "outliers_removed": 3
+                  }
+                },
+                "VVS": {
+                  "retail": {
+                    "min": 15.0,
+                    "max": 750.0,
+                    "median": 250.0,
+                    "n": 17,
+                    "n_raw": 18,
+                    "outliers_removed": 1
+                  }
+                }
               }
             }
           }
@@ -3947,31 +4331,41 @@
           "by_source": {
             "gemrock": {
               "retail": {
-                "min": 70.0,
-                "max": 507.0,
-                "median": 70.0,
-                "n": 3,
-                "n_raw": 3,
-                "outliers_removed": 0
+                "min": 12.0,
+                "max": 950.0,
+                "median": 300.0,
+                "n": 125,
+                "n_raw": 139,
+                "outliers_removed": 14
               },
               "by_clarity": {
                 "SI1": {
                   "retail": {
                     "min": 70.0,
-                    "max": 70.0,
-                    "median": 70.0,
-                    "n": 1,
-                    "n_raw": 1,
-                    "outliers_removed": 0
+                    "max": 1170.0,
+                    "median": 330.0,
+                    "n": 32,
+                    "n_raw": 34,
+                    "outliers_removed": 2
                   }
                 },
                 "VS": {
                   "retail": {
-                    "min": 70.0,
-                    "max": 507.0,
-                    "median": 288.5,
-                    "n": 2,
-                    "n_raw": 2,
+                    "min": 25.0,
+                    "max": 798.0,
+                    "median": 275.0,
+                    "n": 30,
+                    "n_raw": 35,
+                    "outliers_removed": 5
+                  }
+                },
+                "VVS": {
+                  "retail": {
+                    "min": 12.0,
+                    "max": 2028.0,
+                    "median": 449.0,
+                    "n": 26,
+                    "n_raw": 26,
                     "outliers_removed": 0
                   }
                 }
@@ -4022,21 +4416,51 @@
           "by_source": {
             "gemrock": {
               "retail": {
-                "min": 500.0,
-                "max": 500.0,
+                "min": 15.0,
+                "max": 6000.0,
                 "median": 500.0,
-                "n": 1,
-                "n_raw": 1,
-                "outliers_removed": 0
+                "n": 52,
+                "n_raw": 55,
+                "outliers_removed": 3
               },
               "by_clarity": {
-                "SI1": {
+                "SI2": {
                   "retail": {
-                    "min": 500.0,
-                    "max": 500.0,
-                    "median": 500.0,
+                    "min": 349.0,
+                    "max": 349.0,
+                    "median": 349.0,
                     "n": 1,
                     "n_raw": 1,
+                    "outliers_removed": 0
+                  }
+                },
+                "SI1": {
+                  "retail": {
+                    "min": 360.0,
+                    "max": 9949.0,
+                    "median": 1650.0,
+                    "n": 9,
+                    "n_raw": 9,
+                    "outliers_removed": 0
+                  }
+                },
+                "VS": {
+                  "retail": {
+                    "min": 150.0,
+                    "max": 5400.0,
+                    "median": 1450.0,
+                    "n": 13,
+                    "n_raw": 13,
+                    "outliers_removed": 0
+                  }
+                },
+                "VVS": {
+                  "retail": {
+                    "min": 774.0,
+                    "max": 8500.0,
+                    "median": 1779.5,
+                    "n": 8,
+                    "n_raw": 8,
                     "outliers_removed": 0
                   }
                 }
@@ -4085,6 +4509,48 @@
         },
         "_crawler_stats": {
           "by_source": {
+            "gemrock": {
+              "retail": {
+                "min": 28.0,
+                "max": 3999.0,
+                "median": 950.0,
+                "n": 9,
+                "n_raw": 9,
+                "outliers_removed": 0
+              },
+              "by_clarity": {
+                "SI2": {
+                  "retail": {
+                    "min": 2967.0,
+                    "max": 2967.0,
+                    "median": 2967.0,
+                    "n": 1,
+                    "n_raw": 1,
+                    "outliers_removed": 0
+                  }
+                },
+                "VS": {
+                  "retail": {
+                    "min": 366.0,
+                    "max": 2400.0,
+                    "median": 950.0,
+                    "n": 3,
+                    "n_raw": 3,
+                    "outliers_removed": 0
+                  }
+                },
+                "VVS": {
+                  "retail": {
+                    "min": 3999.0,
+                    "max": 3999.0,
+                    "median": 3999.0,
+                    "n": 1,
+                    "n_raw": 1,
+                    "outliers_removed": 0
+                  }
+                }
+              }
+            },
             "1stdibs": {
               "retail": {
                 "min": 29435.79,
@@ -4140,12 +4606,34 @@
           "by_source": {
             "gemrock": {
               "retail": {
-                "min": 321.0,
-                "max": 321.0,
-                "median": 321.0,
-                "n": 1,
-                "n_raw": 1,
-                "outliers_removed": 0
+                "min": 42.0,
+                "max": 2500.0,
+                "median": 260.5,
+                "n": 10,
+                "n_raw": 12,
+                "outliers_removed": 2
+              },
+              "by_clarity": {
+                "VS": {
+                  "retail": {
+                    "min": 129.0,
+                    "max": 7600.0,
+                    "median": 325.0,
+                    "n": 5,
+                    "n_raw": 5,
+                    "outliers_removed": 0
+                  }
+                },
+                "VVS": {
+                  "retail": {
+                    "min": 180.0,
+                    "max": 199.99,
+                    "median": 190.0,
+                    "n": 2,
+                    "n_raw": 2,
+                    "outliers_removed": 0
+                  }
+                }
               }
             }
           }
@@ -4156,10 +4644,10 @@
         "carat_max": 9999
       }
     ],
-    "retail_price_min": 70.0,
-    "retail_price_max": 1326.0,
-    "retail_price_median": 410.5,
-    "retail_sample_count": 6,
+    "retail_price_min": 12.0,
+    "retail_price_max": 1200.0,
+    "retail_price_median": 228.0,
+    "retail_sample_count": 277,
     "_retail_source": "crawler"
   },
   {
@@ -4612,12 +5100,12 @@
           "by_source": {
             "gemrock": {
               "retail": {
-                "min": 70.0,
-                "max": 70.0,
-                "median": 70.0,
-                "n": 1,
-                "n_raw": 1,
-                "outliers_removed": 0
+                "min": 15.0,
+                "max": 350.0,
+                "median": 90.0,
+                "n": 113,
+                "n_raw": 120,
+                "outliers_removed": 7
               },
               "wholesale": {
                 "min": 11.0,
@@ -4629,6 +5117,14 @@
               },
               "by_clarity": {
                 "SI1": {
+                  "retail": {
+                    "min": 220.0,
+                    "max": 279.0,
+                    "median": 249.5,
+                    "n": 2,
+                    "n_raw": 2,
+                    "outliers_removed": 0
+                  },
                   "wholesale": {
                     "min": 11.0,
                     "max": 11.0,
@@ -4640,12 +5136,22 @@
                 },
                 "VS": {
                   "retail": {
-                    "min": 70.0,
-                    "max": 70.0,
-                    "median": 70.0,
-                    "n": 1,
-                    "n_raw": 1,
+                    "min": 35.0,
+                    "max": 410.0,
+                    "median": 90.0,
+                    "n": 42,
+                    "n_raw": 42,
                     "outliers_removed": 0
+                  }
+                },
+                "VVS": {
+                  "retail": {
+                    "min": 15.0,
+                    "max": 345.0,
+                    "median": 79.0,
+                    "n": 42,
+                    "n_raw": 45,
+                    "outliers_removed": 3
                   }
                 }
               }
@@ -4695,22 +5201,42 @@
           "by_source": {
             "gemrock": {
               "retail": {
-                "min": 80.0,
-                "max": 700.0,
-                "median": 700.0,
-                "n": 3,
-                "n_raw": 3,
-                "outliers_removed": 0
+                "min": 68.0,
+                "max": 1100.0,
+                "median": 259.0,
+                "n": 143,
+                "n_raw": 164,
+                "outliers_removed": 21
               },
               "by_clarity": {
+                "SI1": {
+                  "retail": {
+                    "min": 100.0,
+                    "max": 702.0,
+                    "median": 275.0,
+                    "n": 18,
+                    "n_raw": 19,
+                    "outliers_removed": 1
+                  }
+                },
+                "VS": {
+                  "retail": {
+                    "min": 68.0,
+                    "max": 560.0,
+                    "median": 201.0,
+                    "n": 50,
+                    "n_raw": 58,
+                    "outliers_removed": 8
+                  }
+                },
                 "VVS": {
                   "retail": {
                     "min": 80.0,
-                    "max": 700.0,
-                    "median": 390.0,
-                    "n": 2,
-                    "n_raw": 2,
-                    "outliers_removed": 0
+                    "max": 1890.0,
+                    "median": 485.0,
+                    "n": 57,
+                    "n_raw": 62,
+                    "outliers_removed": 5
                   }
                 }
               }
@@ -4768,6 +5294,48 @@
         },
         "_crawler_stats": {
           "by_source": {
+            "gemrock": {
+              "retail": {
+                "min": 75.0,
+                "max": 9264.0,
+                "median": 1492.5,
+                "n": 44,
+                "n_raw": 47,
+                "outliers_removed": 3
+              },
+              "by_clarity": {
+                "SI1": {
+                  "retail": {
+                    "min": 480.0,
+                    "max": 2340.0,
+                    "median": 1017.5,
+                    "n": 6,
+                    "n_raw": 7,
+                    "outliers_removed": 1
+                  }
+                },
+                "VS": {
+                  "retail": {
+                    "min": 79.0,
+                    "max": 4250.0,
+                    "median": 800.0,
+                    "n": 10,
+                    "n_raw": 11,
+                    "outliers_removed": 1
+                  }
+                },
+                "VVS": {
+                  "retail": {
+                    "min": 75.0,
+                    "max": 12000.0,
+                    "median": 3125.0,
+                    "n": 21,
+                    "n_raw": 21,
+                    "outliers_removed": 0
+                  }
+                }
+              }
+            },
             "1stdibs": {
               "retail": {
                 "min": 7516.93,
@@ -4822,6 +5390,14 @@
         "_crawler_stats": {
           "by_source": {
             "gemrock": {
+              "retail": {
+                "min": 100.0,
+                "max": 28000.0,
+                "median": 7500.0,
+                "n": 7,
+                "n_raw": 7,
+                "outliers_removed": 0
+              },
               "wholesale": {
                 "min": 2.0,
                 "max": 2.0,
@@ -4832,12 +5408,30 @@
               },
               "by_clarity": {
                 "VS": {
+                  "retail": {
+                    "min": 1200.0,
+                    "max": 1200.0,
+                    "median": 1200.0,
+                    "n": 1,
+                    "n_raw": 1,
+                    "outliers_removed": 0
+                  },
                   "wholesale": {
                     "min": 2.0,
                     "max": 2.0,
                     "median": 2.0,
                     "n": 1,
                     "n_raw": 1,
+                    "outliers_removed": 0
+                  }
+                },
+                "VVS": {
+                  "retail": {
+                    "min": 300.0,
+                    "max": 28000.0,
+                    "median": 13000.0,
+                    "n": 4,
+                    "n_raw": 4,
                     "outliers_removed": 0
                   }
                 }
@@ -4887,6 +5481,14 @@
         "_crawler_stats": {
           "by_source": {
             "gemrock": {
+              "retail": {
+                "min": 1500.0,
+                "max": 24999.0,
+                "median": 15250.0,
+                "n": 3,
+                "n_raw": 3,
+                "outliers_removed": 0
+              },
               "wholesale": {
                 "min": 2.0,
                 "max": 18.0,
@@ -4897,12 +5499,30 @@
               },
               "by_clarity": {
                 "VS": {
+                  "retail": {
+                    "min": 1500.0,
+                    "max": 1500.0,
+                    "median": 1500.0,
+                    "n": 1,
+                    "n_raw": 1,
+                    "outliers_removed": 0
+                  },
                   "wholesale": {
                     "min": 2.0,
                     "max": 2.0,
                     "median": 2.0,
                     "n": 1,
                     "n_raw": 1,
+                    "outliers_removed": 0
+                  }
+                },
+                "VVS": {
+                  "retail": {
+                    "min": 15250.0,
+                    "max": 24999.0,
+                    "median": 20124.5,
+                    "n": 2,
+                    "n_raw": 2,
                     "outliers_removed": 0
                   }
                 }
@@ -4916,10 +5536,10 @@
         "carat_max": 9999
       }
     ],
-    "retail_price_min": 70.0,
-    "retail_price_max": 700.86,
-    "retail_price_median": 700.0,
-    "retail_sample_count": 5,
+    "retail_price_min": 15.0,
+    "retail_price_max": 1535.0,
+    "retail_price_median": 220.0,
+    "retail_sample_count": 301,
     "_retail_source": "crawler",
     "wholesale_price_min": 2.0,
     "wholesale_price_max": 18.0,
@@ -5288,32 +5908,42 @@
           "by_source": {
             "gemrock": {
               "retail": {
-                "min": 30.0,
-                "max": 350.0,
-                "median": 50.0,
-                "n": 4,
-                "n_raw": 4,
-                "outliers_removed": 0
+                "min": 15.0,
+                "max": 380.0,
+                "median": 100.0,
+                "n": 338,
+                "n_raw": 370,
+                "outliers_removed": 32
               },
               "by_clarity": {
                 "SI1": {
                   "retail": {
-                    "min": 350.0,
-                    "max": 350.0,
-                    "median": 350.0,
-                    "n": 1,
-                    "n_raw": 1,
-                    "outliers_removed": 0
+                    "min": 15.0,
+                    "max": 450.0,
+                    "median": 300.0,
+                    "n": 25,
+                    "n_raw": 27,
+                    "outliers_removed": 2
+                  }
+                },
+                "VS": {
+                  "retail": {
+                    "min": 25.0,
+                    "max": 330.0,
+                    "median": 100.0,
+                    "n": 115,
+                    "n_raw": 123,
+                    "outliers_removed": 8
                   }
                 },
                 "VVS": {
                   "retail": {
-                    "min": 30.0,
-                    "max": 50.0,
-                    "median": 50.0,
-                    "n": 3,
-                    "n_raw": 3,
-                    "outliers_removed": 0
+                    "min": 15.0,
+                    "max": 332.0,
+                    "median": 102.0,
+                    "n": 87,
+                    "n_raw": 95,
+                    "outliers_removed": 8
                   }
                 }
               }
@@ -5363,42 +5993,52 @@
           "by_source": {
             "gemrock": {
               "retail": {
-                "min": 175.0,
-                "max": 1500.0,
-                "median": 365.0,
-                "n": 7,
-                "n_raw": 7,
-                "outliers_removed": 0
+                "min": 30.0,
+                "max": 1050.0,
+                "median": 300.0,
+                "n": 502,
+                "n_raw": 541,
+                "outliers_removed": 39
               },
               "by_clarity": {
+                "SI2": {
+                  "retail": {
+                    "min": 169.0,
+                    "max": 1560.0,
+                    "median": 570.5,
+                    "n": 6,
+                    "n_raw": 6,
+                    "outliers_removed": 0
+                  }
+                },
                 "SI1": {
                   "retail": {
-                    "min": 360.0,
-                    "max": 360.0,
-                    "median": 360.0,
-                    "n": 1,
-                    "n_raw": 1,
-                    "outliers_removed": 0
+                    "min": 110.0,
+                    "max": 625.0,
+                    "median": 270.0,
+                    "n": 122,
+                    "n_raw": 129,
+                    "outliers_removed": 7
                   }
                 },
                 "VS": {
                   "retail": {
-                    "min": 175.0,
-                    "max": 999.99,
-                    "median": 282.5,
-                    "n": 4,
-                    "n_raw": 4,
-                    "outliers_removed": 0
+                    "min": 30.0,
+                    "max": 1200.0,
+                    "median": 363.5,
+                    "n": 132,
+                    "n_raw": 138,
+                    "outliers_removed": 6
                   }
                 },
                 "VVS": {
                   "retail": {
-                    "min": 1500.0,
-                    "max": 1500.0,
-                    "median": 1500.0,
-                    "n": 1,
-                    "n_raw": 1,
-                    "outliers_removed": 0
+                    "min": 110.0,
+                    "max": 2000.0,
+                    "median": 450.0,
+                    "n": 81,
+                    "n_raw": 86,
+                    "outliers_removed": 5
                   }
                 }
               }
@@ -5458,22 +6098,62 @@
           "by_source": {
             "gemrock": {
               "retail": {
-                "min": 599.0,
-                "max": 599.0,
-                "median": 599.0,
-                "n": 1,
-                "n_raw": 1,
-                "outliers_removed": 0
+                "min": 30.0,
+                "max": 3000.0,
+                "median": 480.0,
+                "n": 133,
+                "n_raw": 147,
+                "outliers_removed": 14
               },
               "by_clarity": {
-                "VS": {
+                "I1": {
                   "retail": {
-                    "min": 599.0,
-                    "max": 599.0,
-                    "median": 599.0,
+                    "min": 3991.0,
+                    "max": 3991.0,
+                    "median": 3991.0,
                     "n": 1,
                     "n_raw": 1,
                     "outliers_removed": 0
+                  }
+                },
+                "SI2": {
+                  "retail": {
+                    "min": 199.0,
+                    "max": 429.0,
+                    "median": 314.0,
+                    "n": 2,
+                    "n_raw": 2,
+                    "outliers_removed": 0
+                  }
+                },
+                "SI1": {
+                  "retail": {
+                    "min": 240.0,
+                    "max": 2600.0,
+                    "median": 600.0,
+                    "n": 19,
+                    "n_raw": 21,
+                    "outliers_removed": 2
+                  }
+                },
+                "VS": {
+                  "retail": {
+                    "min": 50.0,
+                    "max": 3000.0,
+                    "median": 598.0,
+                    "n": 27,
+                    "n_raw": 28,
+                    "outliers_removed": 1
+                  }
+                },
+                "VVS": {
+                  "retail": {
+                    "min": 135.0,
+                    "max": 3000.0,
+                    "median": 350.0,
+                    "n": 45,
+                    "n_raw": 51,
+                    "outliers_removed": 6
                   }
                 }
               }
@@ -5531,6 +6211,58 @@
         },
         "_crawler_stats": {
           "by_source": {
+            "gemrock": {
+              "retail": {
+                "min": 60.0,
+                "max": 6000.0,
+                "median": 350.0,
+                "n": 17,
+                "n_raw": 20,
+                "outliers_removed": 3
+              },
+              "by_clarity": {
+                "SI2": {
+                  "retail": {
+                    "min": 3120.0,
+                    "max": 3120.0,
+                    "median": 3120.0,
+                    "n": 1,
+                    "n_raw": 1,
+                    "outliers_removed": 0
+                  }
+                },
+                "SI1": {
+                  "retail": {
+                    "min": 8489.0,
+                    "max": 8489.0,
+                    "median": 8489.0,
+                    "n": 1,
+                    "n_raw": 1,
+                    "outliers_removed": 0
+                  }
+                },
+                "VS": {
+                  "retail": {
+                    "min": 95.0,
+                    "max": 30000.0,
+                    "median": 150.0,
+                    "n": 5,
+                    "n_raw": 5,
+                    "outliers_removed": 0
+                  }
+                },
+                "VVS": {
+                  "retail": {
+                    "min": 600.0,
+                    "max": 800.0,
+                    "median": 650.0,
+                    "n": 3,
+                    "n_raw": 3,
+                    "outliers_removed": 0
+                  }
+                }
+              }
+            },
             "1stdibs": {
               "retail": {
                 "min": 840.09,
@@ -5581,6 +6313,42 @@
           "wholesale_min": 1360,
           "wholesale_max": 2260,
           "_wholesale_source": "auto_1_5"
+        },
+        "_crawler_stats": {
+          "by_source": {
+            "gemrock": {
+              "retail": {
+                "min": 60.0,
+                "max": 1500.0,
+                "median": 180.0,
+                "n": 13,
+                "n_raw": 14,
+                "outliers_removed": 1
+              },
+              "by_clarity": {
+                "VS": {
+                  "retail": {
+                    "min": 275.0,
+                    "max": 28500.0,
+                    "median": 14387.5,
+                    "n": 2,
+                    "n_raw": 2,
+                    "outliers_removed": 0
+                  }
+                },
+                "VVS": {
+                  "retail": {
+                    "min": 1500.0,
+                    "max": 1500.0,
+                    "median": 1500.0,
+                    "n": 1,
+                    "n_raw": 1,
+                    "outliers_removed": 0
+                  }
+                }
+              }
+            }
+          }
         }
       },
       {
@@ -5606,10 +6374,10 @@
         "https://imgcdn1.gempundit.com/media/wysiwyg/Blogs/pink-sapphire-benefits-blog-content-iumage-4-060423.jpg"
       ]
     },
-    "retail_price_min": 30.0,
-    "retail_price_max": 8918.38,
-    "retail_price_median": 599.0,
-    "retail_sample_count": 19,
+    "retail_price_min": 15.0,
+    "retail_price_max": 1050.0,
+    "retail_price_median": 216.0,
+    "retail_sample_count": 1013,
     "_retail_source": "crawler"
   },
   {
@@ -7217,9 +7985,9 @@
               "retail": {
                 "min": 40.0,
                 "max": 1990.0,
-                "median": 275.0,
-                "n": 22,
-                "n_raw": 24,
+                "median": 250.0,
+                "n": 23,
+                "n_raw": 25,
                 "outliers_removed": 2
               },
               "by_clarity": {
@@ -7250,6 +8018,16 @@
                     "median": 1249.5,
                     "n": 8,
                     "n_raw": 8,
+                    "outliers_removed": 0
+                  }
+                },
+                "VVS": {
+                  "retail": {
+                    "min": 250.0,
+                    "max": 250.0,
+                    "median": 250.0,
+                    "n": 1,
+                    "n_raw": 1,
                     "outliers_removed": 0
                   }
                 }
@@ -7428,11 +8206,11 @@
             "gemrock": {
               "retail": {
                 "min": 35.0,
-                "max": 45090.0,
+                "max": 716.0,
                 "median": 200.0,
-                "n": 8,
-                "n_raw": 9,
-                "outliers_removed": 1
+                "n": 9,
+                "n_raw": 11,
+                "outliers_removed": 2
               },
               "wholesale": {
                 "min": 2.0,
@@ -7581,9 +8359,9 @@
       }
     ],
     "retail_price_min": 18.0,
-    "retail_price_max": 8877.46,
-    "retail_price_median": 467.23,
-    "retail_sample_count": 133,
+    "retail_price_max": 7917.0,
+    "retail_price_median": 456.0,
+    "retail_sample_count": 135,
     "_retail_source": "crawler",
     "wholesale_price_min": 1.0,
     "wholesale_price_max": 11.0,
@@ -8473,12 +9251,44 @@
           "by_source": {
             "gemrock": {
               "retail": {
-                "min": 640.0,
-                "max": 640.0,
-                "median": 640.0,
-                "n": 1,
-                "n_raw": 1,
-                "outliers_removed": 0
+                "min": 160.0,
+                "max": 1334.0,
+                "median": 400.0,
+                "n": 11,
+                "n_raw": 12,
+                "outliers_removed": 1
+              },
+              "by_clarity": {
+                "SI1": {
+                  "retail": {
+                    "min": 300.0,
+                    "max": 1872.0,
+                    "median": 1334.0,
+                    "n": 3,
+                    "n_raw": 3,
+                    "outliers_removed": 0
+                  }
+                },
+                "VS": {
+                  "retail": {
+                    "min": 160.0,
+                    "max": 250.0,
+                    "median": 205.0,
+                    "n": 2,
+                    "n_raw": 2,
+                    "outliers_removed": 0
+                  }
+                },
+                "VVS": {
+                  "retail": {
+                    "min": 600.0,
+                    "max": 820.0,
+                    "median": 710.0,
+                    "n": 2,
+                    "n_raw": 2,
+                    "outliers_removed": 0
+                  }
+                }
               }
             }
           }
@@ -8526,21 +9336,51 @@
           "by_source": {
             "gemrock": {
               "retail": {
-                "min": 1650.0,
-                "max": 3300.0,
-                "median": 2475.0,
-                "n": 2,
-                "n_raw": 2,
-                "outliers_removed": 0
+                "min": 199.0,
+                "max": 2200.0,
+                "median": 858.0,
+                "n": 43,
+                "n_raw": 46,
+                "outliers_removed": 3
               },
               "by_clarity": {
+                "SI2": {
+                  "retail": {
+                    "min": 858.0,
+                    "max": 1326.0,
+                    "median": 1092.0,
+                    "n": 2,
+                    "n_raw": 2,
+                    "outliers_removed": 0
+                  }
+                },
+                "SI1": {
+                  "retail": {
+                    "min": 220.0,
+                    "max": 1615.0,
+                    "median": 360.0,
+                    "n": 9,
+                    "n_raw": 9,
+                    "outliers_removed": 0
+                  }
+                },
                 "VS": {
                   "retail": {
-                    "min": 1650.0,
-                    "max": 1650.0,
-                    "median": 1650.0,
-                    "n": 1,
-                    "n_raw": 1,
+                    "min": 199.0,
+                    "max": 2200.0,
+                    "median": 896.0,
+                    "n": 9,
+                    "n_raw": 9,
+                    "outliers_removed": 0
+                  }
+                },
+                "VVS": {
+                  "retail": {
+                    "min": 500.0,
+                    "max": 3200.0,
+                    "median": 1100.0,
+                    "n": 8,
+                    "n_raw": 8,
                     "outliers_removed": 0
                   }
                 }
@@ -8601,12 +9441,12 @@
           "by_source": {
             "gemrock": {
               "retail": {
-                "min": 2500.0,
-                "max": 2851.0,
-                "median": 2675.5,
-                "n": 2,
-                "n_raw": 2,
-                "outliers_removed": 0
+                "min": 240.0,
+                "max": 6000.0,
+                "median": 2250.0,
+                "n": 26,
+                "n_raw": 28,
+                "outliers_removed": 2
               },
               "by_clarity": {
                 "I1": {
@@ -8619,13 +9459,43 @@
                     "outliers_removed": 0
                   }
                 },
-                "VS": {
+                "SI2": {
                   "retail": {
-                    "min": 2500.0,
-                    "max": 2500.0,
-                    "median": 2500.0,
+                    "min": 3599.0,
+                    "max": 3599.0,
+                    "median": 3599.0,
                     "n": 1,
                     "n_raw": 1,
+                    "outliers_removed": 0
+                  }
+                },
+                "SI1": {
+                  "retail": {
+                    "min": 999.0,
+                    "max": 8900.0,
+                    "median": 1800.0,
+                    "n": 3,
+                    "n_raw": 3,
+                    "outliers_removed": 0
+                  }
+                },
+                "VS": {
+                  "retail": {
+                    "min": 1299.0,
+                    "max": 5163.0,
+                    "median": 2500.0,
+                    "n": 9,
+                    "n_raw": 9,
+                    "outliers_removed": 0
+                  }
+                },
+                "VVS": {
+                  "retail": {
+                    "min": 250.0,
+                    "max": 6000.0,
+                    "median": 1500.0,
+                    "n": 8,
+                    "n_raw": 8,
                     "outliers_removed": 0
                   }
                 }
@@ -8681,6 +9551,42 @@
           "wholesale_min": 1460,
           "wholesale_max": 2540,
           "_wholesale_source": "auto_1_5"
+        },
+        "_crawler_stats": {
+          "by_source": {
+            "gemrock": {
+              "retail": {
+                "min": 1400.0,
+                "max": 9435.0,
+                "median": 5417.5,
+                "n": 2,
+                "n_raw": 2,
+                "outliers_removed": 0
+              },
+              "by_clarity": {
+                "SI2": {
+                  "retail": {
+                    "min": 9435.0,
+                    "max": 9435.0,
+                    "median": 9435.0,
+                    "n": 1,
+                    "n_raw": 1,
+                    "outliers_removed": 0
+                  }
+                },
+                "SI1": {
+                  "retail": {
+                    "min": 1400.0,
+                    "max": 1400.0,
+                    "median": 1400.0,
+                    "n": 1,
+                    "n_raw": 1,
+                    "outliers_removed": 0
+                  }
+                }
+              }
+            }
+          }
         }
       },
       {
@@ -8727,10 +9633,10 @@
         "carat_max": 9999
       }
     ],
-    "retail_price_min": 640.0,
-    "retail_price_max": 6299.26,
-    "retail_price_median": 2675.5,
-    "retail_sample_count": 6,
+    "retail_price_min": 160.0,
+    "retail_price_max": 4000.0,
+    "retail_price_median": 999.0,
+    "retail_sample_count": 81,
     "_retail_source": "crawler"
   },
   {
@@ -8787,12 +9693,12 @@
           "by_source": {
             "gemrock": {
               "retail": {
-                "min": 25.0,
+                "min": 5.0,
                 "max": 360.0,
-                "median": 89.5,
-                "n": 12,
-                "n_raw": 13,
-                "outliers_removed": 1
+                "median": 97.5,
+                "n": 590,
+                "n_raw": 639,
+                "outliers_removed": 49
               },
               "wholesale": {
                 "min": 1.0,
@@ -8803,13 +9709,23 @@
                 "outliers_removed": 1
               },
               "by_clarity": {
+                "SI2": {
+                  "retail": {
+                    "min": 149.0,
+                    "max": 1170.0,
+                    "median": 546.0,
+                    "n": 6,
+                    "n_raw": 6,
+                    "outliers_removed": 0
+                  }
+                },
                 "SI1": {
                   "retail": {
-                    "min": 35.0,
+                    "min": 30.0,
                     "max": 979.0,
-                    "median": 300.0,
-                    "n": 5,
-                    "n_raw": 5,
+                    "median": 270.0,
+                    "n": 20,
+                    "n_raw": 20,
                     "outliers_removed": 0
                   },
                   "wholesale": {
@@ -8823,12 +9739,12 @@
                 },
                 "VS": {
                   "retail": {
-                    "min": 45.0,
-                    "max": 300.0,
-                    "median": 172.5,
-                    "n": 2,
-                    "n_raw": 2,
-                    "outliers_removed": 0
+                    "min": 15.0,
+                    "max": 375.0,
+                    "median": 100.0,
+                    "n": 188,
+                    "n_raw": 201,
+                    "outliers_removed": 13
                   },
                   "wholesale": {
                     "min": 1.0,
@@ -8841,12 +9757,12 @@
                 },
                 "VVS": {
                   "retail": {
-                    "min": 25.0,
-                    "max": 70.0,
-                    "median": 40.0,
-                    "n": 3,
-                    "n_raw": 3,
-                    "outliers_removed": 0
+                    "min": 9.0,
+                    "max": 400.0,
+                    "median": 115.0,
+                    "n": 156,
+                    "n_raw": 164,
+                    "outliers_removed": 8
                   }
                 }
               }
@@ -8918,12 +9834,12 @@
           "by_source": {
             "gemrock": {
               "retail": {
-                "min": 90.0,
-                "max": 940.0,
-                "median": 169.0,
-                "n": 16,
-                "n_raw": 17,
-                "outliers_removed": 1
+                "min": 10.0,
+                "max": 1525.0,
+                "median": 270.0,
+                "n": 791,
+                "n_raw": 861,
+                "outliers_removed": 70
               },
               "wholesale": {
                 "min": 1.0,
@@ -8934,24 +9850,34 @@
                 "outliers_removed": 0
               },
               "by_clarity": {
+                "SI2": {
+                  "retail": {
+                    "min": 65.0,
+                    "max": 1950.0,
+                    "median": 394.5,
+                    "n": 12,
+                    "n_raw": 12,
+                    "outliers_removed": 0
+                  }
+                },
                 "SI1": {
                   "retail": {
-                    "min": 153.0,
-                    "max": 695.0,
-                    "median": 424.0,
-                    "n": 2,
-                    "n_raw": 2,
-                    "outliers_removed": 0
+                    "min": 75.0,
+                    "max": 2100.0,
+                    "median": 470.0,
+                    "n": 60,
+                    "n_raw": 64,
+                    "outliers_removed": 4
                   }
                 },
                 "VS": {
                   "retail": {
-                    "min": 90.0,
-                    "max": 1500.03,
-                    "median": 142.5,
-                    "n": 4,
-                    "n_raw": 4,
-                    "outliers_removed": 0
+                    "min": 10.0,
+                    "max": 1010.0,
+                    "median": 214.5,
+                    "n": 246,
+                    "n_raw": 276,
+                    "outliers_removed": 30
                   },
                   "wholesale": {
                     "min": 162.0,
@@ -8964,12 +9890,12 @@
                 },
                 "VVS": {
                   "retail": {
-                    "min": 100.0,
-                    "max": 940.0,
-                    "median": 100.0,
-                    "n": 7,
-                    "n_raw": 7,
-                    "outliers_removed": 0
+                    "min": 10.0,
+                    "max": 2418.0,
+                    "median": 499.0,
+                    "n": 228,
+                    "n_raw": 246,
+                    "outliers_removed": 18
                   }
                 }
               }
@@ -9041,12 +9967,12 @@
           "by_source": {
             "gemrock": {
               "retail": {
-                "min": 50.0,
-                "max": 8949.0,
-                "median": 799.0,
-                "n": 10,
-                "n_raw": 10,
-                "outliers_removed": 0
+                "min": 20.0,
+                "max": 7500.0,
+                "median": 900.0,
+                "n": 461,
+                "n_raw": 499,
+                "outliers_removed": 38
               },
               "wholesale": {
                 "min": 2.0,
@@ -9067,34 +9993,44 @@
                     "outliers_removed": 0
                   }
                 },
+                "SI2": {
+                  "retail": {
+                    "min": 1060.0,
+                    "max": 8112.0,
+                    "median": 3968.0,
+                    "n": 8,
+                    "n_raw": 8,
+                    "outliers_removed": 0
+                  }
+                },
                 "SI1": {
                   "retail": {
-                    "min": 8550.0,
-                    "max": 8550.0,
-                    "median": 8550.0,
-                    "n": 1,
-                    "n_raw": 1,
-                    "outliers_removed": 0
+                    "min": 195.0,
+                    "max": 7339.0,
+                    "median": 1850.0,
+                    "n": 41,
+                    "n_raw": 45,
+                    "outliers_removed": 4
                   }
                 },
                 "VS": {
                   "retail": {
-                    "min": 450.0,
-                    "max": 450.0,
-                    "median": 450.0,
-                    "n": 1,
-                    "n_raw": 1,
-                    "outliers_removed": 0
+                    "min": 20.0,
+                    "max": 5000.0,
+                    "median": 600.0,
+                    "n": 116,
+                    "n_raw": 127,
+                    "outliers_removed": 11
                   }
                 },
                 "VVS": {
                   "retail": {
-                    "min": 85.0,
-                    "max": 8949.0,
-                    "median": 2399.5,
-                    "n": 6,
-                    "n_raw": 6,
-                    "outliers_removed": 0
+                    "min": 80.0,
+                    "max": 11130.0,
+                    "median": 2245.5,
+                    "n": 158,
+                    "n_raw": 164,
+                    "outliers_removed": 6
                   }
                 }
               }
@@ -9176,42 +10112,52 @@
           "by_source": {
             "gemrock": {
               "retail": {
-                "min": 150.0,
-                "max": 42778.0,
-                "median": 1450.0,
-                "n": 9,
-                "n_raw": 10,
-                "outliers_removed": 1
+                "min": 15.0,
+                "max": 22000.0,
+                "median": 822.0,
+                "n": 222,
+                "n_raw": 253,
+                "outliers_removed": 31
               },
               "by_clarity": {
+                "SI2": {
+                  "retail": {
+                    "min": 1530.0,
+                    "max": 26540.0,
+                    "median": 7413.0,
+                    "n": 6,
+                    "n_raw": 6,
+                    "outliers_removed": 0
+                  }
+                },
                 "SI1": {
                   "retail": {
-                    "min": 7500.0,
-                    "max": 7500.0,
+                    "min": 950.0,
+                    "max": 64218.0,
                     "median": 7500.0,
-                    "n": 1,
-                    "n_raw": 1,
-                    "outliers_removed": 0
+                    "n": 15,
+                    "n_raw": 16,
+                    "outliers_removed": 1
                   }
                 },
                 "VS": {
                   "retail": {
-                    "min": 150.0,
-                    "max": 10425.0,
-                    "median": 1450.0,
-                    "n": 5,
-                    "n_raw": 5,
-                    "outliers_removed": 0
+                    "min": 85.0,
+                    "max": 15000.0,
+                    "median": 659.0,
+                    "n": 57,
+                    "n_raw": 62,
+                    "outliers_removed": 5
                   }
                 },
                 "VVS": {
                   "retail": {
-                    "min": 220875.0,
-                    "max": 220875.0,
-                    "median": 220875.0,
-                    "n": 1,
-                    "n_raw": 1,
-                    "outliers_removed": 0
+                    "min": 36.0,
+                    "max": 28000.0,
+                    "median": 599.5,
+                    "n": 78,
+                    "n_raw": 91,
+                    "outliers_removed": 13
                   }
                 }
               }
@@ -9274,10 +10220,10 @@
         "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Sapphire%2C_Ceylon%2C_Sri_Lanka.jpg/800px-Sapphire%2C_Ceylon%2C_Sri_Lanka.jpg"
       ]
     },
-    "retail_price_min": 25.0,
-    "retail_price_max": 11213.64,
-    "retail_price_median": 697.0,
-    "retail_sample_count": 92,
+    "retail_price_min": 5.0,
+    "retail_price_max": 2310.0,
+    "retail_price_median": 207.5,
+    "retail_sample_count": 2002,
     "_retail_source": "crawler",
     "wholesale_price_min": 1.0,
     "wholesale_price_max": 8.0,

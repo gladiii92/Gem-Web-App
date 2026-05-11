@@ -1,0 +1,26 @@
+Gem-Web-App/
+├── data.json
+├── index.html
+├── style.css
+├── crawler/
+│   ├── crawl_db.json          ← 1523 Einträge, Quelle für Few-Shot Beispiele
+│   ├── gemrock_crawler.py
+│   ├── parser.py
+│   ├── 1stdibs_crawler.py
+│   ├── config.py
+│   ├── aggregator.py
+│   ├── recategorize.py
+│   ├── categorizer.py
+│   ├── check_1stdibs.py
+│   ├── manual_import.py
+│   ├── db.py
+│   └── requirements.txt
+├── js/
+│   ├── ui.js
+│   ├── pricing.js
+│   ├── modifiers.js
+│   └── vision.js              ← NEU — Frontend Vision Logic
+└── vision/
+    ├── vision_api.py          ← Flask Proxy (localhost:5000)
+    ├── vision_prompt.py       ← Prompt-Builder mit Few-Shot + LOOK_ALIKE_GUIDE
+    └── requirements.txt       ← flask, flask-cors, requests, Pillow
