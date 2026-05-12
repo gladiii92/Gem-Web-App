@@ -22,4 +22,4 @@ REQUEST_DELAY        = 2.5   # Listing-Seiten
 DETAIL_REQUEST_DELAY = 1.5   # Detailseiten (GemRock)
 
 # Pfad zur Datenbank
-DB_PATH = "crawl_db.json"
+DB_PATH = "crawl_db.json"  # nur noch für Legacy-Kompatibilität, nicht mehr aktiv genutzt

@@ -28,6 +28,7 @@ migrate_data.py
 
 # Wichtige Datei
 crawler/crawl_db.json
+crawler/gems.db
 data.json
 vision/corrections.json
 workers/index.js

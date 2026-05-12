@@ -7,9 +7,11 @@ Mit Clarity wenn verfügbar, sonst gesamt.
 import json
 import statistics
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).parent))
+from db import load_db
 
-ROOT     = Path(__file__).parent.parent
-CRAWL_DB = Path(__file__).parent / "crawl_db.json"
+ROOT      = Path(__file__).parent.parent
 DATA_JSON = ROOT / "data.json"
 
 CATEGORY_MAP = {
@@ -54,8 +56,7 @@ CATEGORY_MAP = {
 
 CLARITY_GRADES = ["I1", "SI2", "SI1", "VS", "VVS"]
 
-with open(CRAWL_DB, "r", encoding="utf-8") as f:
-    entries = json.load(f)
+entries = load_db()
 
 with open(DATA_JSON, "r", encoding="utf-8") as f:
     data = json.load(f)

@@ -4,9 +4,12 @@ vision_prompt.py v6 — Hybrid RAG: Kategorie-Filter + Farb-Ranking
 
 import json
 import random
+import sqlite3
+import sys
 from pathlib import Path
+from collections import Counter
 
-CRAWL_DB = Path(__file__).parent.parent / "crawler" / "crawl_db.json"
+DB_PATH = Path(__file__).parent.parent / "crawler" / "gems.db"
 
 # Mapping: Modell-Output (Schlüsselwörter) → gem_category in crawl_db
 STONE_TO_CATEGORY = {
@@ -54,34 +57,39 @@ COLOR_KEYWORDS = {
 
 
 def load_db() -> list:
-    if not CRAWL_DB.exists():
+    """Lädt alle crawl_entries aus SQLite — API-kompatibel zu vorher."""
+    if not DB_PATH.exists():
         return []
-    with open(CRAWL_DB, encoding="utf-8") as f:
-        return json.load(f)
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row
+    rows = conn.execute("SELECT * FROM crawl_entries").fetchall()
+    conn.close()
+    result = []
+    for r in rows:
+        d = dict(r)
+        d["colours"] = json.loads(d.get("colours") or "[]")
+        result.append(d)
+    return result
 
-CORRECTIONS_FILE = Path(__file__).parent / "corrections.json"
 
 def build_correction_hint(max_entries: int = 5) -> str:
     """
     Liest corrections.json und baut einen gezielten Warn-Block.
     Häufigste Verwechslungen werden priorisiert (nach Anzahl sortiert).
     """
-    if not CORRECTIONS_FILE.exists():
+    if not DB_PATH.exists():
         return ""
 
-    with open(CORRECTIONS_FILE, encoding="utf-8") as f:
-        corrections = json.load(f)
+    conn = sqlite3.connect(DB_PATH)
+    rows = conn.execute(
+        "SELECT predicted, correct FROM corrections WHERE predicted IS NOT NULL AND correct IS NOT NULL"
+    ).fetchall()
+    conn.close()
 
-    if not corrections:
+    if not rows:
         return ""
 
-    # Verwechslungs-Paare zählen: "Ruby → Pink Sapphire" etc.
-    from collections import Counter
-    pairs = Counter(
-        f"{c['predicted']} → {c['correct']}"
-        for c in corrections
-        if c.get("predicted") and c.get("correct")
-    )
+    pairs = Counter(f"{r[0]} → {r[1]}" for r in rows)
 
     if not pairs:
         return ""

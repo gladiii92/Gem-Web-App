@@ -8,6 +8,7 @@ import io
 import json
 import re
 import requests
+import sqlite3
 from datetime import datetime, timezone
 from pathlib import Path
 from flask import Flask, request, jsonify
@@ -22,7 +23,7 @@ OLLAMA_URL      = "http://localhost:11434/api/generate"
 VISION_MODEL    = "qwen2.5vl:7b"
 TIMEOUT_SEC     = 600
 MAX_IMG_SIZE    = (1024, 1024)
-CORRECTIONS_FILE = Path(__file__).parent / "corrections.json"
+CORRECTIONS_DB = Path(__file__).parent.parent / "crawler" / "gems.db"
 
 _db = load_db()
 print(f"[vision_api] DB geladen: {len(_db)} Einträge")
@@ -171,17 +172,26 @@ def call_ollama_vision(images_b64: list, prompt: str) -> dict:
 # ── Corrections-Helper ───────────────────────────────────────────────────────
 
 def load_corrections() -> list:
-    if not CORRECTIONS_FILE.exists():
+    if not CORRECTIONS_DB.exists():
         return []
-    with open(CORRECTIONS_FILE, encoding="utf-8") as f:
-        return json.load(f)
+    conn = sqlite3.connect(CORRECTIONS_DB)
+    rows = conn.execute(
+        "SELECT predicted, correct, image_hash, timestamp FROM corrections ORDER BY id"
+    ).fetchall()
+    conn.close()
+    return [{"predicted": r[0], "correct": r[1],
+             "image_hash": r[2], "timestamp": r[3]} for r in rows]
 
 
 def save_correction(entry: dict):
-    corrections = load_corrections()
-    corrections.append(entry)
-    with open(CORRECTIONS_FILE, "w", encoding="utf-8") as f:
-        json.dump(corrections, f, indent=2, ensure_ascii=False)
+    conn = sqlite3.connect(CORRECTIONS_DB)
+    conn.execute(
+        "INSERT INTO corrections (predicted, correct, image_hash, timestamp) VALUES (?,?,?,?)",
+        (entry.get("predicted"), entry.get("correct"),
+         entry.get("image_hash"), entry.get("timestamp"))
+    )
+    conn.commit()
+    conn.close()
     print(f"[vision_api] Correction gespeichert: {entry}")
 
 
