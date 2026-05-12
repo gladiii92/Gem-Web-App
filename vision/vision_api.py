@@ -14,7 +14,7 @@ from pathlib import Path
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
-from vision_prompt import load_db, build_vision_prompt, STONE_TO_CATEGORY
+from vision_prompt import load_db, build_vision_prompt, build_pass1_prompt, STONE_TO_CATEGORY
 
 app = Flask(__name__)
 CORS(app)
@@ -168,6 +168,38 @@ def call_ollama_vision(images_b64: list, prompt: str) -> dict:
     print(f"[vision_api] Output ({len(raw_text)} Zeichen): {raw_text[:300]}")
     return extract_json(raw_text)
 
+def call_ollama_pass1(images_b64: list) -> str | None:
+    """
+    Pass 1 — schneller Call, gibt nur gem_category zurück.
+    num_predict: 40, kein volles JSON nötig.
+    """
+    payload = {
+        "model": VISION_MODEL,
+        "prompt": build_pass1_prompt(),
+        "images": images_b64,
+        "stream": False,
+        "format": "json",
+        "keep_alive": "30m",
+        "options": {
+            "temperature": 0.1,
+            "num_predict": 40,
+        },
+    }
+    try:
+        resp = requests.post(OLLAMA_URL, json=payload, timeout=60)
+        raw = resp.json().get("response", "")
+        print(f"[vision_api] Pass 1 raw: {raw[:100]}")
+        data = json.loads(raw.strip())
+        category = data.get("gem_category", "").lower().strip()
+        valid = {
+            "sapphire","ruby","emerald","tourmaline","spinel",
+            "tanzanite","garnet","topaz","alexandrite","morganite"
+        }
+        return category if category in valid else None
+    except Exception as e:
+        print(f"[vision_api] Pass 1 fehlgeschlagen: {e}")
+        return None
+
 
 # ── Corrections-Helper ───────────────────────────────────────────────────────
 
@@ -247,7 +279,12 @@ def analyze():
 
     # gem_category: noch nicht bekannt vor Ollama-Call → None (Stufe 1 entfällt beim ersten Call)
     # Nach dem Call könnte man einen zweiten gezielteren Call machen — das ist Schritt 7B-Advanced
-    prompt = build_vision_prompt(_db, n_images=len(images_b64), gem_category=None, color_hint=color_hint)
+    # Pass 1 — gem_category schnell ermitteln (~15-25s)
+    gem_category = call_ollama_pass1(images_b64)
+    print(f"[vision_api] Pass 1 → gem_category={gem_category}")
+
+    # Pass 2 — voller Call mit kategorie-gefiltertem RAG
+    prompt = build_vision_prompt(_db, n_images=len(images_b64), gem_category=gem_category, color_hint=color_hint)
 
     try:
         result = call_ollama_vision(images_b64, prompt)
@@ -277,6 +314,7 @@ def analyze():
     result["images_analyzed"] = len(images_b64)
     result["image_hash"] = img_hash
     result["rag_color_hint"] = color_hint  # Debug-Info im Response
+    result["rag_gem_category"] = gem_category  # Debug-Info
 
     return jsonify(result)
 

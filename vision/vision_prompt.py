@@ -296,8 +296,25 @@ Return this exact JSON structure — fill in real values, do NOT describe the fi
   "notes": "any additional observation"
 }}
 
+
+
 Important: probabilities must sum to exactly 1.0. clarity_estimate must be one of: I1, SI2, SI1, VS, VVS.
 color_stability must be one of: stable, slight_shift, strong_shift.
 carat_approx is null unless a ruler, coin or finger provides a clear size reference."""
 
     return prompt
+
+
+def build_pass1_prompt() -> str:
+    """
+    Pass 1 — nur gem_category ermitteln.
+    Minimaler Prompt, num_predict: 40, kein RAG, kein LOOK_ALIKE_GUIDE.
+    """
+    return """You are a gemologist. Look at the gemstone image.
+Respond with ONLY a valid JSON object, nothing else:
+{"gem_category": "sapphire"}
+
+gem_category must be exactly one of:
+sapphire, ruby, emerald, tourmaline, spinel, tanzanite, garnet, topaz, alexandrite, morganite
+
+If unsure, pick the closest match. Never return null."""
