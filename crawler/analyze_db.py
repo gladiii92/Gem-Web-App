@@ -2,7 +2,7 @@
 import json
 from collections import Counter
 
-with open("crawl_db.json", "r", encoding="utf-8") as f:
+with open("gems.db", "r", encoding="utf-8") as f:
     db = json.load(f)
 
 print(f"=== crawl_db.json Analyse ===")

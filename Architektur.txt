@@ -7,10 +7,11 @@ Gem-Web-App/
 ├── Architektur.txt
 ├── Ablauf.txt
 ├── crawler/
-│   ├── crawl_db.json          ← 6523 Einträge, Quelle für Few-Shot Beispiele
 │   ├── gemrock_crawler.py
 │   ├── analyze_db.py
 │   ├── parser.py
+│   ├── gems.db
+│   ├── repair_clarity.py
 │   ├── 1stdibs_crawler.py
 │   ├── config.py
 │   ├── aggregator.py
