@@ -36,3 +36,9 @@ workers/index.js
 #Meine Dateien
 Architektur.txt
 Ablauf.txt
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
