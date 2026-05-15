@@ -163,7 +163,7 @@ def categorize(entry: dict) -> dict:
         entry["category_id"] = None
         return entry
 
-    # ── Kein Match
+    # ── Kein Match ──
     entry["category"] = "unknown"
     entry["category_id"] = None
     return entry
