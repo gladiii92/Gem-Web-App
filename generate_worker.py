@@ -32,7 +32,7 @@ def load_env():
 env            = load_env()
 ACCOUNT_ID     = env.get("CLOUDFLARE_ACCOUNT_ID", "")
 NAMESPACE_ID   = env.get("CF_NAMESPACE_ID", "")
-API_TOKEN      = env.get("CF_API_TOKEN", "")
+API_TOKEN      = env.get("CLOUDFLARE_API_TOKEN", "")
 DATA_JSON      = Path(__file__).parent / "data.json"
 
 if not all([ACCOUNT_ID, NAMESPACE_ID, API_TOKEN]):

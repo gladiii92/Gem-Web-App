@@ -12,7 +12,6 @@ import sys
 sys.path.insert(0, str(Path(__file__).parent))
 from db import load_db
 
-
 ROOT = Path(__file__).parent.parent
 DATA_JSON = ROOT / "data.json"
 
@@ -83,6 +82,20 @@ entries = load_db()
 with open(DATA_JSON, "r", encoding="utf-8") as f:
     data = json.load(f)
 
+# ── Alte Crawler-Stats komplett zurücksetzen ─────────────────────────────────
+for gem in data:
+    gem.pop("retail_price_min", None)
+    gem.pop("retail_price_max", None)
+    gem.pop("retail_price_median", None)
+    gem.pop("retail_sample_count", None)
+    gem.pop("wholesale_price_min", None)
+    gem.pop("wholesale_price_max", None)
+    gem.pop("wholesale_price_median", None)
+    gem.pop("wholesale_sample_count", None)
+    gem.pop("_retail_source", None)
+    gem.pop("_wholesale_source", None)
+    for bucket in gem.get("price_ranges", []):
+        bucket.pop("_crawler_stats", None)
 
 raw = {}
 for e in entries:

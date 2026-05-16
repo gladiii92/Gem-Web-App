@@ -2,6 +2,7 @@
   "name": "gem-api",
   "main": "workers/index.js",
   "compatibility_date": "2026-05-15",
+  "account_id": "cbd3e0205caf48eff76ec6758569f89e",
   "compatibility_flags": ["nodejs_compat"],
   "kv_namespaces": [
     {
