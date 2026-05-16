@@ -1,0 +1,12 @@
+{
+  "name": "gem-api",
+  "main": "workers/index.js",
+  "compatibility_date": "2026-05-15",
+  "compatibility_flags": ["nodejs_compat"],
+  "kv_namespaces": [
+    {
+      "binding": "KV_GEMS",
+      "id": "845ecbe260f540f9a16227906a63b889"
+    }
+  ]
+}
